@@ -12,12 +12,9 @@ body{
 	text-align: center;
 	margin-top: 20px;
 }
-.flash_p{
-
-}
 .fl-text{
 	text-align: center;
-	color: #ff7f24;
+	color: #0000FF;
 }
 .tupian{
 	background-image: url(images/soso.jpg);
@@ -30,8 +27,10 @@ a{
 }
 #div-m{
 	float: right;
-    padding: 30px;
+    padding: 55px;
+    margin-left: 100px;
     background-color: #9AC0CD;
+    border: 1px solid black;
 }
 #photo-list {
 	width:910px; 
@@ -57,4 +56,6 @@ a{
 #detail{
 	color: #00BFFF;
 	background-color: #c7c7c7;
+	width: 300px;
+	height: 450px;
 }
