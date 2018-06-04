@@ -2,7 +2,9 @@ package cn.edu.scnu.it.aipet.dao;
 
 import cn.edu.scnu.it.aipet.pojo.User;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserMapper {
     public int insertUser(User user);
     public User getUser(@Param("iduser") Long iduser);
