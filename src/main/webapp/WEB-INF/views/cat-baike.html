@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1" /> 
+  <title>狗狗百科</title> 
+  <link rel="stylesheet" type="text/css" href="CSS/index.css">
+  <link rel="stylesheet" type="text/css" href="CSS/baike.css">
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head> 
+ <body> 
+  <div class="main-container"> 
+     <header>		
+			<div class="nav navbar-fixed-top">
+		<ul class="nav navbar-nav ">
+			<li><a href="index.html">APet.com</a></li>
+			<li><a class="disabled">|为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
+			<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
+		</ul>
+		</div>
+
+	<div class="bj-img">
+			<img src="images/keji.jpg" width="100%" height="100%" alt="">
+		</div>
+	</header>
+    <!--导航栏开始-->
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">首页</a>
+        </div>
+        <div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">发布消息<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="out-adopt.html">我要送养</a></li>
+                    <li><a href="adopt.html">我要领养</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">狗狗<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#aaa">送养信息</a></li>
+                    <li><a href="dog-outadopt.html">领养信息</a></li>
+                    <li><a href="dog-baike.html">狗狗百科</a></li>
+                    <li><a href="dog-forum.html">狗狗论坛</a></li>
+                </ul>               
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">猫咪<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#bbb">送养信息</a></li>
+                    <li><a href="#">领养信息</a></li>
+                    <li><a href="#">猫咪百科</a></li>
+                    <li><a href="#">猫咪论坛</a></li>
+                </ul>               
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他（如兔子、仓鼠）<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#ccc">送养信息</a></li>
+                    <li><a href="#">领养信息</a></li>
+                    <li><a href="#">其他百科</a></li>
+                    <li><a href="#">其他论坛</a></li>
+                </ul>               
+            </li>
+            <li><a href="details.html">领养须知</a></li>
+            <li><a href="#">使用助手</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<!--导航栏结束-->
+    <div class="help-container" id="con">
+    <div class="container-wrapper clearfix">
+        <div class="help-sidebar">
+    <div class="sidebar-title">
+        <h3><a href="#">宠物百科</a><span class="pull-right"><i class="fa fa-angle-down"></i> </span></h3>
+    </div>
+    <div class="sidebar-menu animated">
+        <ul class="metismenu" id="metismenu" aria-expanded="true">
+          
+            <li class="active">
+                <a href="#" aria-expanded="true">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>常见品种</span>
+                </a>
+                <ul class="sub-menu collapse in" aria-expanded="true">
+					 <li>
+                        <a href="baike/wiki-布偶猫.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>布偶猫</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+          
+            <li class="active">
+                <a href="https://coding.net/help/doc/git/repository.html#" aria-expanded="true">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>常见疾病</span>
+                </a>
+                <ul class="sub-menu collapse in" aria-expanded="true">
+					<li>
+                       <a href="baike/wiki-cat-1.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>耳螨病</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>
+          
+            <li class="active">
+                <a href="https://coding.net/help/doc/git/repository.html#" aria-expanded="true">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>喂养知识</span>
+                </a>
+                <ul class="sub-menu collapse in" aria-expanded="true">
+					
+                    <li>
+                        <a href="baike/wiki-cat-2.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>猫咪得了耳螨会传染给人么？</span>
+                        </a>
+                    </li>
+                  </ul>
+            </li>
+          
+            <li class="active">
+                <a href="https://coding.net/help/doc/git/repository.html#" aria-expanded="true">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>猫咪心思</span>
+                </a>
+                <ul class="sub-menu collapse in" aria-expanded="true">
+					
+                    <li>
+                        <a href="baike/wiki-cat-3.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>猫咪会做梦吗？</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="baike/wiki-cat-4.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>我的床上有只死鸟！</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>                                   
+        </ul>
+    </div>
+</div>
+        <div class="help-content">
+            <form id="search-form" action="https://coding.net/help/search.html">
+                <div class="content-header">
+                    <div>
+                        <div class="header-search">
+                            <input name="q" type="text">
+                            <div class="s-button" onclick="doSearch()">搜索</div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="content-body clearfix">
+                <div class="content-wrapper">
+                    <section class="document-content">
+                        <div class="document-header">
+                            <h3>
+                                <i class="fa fa-caret-down "></i>
+                                布偶猫
+                            </h3>
+                        </div>
+                        <div class="document-body">
+                            <article class="markdown">
+									<img src="images/wiki_cat_1.jpg" alt="猫咪百科"/>
+<h2 id="git--git--codingnet" class="clickable-header">布偶猫百科</h2>
+<p>布偶猫百科
+布偶猫又叫布拉多尔猫、布娃娃猫、玩偶猫，拉丁学名为Ragdoll。虽然布偶猫的体型和体重在整个猫类中都是最大，但它们确是十足的温柔大块头。它们对人类非常友善，即便面对孩子们的打闹也能大度包容，因此布偶猫受到许多家庭的青睐。
+
+布偶猫的原产地是美国，由家住加州的一名叫Ann Baker的妇女在上世纪60年代所培育，1965年在美国获得认可，然后逐渐进入其他国家。布偶猫进入中国较晚，至今不过10年时间，但布偶猫却在很短时间内就在中国流行开来，这与它们出众的外貌和极佳的性格密不可分。
+
+如果你喜欢粘人的猫咪，那么布偶猫绝对是一个不错的选择。它们很喜欢待在主人身边，如果你有事在忙，它们也不会吵到你，因为布偶猫的叫声很轻柔，而且大部分情况下，它们都会保持安静。与此同时，布偶猫除了对主人很友善外，它们对陌生人、小孩子和其他动物都非常友好，因此，主人不必担心布偶猫是否会伤害到家作客的客人或其他动物等。
+
+此外，布偶猫的城市适应能力极强，它们既可以忍受炎炎夏日，也能安然度过数九寒冬。由于布偶猫身上没有体味、不会流口水，所以它们也不会给主人的日常生活带来多少烦恼。而且布偶猫的可训练性也较强，只要主人能够适当引导，它们就会按照指令做出相应的反应。
+
+不过布偶猫的毛发较长，因此需要主人经常给猫咪梳理毛发，这样不仅可以缓解家中猫毛乱飞的情况，还能让猫咪的毛发更健康！</p>
+<hr>
+                    </article>
+                </div>
+                    </section>
+                    <div class="unfixed clearfix">
+                        <div class="pull-right">
+                            <span>问题仍未解决？</span>
+                            <a href="javascript:" class="ask-help">问题反馈</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+<!--页脚-->
+<footer class="rig">
+	<br/>
+	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 xiaogui All Rights Reserved.
+</footer>
+</body>
+</html>
+
