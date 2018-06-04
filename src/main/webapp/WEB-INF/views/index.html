@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>首页</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">-->
 	<link rel="stylesheet" type="text/css" href="CSS/index.css">
 	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
@@ -15,7 +16,7 @@
 	<div>
 		<!--公共头部开始-->
 	<header>	
-		<div class="nav navbar-fixed-top">
+		<div class="nav navbar-fixed-top" id="first">
 		<ul class="nav navbar-nav ">
 			<li><a href="index.html">APet.com</a></li>
 			<li><a class="disabled">|为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
@@ -25,23 +26,7 @@
 			<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
 		</ul>
 		</div>
-		
-	<!--	
-		<div class="nav navbar-fixed-top">
-		<ul class="nav navbar-nav ">
-			<li><a href="index.html">|APet.com|</a></li>
-			<li><a href="#">|发布|</a></li>
-			<li><a href="#">|狗狗|</a></li>
-			<li><a href="#">|猫咪|</a></li>
-			<li><a class="disabled">为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
-			<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
-		</ul>
-		</div>		-->
-
-	<div class="bj-img">
+	<div class="bj-img" id="second">
 			<img src="images/keji.jpg" width="100%" height="100%" alt="导航栏上背景图">
 		</div>
 	</header>
@@ -541,4 +526,25 @@
 	 });
 	alert("欢迎登录Apet.com!");
 </script>-->
+<script>
+var parent=getElementByTagName("header");
+var child=getElementById("first");
+var newnode=document.createElement("div");
+var text=document.createTextNode("欢迎您，用户名，退出")；
+newnode.appendChild(text);
+parent.replaceChild(newnode,child);
+</script>
 </html>
+<!--<div class="nav navbar-fixed-top" id="first">
+		<ul class="nav navbar-nav ">
+			<li><a href="index.html">APet.com</a></li>
+			<li><a class="disabled">|为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
+			<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
+		</ul>
+		</div>
+	<div class="bj-img" id="second">
+			<img src="images/keji.jpg" width="100%" height="100%" alt="导航栏上背景图">
+		</div>->
