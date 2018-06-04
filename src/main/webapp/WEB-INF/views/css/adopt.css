@@ -1,0 +1,25 @@
+.oa-text{
+	text-align: left;
+	margin-left: 30%;
+}
+h4{
+	padding-bottom: 20px;
+}
+body{
+	background-color: #c7c7c7;
+	/*background-image: linear-gradient(to bottom,#c7c7c7,#c7c7c7);*/
+}
+.txt-left{
+	text-align: left;
+	color: red;
+}
+.txt-center{
+	text-align: center;
+	padding: 0 200px;
+}
+.decoration{
+	list-style-type: decimal;
+}
+#clear-row{
+	padding-left: 50px;
+}

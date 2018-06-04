@@ -1,0 +1,60 @@
+body{
+	background-image: linear-gradient(to bottom,#c7c7c7,#c7c7c7);
+
+}
+.bj-img{
+    margin-top: 0;
+	background-position: center;
+}
+.rig{
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	margin-top: 20px;
+}
+.flash_p{
+
+}
+.fl-text{
+	text-align: center;
+	color: #ff7f24;
+}
+.tupian{
+	background-image: url(images/soso.jpg);
+	background-position: center;
+	margin-bottom: 2px;
+
+}
+a{
+	text-decoration: none;
+}
+#div-m{
+	float: right;
+    padding: 30px;
+    background-color: #9AC0CD;
+}
+#photo-list {
+	width:910px; 
+	height:380px;    
+	margin:2px auto; 
+	border:1px  #ccc;
+} 
+#photo-list ul { 
+	list-style:none;
+}
+
+#photo-list img {
+ padding:2px;
+} 
+.wrap1{
+     background-color: #c7c7c7;
+     border: 1px solid black;
+}
+
+#d-img{
+	margin-top: 5px;
+}
+#detail{
+	color: #00BFFF;
+	background-color: #c7c7c7;
+}
