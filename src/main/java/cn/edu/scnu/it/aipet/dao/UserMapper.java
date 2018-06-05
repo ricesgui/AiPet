@@ -10,4 +10,5 @@ public interface UserMapper {
     public User getUser(@Param("iduser") Long iduser);
     public int updateUser(User role);
     public int deleteUser(@Param("iduser") Long iduser);
+    public User selectUserByEmail(@Param("email") String email);
 }

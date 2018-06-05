@@ -12,9 +12,14 @@
     <!-- 定义扫描装载的包 -->
     <context:component-scan base-package="cn.edu.scnu.it.aipet.*"/>
 
-    <mvc:resources location="/WEB-INF/views/CSS" mapping="/CSS/**"/>
-    <mvc:resources location="/WEB-INF/views/images" mapping="/images/**"/>
     <mvc:resources location="/WEB-INF/views/" mapping="/views/**"/>
+    <mvc:resources location="/WEB-INF/views/CSS" mapping="/views/CSS/**"/>
+    <mvc:resources location="/WEB-INF/views/cat" mapping="/views/cat/**"/>
+    <mvc:resources location="/WEB-INF/views/dog" mapping="/views/dog/**"/>
+    <mvc:resources location="/WEB-INF/views/baike" mapping="/views/baike/**"/>
+    <mvc:resources location="/WEB-INF/views/images" mapping="/views/images/**" />
+    <mvc:resources location="/WEB-INF/views/other" mapping="/views/other/**" />
+
     <!--定义视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/views/jsp/" p:suffix=".jsp"/>

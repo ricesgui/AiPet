@@ -14,4 +14,9 @@ public class UserServiceImpl implements UserService {
     public int insertUser(User user) {
         return userMapper.insertUser(user);
     }
+
+    @Override
+    public User selectUser(String email) {
+        return userMapper.selectUserByEmail(email);
+    }
 }

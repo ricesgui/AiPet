@@ -13,7 +13,7 @@
     <title>首页</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">-->
-    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
@@ -28,15 +28,15 @@
         <div class="nav navbar-fixed-top" id="first">
             <ul class="nav navbar-nav">
                 <li>
-                    <a class="disabled"><span id="username"><c:out value="${user.name}"></c:out></span></a>
+                    <a class="disabled"><span id="username"><c:out value="${user.name}"/></span></a>
                 </li>
                 <li>
                     <a href="" class="disabled">您已登录</a>
                 </li>
-                <li><a href="../index.html">退出</a></li>
+                <li><a href="index.html">退出</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../about_us.html"><span class="glyphicon glyphicon-user">个人中心</a></li>
+                <li><a href="about_us.html"><span class="glyphicon glyphicon-user">个人中心</a></li>
 
             </ul>
         </div>
@@ -51,7 +51,7 @@
         </ul>
         </div>-->
         <div class="bj-img" id="second">
-            <img src="../images/keji.jpg" width="100%" height="100%" alt="导航栏上背景图">
+            <img src="images/keji.jpg" width="100%" height="100%" alt="导航栏上背景图">
         </div>
     </header>
     <!--公共头部结束-->
@@ -60,24 +60,24 @@
     <nav class="navbar navbar-default navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="../index.html">首页</a>
+                <a class="navbar-brand" href="index.html">首页</a>
             </div>
             <div>
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">发布消息<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../out-adopt.html">我要送养</a></li>
-                            <li><a href="../adopt.html">我要领养</a></li>
+                            <li><a href="out-adopt.html">我要送养</a></li>
+                            <li><a href="adopt.html">我要领养</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">狗狗<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#aaa">送养信息</a></li>
-                            <li><a href="../dog-outadopt.html">领养信息</a></li>
-                            <li><a href="../dog-baike.html">狗狗百科</a></li>
-                            <li><a href="../dog-forum.html">狗狗论坛</a></li>
+                            <li><a href="dog-outadopt.html">领养信息</a></li>
+                            <li><a href="dog-baike.html">狗狗百科</a></li>
+                            <li><a href="dog-forum.html">狗狗论坛</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -85,7 +85,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="#bbb">送养信息</a></li>
                             <li><a href="#">领养信息</a></li>
-                            <li><a href="../cat-baike.html">猫咪百科</a></li>
+                            <li><a href="cat-baike.html">猫咪百科</a></li>
                             <li><a href="#">猫咪论坛</a></li>
                         </ul>
                     </li>
@@ -98,7 +98,7 @@
                             <li><a href="#">其他论坛</a></li>
                         </ul>
                     </li>
-                    <li><a href="../details.html">领养须知</a></li>
+                    <li><a href="details.html">领养须知</a></li>
                     <li><a href="#">使用助手</a></li>
                 </ul>
             </div>
@@ -107,7 +107,7 @@
 
     <!--导航栏结束-->
     <div class="tupian">
-        <img src="../images/soso.jpg" width="100%" height="100%" alt="">
+        <img src="images/soso.jpg" width="100%" height="100%" alt="">
     </div>
 
     <!--flash页，两栏布局-->
@@ -126,16 +126,16 @@
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="../images/flash-1.jpg" alt="流浪狗1">
+                            <img src="images/flash-1.jpg" alt="流浪狗1">
                         </div>
                         <div class="item">
-                            <img src="../images/flash-2.jpg" alt="流浪狗2">
+                            <img src="images/flash-2.jpg" alt="流浪狗2">
                         </div>
                         <div class="item">
-                            <img src="../images/flash-3.jpg" alt="流浪狗3">
+                            <img src="images/flash-3.jpg" alt="流浪狗3">
                         </div>
                         <div class="item">
-                            <img src="../images/flash-4.jpg" alt="流浪狗4">
+                            <img src="images/flash-4.jpg" alt="流浪狗4">
                         </div>
                     </div>
                     <!-- 轮播（Carousel）导航 -->
@@ -169,7 +169,7 @@
                             <br/>
                             <br/>
                             <button type="submit" class="btn btn-default" onclick="login_login">登录</button>&nbsp;&nbsp;
-                            <button class="btn btn-default"><a href="../register.html">注册</a></button>
+                            <button class="btn btn-default"><a href="register.html">注册</a></button>
                         </form>
                     </div>
                 </div>
@@ -179,15 +179,15 @@
     <!--主体内容开始-->
     <main>
         <h3>
-            <span class="pull-left">狗狗领养信息</span><span class="pull-right"><a href="../dog-adopt.html" name="aaa">更多信息>>></a></span>
+            <span class="pull-left">狗狗领养信息</span><span class="pull-right"><a href="dog-adopt.html" name="aaa">更多信息>>></a></span>
         </h3>
         <br/>
         <br/>
         <div class="row" >
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../dog/d-adopt-detail-1.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/d-adopt-1.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-1.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/d-adopt-1.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址：广州-天河</h4>
                             <p>
@@ -203,8 +203,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../dog/d-adopt-detail-2.html"  data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/d-adopt-2.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-2.html"  data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/d-adopt-2.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:北京媒体村</h4>
                             <p>
@@ -220,7 +220,7 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="dog/d-adopt-3.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="../images/d-adopt-3.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-3.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-3.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:上海</h4>
                             <p>
@@ -236,7 +236,7 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../dog/d-adopt-4.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="../images/d-adopt-4.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-4.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-4.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:天津</h4>
                             <p>
@@ -254,8 +254,8 @@
         <div class="row">
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../dog/d-apopt-5.html"  data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/d-adopt-5.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-5.html"  data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/d-adopt-5.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:武汉</h4>
                             <p>
@@ -271,8 +271,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../dog/d-adopt-detail-6.html"  data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/d-adopt-6.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-6.html"  data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/d-adopt-6.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:北京</h4>
                             <p>
@@ -288,8 +288,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../dog/d-adopt-detail-7.html"  data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/d-adopt-7.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-7.html"  data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/d-adopt-7.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:北京</h4>
                             <p>
@@ -305,8 +305,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../dog/d-adopt-detail-8.html"  data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/d-adopt-8.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-8.html"  data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/d-adopt-8.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:北京</h4>
                             <p>
@@ -330,8 +330,8 @@
         <div class="row">
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../cat/c-adopt-detail-1.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/c-adopt-1.jpg" width="" height="" alt="领养猫图片">
+                    <a href="cat/c-adopt-detail-1.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/c-adopt-1.jpg" width="" height="" alt="领养猫图片">
                         <div class="caption">
                             <h4>地址:上海</h4>
                             <p>
@@ -347,8 +347,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../cat/c-adopt-detail-2.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/c-adopt-2.jpg" width="" height="" alt="领养猫图片">
+                    <a href="cat/c-adopt-detail-2.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/c-adopt-2.jpg" width="" height="" alt="领养猫图片">
                         <div class="caption">
                             <h4>地址:上海</h4>
                             <p>
@@ -364,8 +364,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../cat/c-adopt-detail-3.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/c-adopt-3.jpg" width="" height="" alt="领养猫图片">
+                    <a href="cat/c-adopt-detail-3.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/c-adopt-3.jpg" width="" height="" alt="领养猫图片">
                         <div class="caption">
                             <h4>地址:北京</h4>
                             <p>
@@ -381,8 +381,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../cat/c-adopt-detail-4.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/c-adopt-4.jpg" width="" height="" alt="领养猫图片">
+                    <a href="cat/c-adopt-detail-4.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/c-adopt-4.jpg" width="" height="" alt="领养猫图片">
                         <div class="caption">
                             <h4>地址：广东惠州</h4>
                             <p>
@@ -398,8 +398,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../cat/c-adopt-detail-5.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/c-adopt-5.jpg" width="" height="" alt="领养猫图片">
+                    <a href="cat/c-adopt-detail-5.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/c-adopt-5.jpg" width="" height="" alt="领养猫图片">
                         <div class="caption">
                             <h4>地址：广州</h4>
                             <p>
@@ -415,8 +415,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../cat/c-adopt-detail-6.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/c-adopt-6.jpg" width="" height="" alt="领养猫图片">
+                    <a href="cat/c-adopt-detail-6.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/c-adopt-6.jpg" width="" height="" alt="领养猫图片">
                         <div class="caption">
                             <h4>地址：广州</h4>
                             <p>
@@ -432,8 +432,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../cat/c-adopt-detail-7.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/c-adopt-7.jpg" width="" height="" alt="领养猫图片">
+                    <a href="cat/c-adopt-detail-7.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/c-adopt-7.jpg" width="" height="" alt="领养猫图片">
                         <div class="caption">
                             <h4>地址：广州</h4>
                             <p>
@@ -449,8 +449,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../cat/c-adopt-detail-8.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/c-adopt-8.jpg" width="" height="" alt="领养猫图片">
+                    <a href="cat/c-adopt-detail-8.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/c-adopt-8.jpg" width="" height="" alt="领养猫图片">
                         <div class="caption">
                             <h4>地址：上海</h4>
                             <p>
@@ -473,8 +473,8 @@
         <div class="row">
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../other/e-adopt-1.html" data-toggle="tooltip" title="点击我查看更多详情">
-                        <img src="../images/e-adopt-1.jpg" width="" height="" alt="领养兔图片"></a>
+                    <a href="other/e-adopt-1.html" data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/e-adopt-1.jpg" width="" height="" alt="领养兔图片"></a>
                     <div class="caption">
                         <h4>地址：广州</h4>
                         <p>
@@ -489,7 +489,7 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../other/e-adopt-2.html"><img src="../images/e-adopt-2.jpg" width="" height="" alt="领养兔图片"></a>
+                    <a href="other/e-adopt-2.html"><img src="images/e-adopt-2.jpg" width="" height="" alt="领养兔图片"></a>
                     <div class="caption">
                         <h4>地址：广东广州</h4>
                         <p>
@@ -504,7 +504,7 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="../other/e-adopt-3.html"><img src="../images/e-adopt-3.jpg" width="" height="" alt="领养猫图片"></a>
+                    <a href="other/e-adopt-3.html"><img src="images/e-adopt-3.jpg" width="" height="" alt="领养猫图片"></a>
                     <div class="caption">
                         <h4>地址：上海</h4>
                         <p>
@@ -536,12 +536,12 @@
 
     </main>
     <div id="d-img">
-        <img src="../images/soso2.jpg" width="100%" height="100%" alt="sos图片">
+        <img src="images/soso2.jpg" width="100%" height="100%" alt="sos图片">
     </div>
     <!--页脚-->
     <footer class="rig">
 
-        <a href="../about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
+        <a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
     </footer>
 </body>
 <!--<script>

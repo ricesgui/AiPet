@@ -10,5 +10,7 @@
     <delete id="deleteUser" parameterType="long">
         delete from users where id=#{id}
     </delete>
-
+    <select id="selectUserByEmail" parameterType="string" resultType="cn.edu.scnu.it.aipet.pojo.User">
+        select name,email,password from users where email=#{email}
+    </select>
 </mapper>
