@@ -11,9 +11,13 @@
     <mvc:annotation-driven/>
     <!-- 定义扫描装载的包 -->
     <context:component-scan base-package="cn.edu.scnu.it.aipet.*"/>
+
+    <mvc:resources location="/WEB-INF/views/CSS" mapping="/CSS/**"/>
+    <mvc:resources location="/WEB-INF/views/images" mapping="/images/**"/>
+    <mvc:resources location="/WEB-INF/views/" mapping="/views/**"/>
     <!--定义视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-          p:prefix="/WEB-INF/views/jsp" p:suffix=".jsp"/>
+          p:prefix="/WEB-INF/views/jsp/" p:suffix=".jsp"/>
     <!--注解事务
     <tx:annotation-driven transaction-manager="transactionManager"/>
     -->

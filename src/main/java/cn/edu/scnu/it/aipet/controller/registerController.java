@@ -8,19 +8,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller("registerController")
-@RequestMapping("/views")
+@RequestMapping("/views/jsp")
 public class registerController {
 
     @Autowired
     private UserService userService=null;
-
-    @RequestMapping("/registerl")
-    public ModelAndView register(User user){
-        System.out.println("进入view");
+    @Autowired
+    private User user=null;
+    @RequestMapping("/register")
+    public ModelAndView register(String name,String password,String email){
+        user.setName(name);
+        user.setEmail(email);
+        user.setPassword(password);
         userService.insertUser(user);
         ModelAndView mv=new ModelAndView();
         mv.addObject("user",user);
-        mv.setViewName("register");
+        mv.setViewName("index");
         return mv;
     }
 }
