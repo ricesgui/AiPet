@@ -19,7 +19,7 @@
 	<hr>
 	<main>
 		<div id="main-div">
-			<form action="jsp/register.html">
+			<form action="jsp/register.html" method="post">
 			<h1>用户注册</h1>
 			<label><h3>用户名：<input type="text" name="name" value="" required="required"></h3></label>
 			<br>
@@ -27,7 +27,7 @@
 			<br/>
 			<label><h3>密码&nbsp;&nbsp;&nbsp;：<input type="text" name="password" value="" required="required"></h3></label>请输入密码
 			<br/>
-			<label><h3>验证码：<input type="text" name="" id="checknum",height="50"  onchange="return check_checknum(this.value)"></h3><span id="checknum_result"></label>
+			<label><h3>验证码：<input type="text" name="" id="checknum",height="50"  onchange="return check_checknum(this.value)" required="required"></h3><span id="checknum_result"></label>
 			<canvas id="canvas" width="150" height="50"></canvas>
  			 <a href="#" id="changeImg">看不清，换一张</a>
 		 （请区分大小写）
@@ -117,7 +117,7 @@
 	  {
 	  	var node=document.getElementById("checknum_result");
 		  node.innerHTML="验证码正确 ";
-		  node.style.color="#0F0";
+		  node.style.color="#0F0";//DOM改变样式
 		  return true;
 	  }
 	  else {
@@ -128,4 +128,12 @@
 	  }
   }
   </script>
+
+  <script type="text/javascript" src="javascript/excanvas/excanvas.js">
+  	G_vmlCanvasManager = G_vmlCanvasManager_;
+  </script>
+  
+  <script type="text/javascript" src="javascript/excanvas/canvas.text.js"></script>
+  <script type="text/javascript" src="javascript/excanvas/faces/optimer-normal-normal.js"></script>
+
 </html>
