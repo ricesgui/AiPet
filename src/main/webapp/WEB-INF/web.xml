@@ -10,7 +10,7 @@
   <!-- Spring和mybatis的配置文件 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:/spring-mybatis.xml</param-value>
+    <param-value>classpath:applicationContext.xml</param-value>
   </context-param>
   <!-- 配置ContextLoaderListener用以初始化Spring IoC容器 -->
   <listener>
@@ -20,6 +20,10 @@
     <!-- 注意：Spring MVC框架会根据servlet-name配置，找到/WEB-INF/dispatcher-servlet.xml作为配置文件载入Web工程中 -->
     <servlet-name>dispatcher</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:dispatcher-servlet.xml</param-value>
+    </init-param>
     <!-- 使得Dispatcher在服务器启动的时候就初始化 -->
     <load-on-startup>2</load-on-startup>
     <!--MultipartResolver参数 -->
@@ -33,6 +37,6 @@
   <!-- Servlet拦截配置 -->
   <servlet-mapping>
     <servlet-name>dispatcher</servlet-name>
-    <url-pattern>*.do</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -4,9 +4,9 @@ import cn.edu.scnu.it.aipet.dao.UserMapper;
 import cn.edu.scnu.it.aipet.pojo.User;
 import cn.edu.scnu.it.aipet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper=null;

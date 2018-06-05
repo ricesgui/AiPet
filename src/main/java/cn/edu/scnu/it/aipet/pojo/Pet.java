@@ -2,7 +2,7 @@ package cn.edu.scnu.it.aipet.pojo;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Pet {
     private Long idpet=null;
     private String petspecies=null;

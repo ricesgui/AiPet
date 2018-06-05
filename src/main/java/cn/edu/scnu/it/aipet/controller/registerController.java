@@ -13,13 +13,17 @@ public class registerController {
 
     @Autowired
     private UserService userService=null;
-
-    @RequestMapping("register")
-    public ModelAndView register(User user){
+    @Autowired
+    private User user=null;
+    @RequestMapping("/register")
+    public ModelAndView register(String name,String password,String email){
+        user.setName(name);
+        user.setEmail(email);
+        user.setPassword(password);
         userService.insertUser(user);
         ModelAndView mv=new ModelAndView();
         mv.addObject("user",user);
-        mv.setViewName("page");
+        mv.setViewName("index");
         return mv;
     }
 }
