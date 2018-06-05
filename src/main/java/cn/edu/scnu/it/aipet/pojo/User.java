@@ -1,5 +1,8 @@
 package cn.edu.scnu.it.aipet.pojo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
     private Long idusers=null;
     private String name=null;
@@ -9,7 +12,6 @@ public class User {
     private String number=null;
     private String email=null;
     private String address=null;
-    private String checknum=null;
 
     public Long getIdusers() {
         return idusers;
@@ -75,11 +77,4 @@ public class User {
         this.address = address;
     }
 
-    public String getChecknum() {
-        return checknum;
-    }
-
-    public void setChecknum(String checknum) {
-        this.checknum = checknum;
-    }
 }
