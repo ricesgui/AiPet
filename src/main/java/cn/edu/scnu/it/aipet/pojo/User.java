@@ -2,7 +2,6 @@ package cn.edu.scnu.it.aipet.pojo;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class User {
     private Long idusers=null;
     private String name=null;

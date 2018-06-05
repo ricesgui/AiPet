@@ -2,7 +2,7 @@ package cn.edu.scnu.it.aipet.pojo;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Adopt {
     private Long idadopt=null;
     private Long iduser=null;

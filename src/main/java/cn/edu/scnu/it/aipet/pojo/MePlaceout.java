@@ -4,7 +4,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
-@Component
+
 public class MePlaceout {
     private Long idmp=null;
     private Long iduser=null;

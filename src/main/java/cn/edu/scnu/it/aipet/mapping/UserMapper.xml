@@ -3,13 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.edu.scnu.it.aipet.dao.UserMapper">
    <insert id="insertUser" keyProperty="iduser">
-       insert into users(name,realname,sex,password,number,email,address) values(#{role.name},
-       #{role.realname},#{role.sex},#{role.password},#{role.number},#{role.email},#{role.address})
+       insert into users(name,password,email) values(#{role.name},
+      #{role.password},#{role.email})
    </insert>
 
     <delete id="deleteUser" parameterType="long">
         delete from users where id=#{id}
     </delete>
 
-    <select id="getUser" parameterType="long" resultType=""
 </mapper>

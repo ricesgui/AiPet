@@ -2,7 +2,7 @@ package cn.edu.scnu.it.aipet.pojo;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Administrator {
     private String adminname=null;
     private String password=null;

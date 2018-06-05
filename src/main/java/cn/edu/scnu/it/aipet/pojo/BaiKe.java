@@ -4,7 +4,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
-@Component
+
 public class BaiKe {
     private Long idbaike=null;
     private String messsort=null;  //the kind of the message

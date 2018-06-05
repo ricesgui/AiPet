@@ -8,14 +8,14 @@
         <!--允许JBDC支持生成的键-->
         <setting name="useGeneratedKeys" value="true"/>
         <!--配置默认的执行期-->
-        <setting name="defaultExecutoryType" value="REUSE"/>
+        <setting name="defaultExecutorType" value="REUSE"/>
         <!--全局启用延迟加载-->
         <setting name="lazyLoadingEnabled" value="true"/>
         <!--设置超时时间，即驱动等待一个数据库的响应时间-->
         <setting name="defaultStatementTimeout" value="25000"/>
     </settings>
     <typeAliases>
-        <typeAlias type="user" type="cn.edu.scnu.it.aipet.pojo.User"/>
+        <typeAlias alias="user" type="cn.edu.scnu.it.aipet.pojo.User"/>
     </typeAliases>
     <mappers>
         <mapper resource="cn/edu/scnu/it/aipet/mapping/UserMapper.xml"/>
