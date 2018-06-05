@@ -19,20 +19,20 @@
 	<hr>
 	<main>
 		<div id="main-div">
-			<form action="registerl">
+			<form action="jsp/register.html">
 			<h1>用户注册</h1>
-			<label><h3>用户名：<input type="text" name="name" value=""></h3></label>
+			<label><h3>用户名：<input type="text" name="name" value="" required="required"></h3></label>
 			<br>
-			<label><h3>邮箱&nbsp;&nbsp;&nbsp;：<input type="text" name="email" value=""></h3></label>是您的登录帐号，可用于找回密码
+			<label><h3>邮箱&nbsp;&nbsp;&nbsp;：<input type="text" name="email" value="" required="required"></h3></label>是您的登录帐号，可用于找回密码
 			<br/>
-			<label><h3>密码&nbsp;&nbsp;&nbsp;：<input type="text" name="password" value=""></h3></label>请输入密码
+			<label><h3>密码&nbsp;&nbsp;&nbsp;：<input type="text" name="password" value="" required="required"></h3></label>请输入密码
 			<br/>
-			<label><h3>验证码：<input type="text" name="" height="50"></h3></label>
-			<canvas id="canvas" width="120" height="50"></canvas>
+			<label><h3>验证码：<input type="text" name="" id="checknum",height="50"  onchange="return check_checknum(this.value)"></h3><span id="checknum_result"></label>
+			<canvas id="canvas" width="150" height="50"></canvas>
  			 <a href="#" id="changeImg">看不清，换一张</a>
-			请输入图片中的数字
+		 （请区分大小写）
 			<br/>
-				<input type="checkbox" name="">阅读并接受<a href="#">《Apet网协议》</a>
+				<input type="checkbox" name="" required="required">阅读并接受<a href="#">《Apet网协议》</a>
 			</h6>
 			<br>
 			<button class="btn btn-default btn-sm" onclick="">注册</button>
@@ -46,7 +46,8 @@
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 </body>
- <script>
+    <script>
+	var str1="";
   /**生成一个随机数**/
   function randomNum(min,max){
     return Math.floor( Math.random()*(max-min)+min);
@@ -77,6 +78,7 @@
     ctx.fillRect(0,0,width,height);
     /**绘制文字**/
     var str = 'ABCEFGHJKLMNPQRSTWXY123456789';
+	str1="";
     for(var i=0; i<4; i++){
       var txt = str[randomNum(0,str.length)];
       ctx.fillStyle = randomColor(50,160);  //随机生成字体颜色
@@ -91,6 +93,7 @@
       //恢复坐标原点和旋转角度
       ctx.rotate(-deg*Math.PI/180);
       ctx.translate(-x,-y);
+	  str1+=txt;
     }
     /**绘制干扰线**/
     for(var i=0; i<8; i++){
@@ -107,6 +110,22 @@
       ctx.arc(randomNum(0,width),randomNum(0,height), 1, 0, 2*Math.PI);
       ctx.fill();
     }
+  }
+  function check_checknum(f)
+  {
+	  if(f==str1) 
+	  {
+	  	var node=document.getElementById("checknum_result");
+		  node.innerHTML="验证码正确 ";
+		  node.style.color="#0F0";
+		  return true;
+	  }
+	  else {
+	  	var node=document.getElementById("checknum_result");
+		  node.innerHTML="验证码错误 ";
+		  node.style.color="#F00";
+		  return false;
+	  }
   }
   </script>
 </html>
