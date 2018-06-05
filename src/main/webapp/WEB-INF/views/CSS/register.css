@@ -4,10 +4,6 @@ body{
 #head-c{
 	padding-bottom: 50px;
 }
-#main-div{
-	padding: 50px;
-	margin-left: 30%;
-}
 .rig{
 	font-size: small;
 	font-style: italic;
@@ -18,7 +14,4 @@ body{
 	border: 1px,solid,black;
 	width: 50em;
 	height: 3em;
-}
-.div-center{
-	margin-left: 30%;
 }

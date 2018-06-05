@@ -51,8 +51,8 @@
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">狗狗<b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="dog-adopt.html">送养信息</a></li>
-					<li><a href="dog-outadopt.html">领养信息</a></li>
+					<li><a href="dog-outadopt.html">送养信息</a></li>
+					<li><a href="dog-adopt.html">领养信息</a></li>
 					<li><a href="dog-baike.html">狗狗百科</a></li>
 					<li><a href="dog-forum.html">狗狗论坛</a></li>
 				</ul>				
@@ -60,8 +60,8 @@
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">猫咪<b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">送养信息</a></li>
-					<li><a href="#">领养信息</a></li>
+					<li><a href="cat-outadopt.html">送养信息</a></li>
+					<li><a href="cat-adopt.html">领养信息</a></li>
 					<li><a href="cat-baike.html">猫咪百科</a></li>
 					<li><a href="#">猫咪论坛</a></li>
 				</ul>				
@@ -69,8 +69,8 @@
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">其他（如兔子、仓鼠）<b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">送养信息</a></li>
-					<li><a href="#">领养信息</a></li>
+					<li><a href="other-outadopt.html">送养信息</a></li>
+					<li><a href="other-adopt.html">领养信息</a></li>
 					<li><a href="#">其他百科</a></li>
 					<li><a href="#">其他论坛</a></li>
 				</ul>				
@@ -84,6 +84,7 @@
 
 <main>	
 	<!--面包屑导航-->
+	<div class="container">
 	<div class="row clearfix">
 		<div class="col-md-2 column">
 			<ul class="nav nav-pills" id="rootnav">
@@ -99,10 +100,10 @@
 	
 	<div class="oa-text">	
 		<form method="post" action="">
-	<h4><label>*送养种类：<input type="radio" name="kind" class="btn-group"> 狗狗</input><input type="radio" name="kind" class="btn-group"> 猫咪</input><input type="radio" name="kind" class="btn-group"> 其他</input></label>
+	<h4><label>*送养种类：<input type="radio" name="kind" class="btn-group"=> 狗狗</input><input type="radio" name="kind" class="btn-group"> 猫咪</input><input type="radio" name="kind" class="btn-group"> 其他</input></label>
 	</h4>
 	<h4>
-		<label>*宠物昵称：<input type="text" name="" required="required"></label>
+		<label>*宠物昵称：<input type="text" name="placeouttitle" required="required"></label>
 	</h4>
 	<h4>
 		<label>*性别选择：<input type="radio" name="sex" class="btn-group" required="required">男</input><input type="radio" name="sex" class="btn-group">女</input></label>
@@ -123,7 +124,7 @@
 		<label>*联系方式：<input type="text" name="" required="required"></label>
 	</h4>
 	<h4>
-		<label>*详细地址：<input type="text" name="" required="required"></label>
+		<label>*详细地址：<input type="text" name="address" required="required"></label>
 	</h4>
 	<h4>
 		<label for="inputfile">上传照片:</label>
@@ -138,10 +139,10 @@
 			</div>
 		</div>
 	</label>
-		<!--<label>宠物描述：<textarea rows="5" cols="50">请描述您的宠物的性格和喜好。</textarea></label>-->
 	</h4>
 	<h4><button type="button" class="btn btn-success">发布</button></h4>
 	</form>
+	</div>
 	</div>
 </main>
 <!--页脚-->

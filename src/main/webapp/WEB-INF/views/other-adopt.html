@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>我要领养</title>
+	<title>其他领养页面</title>
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">-->
 	<link rel="stylesheet" type="text/css" href="CSS/index.css">
-	<link rel="stylesheet" type="text/css" href="CSS/adopt.css">
 	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
@@ -15,8 +15,8 @@
 <body>	
 	<div>
 		<!--公共头部开始-->
-	<header>		
-		<div class="nav navbar-fixed-top">
+	<header>	
+		<div class="nav navbar-fixed-top" id="first">
 		<ul class="nav navbar-nav ">
 			<li><a href="index.html">APet.com</a></li>
 			<li><a class="disabled">|为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
@@ -26,13 +26,12 @@
 			<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
 		</ul>
 		</div>
-
-	<div class="bj-img">
-			<img src="images/keji.jpg" width="100%" height="100%" alt="">
+	<div class="bj-img" id="second">
+			<img src="images/keji.jpg" width="100%" height="" alt="导航栏上背景图">
 		</div>
 	</header>
-
 	<!--公共头部结束-->
+
 	<!--导航栏开始-->
     <nav class="navbar navbar-default navbar-inverse" role="navigation">
     	<div class="container-fluid">
@@ -81,54 +80,74 @@
 	</div>
 	</div>
 </nav>
-<main>
-	<div class="container">
-	<div class="row clearfix">
-		<div class="col-md-2 column">
-			<ul class="nav nav-pills" id="rootnav">
-				<li>
-					 <a href="index.html">首页</a>
-				</li>
-				<li class="disabled">
-					<a href="">-->我要领养</a>
-				</li>
-			</ul>
+	<div class="row">
+		<div class="col-xs-6 col-xs-3">
+			<div class="thumbnail" id="detail">
+				<a href="other/e-adopt-1.html" data-toggle="tooltip" title="点击我查看更多详情">
+                   <img src="images/e-adopt-1.jpg" width="" height="" alt="领养兔图片">
+				<div class="caption">
+					<h4>地址：广州</h4>
+					<p>
+						年龄：1年
+						<br/>
+						发布时间：2018-05-31
+						<br/>
+						发布人描述信息：半岁的兔子，活泼好动，粘人，好喂养，会用猫砂。
+					</p>
+				</div>
+				</a>
+			</div>	
+		</div>
+		<div class="col-xs-6 col-xs-3">
+			<div class="thumbnail" id="detail">
+				<a href="other/e-adopt-2.html"><img src="images/e-adopt-2.jpg" width="" height="" alt="领养兔图片">
+				<div class="caption">
+					<h4>地址：广东广州</h4>
+					<p>
+						年龄：1年
+						<br/>
+						发布时间：2018-06-01
+						<br/>
+						发布人描述信息：黑色小兔兔一只，很健康，一只腿白色
+					</p>
+				</div>
+				</a>
+			</div>	
+		</div>
+		<div class="col-xs-6 col-xs-3">
+			<div class="thumbnail" id="detail">
+				<a href="other/e-adopt-3.html"><img src="images/e-adopt-3.jpg" width="" height="" alt="领养猫图片">
+				<div class="caption">
+					<h4>地址：上海</h4>
+					<p>
+						年龄:1年0个月
+						<br/>
+						发布时间： 2018-05-30
+						<br/>
+						发布人描述信息:赠送小仓鼠一枚 求爱心人士领养 鼠笼及鼠粮全部赠送
+					</p>
+				</div>
+				</a>
+			</div>	
+		</div>
+		<div class="col-xs-6 col-xs-3">
+			<div class="thumbnail" id="detail">
+				<a href="#"><img src="images/e-adopt-4.jpg" width="" height="" alt="领养猫图片">
+				<div class="caption">
+					<h4>地址:广东广州</h4>
+					<p>
+						年龄：1年3个月
+						<br/>
+						发布时间：2018-05-30
+						<br/>
+						发布人描述信息：送养一只兔子，一只荷兰猪，均要求自备笼子，并且要有养小宠经验
+					</p>
+				</div>
+				</a>
+			</div>	
 		</div>
 	</div>
-	<div class="oa-text">	
-		<form action="" method="post">
-		<h4><label>*领养种类：<input type="radio" name="kind" class="btn-group"> 狗狗<input type="radio" name="kind" class="btn-group"> 猫咪<input type="radio" name="kind" class="btn-group"> 其他</label>
-		</h4>
-		<h4>
-			<label>性别选择：<input type="radio" name="sex" class="btn-group">男<input type="radio" name="sex" class="btn-group">女</label>
-		</h4>
-		<h4>
-			<label>*标题:<input type="text" name="" required="required"></label>
-		</h4>
-		<h4>
-			<label>宠物年龄：<input type="number" name="" min="0" max="100" step="1">年<input type="number" name="" min="0" max="100" step="1">月 &nbsp;左右</label>
-		</h4>
-		<h4>
-			<label>*联系人姓名:<input type="text" name="" required="required"></label>
-		</h4>
-		<h4>
-			<label>*联系方式：<input type="text" name="" required="required"></label>
-		</h4>
-		<h4>
-		<label>领养描述：
-		<div class="panel panel-default" id="d-p">
-			<h5>描述你领养宠物之后会如何照顾它。</h5>		
-			<div class="panel-body">
-				<textarea rows="5" required="required"></textarea>
-			</div>
-		</div>
-		</label>
-	</h4>
-	<h4><button type="button" class="btn btn-success">发布</button></h4>
-	</form>
-	</div>
-	</div>
-</main>
+
 <!--页脚-->
 <footer class="rig">
 	<br/>
