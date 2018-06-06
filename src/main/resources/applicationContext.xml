@@ -45,6 +45,10 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
+    <!-- spring redis相关-->
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+    
+
     <!--采用自动扫描方式创建mapper bean-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="cn.edu.scnu.it.aipet.dao"/>
