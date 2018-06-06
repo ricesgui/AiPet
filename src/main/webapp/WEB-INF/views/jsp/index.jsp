@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: wangjun
+  User: wangjun + xiaogui
   Date: 2018/6/5
   Time: 上午10:15
   To change this template use File | Settings | File Templates.
@@ -40,72 +40,59 @@
 
             </ul>
         </div>
-        <!--<div class="nav navbar-fixed-top" id="first">
-        <ul class="nav navbar-nav ">
-            <li><a href="index.html">APet.com</a></li>
-            <li><a class="disabled">|为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
-            <li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
-        </ul>
-        </div>-->
-        <div class="bj-img" id="second">
-            <img src="images/keji.jpg" width="100%" height="100%" alt="导航栏上背景图">
-        </div>
     </header>
     <!--公共头部结束-->
 
     <!--导航栏开始-->
     <nav class="navbar navbar-default navbar-inverse" role="navigation">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">首页</a>
-            </div>
-            <div>
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">发布消息<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="out-adopt.html">我要送养</a></li>
-                            <li><a href="adopt.html">我要领养</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">狗狗<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#aaa">送养信息</a></li>
-                            <li><a href="dog-outadopt.html">领养信息</a></li>
-                            <li><a href="dog-baike.html">狗狗百科</a></li>
-                            <li><a href="dog-forum.html">狗狗论坛</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">猫咪<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#bbb">送养信息</a></li>
-                            <li><a href="#">领养信息</a></li>
-                            <li><a href="cat-baike.html">猫咪百科</a></li>
-                            <li><a href="#">猫咪论坛</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他（如兔子、仓鼠）<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#ccc">送养信息</a></li>
-                            <li><a href="#">领养信息</a></li>
-                            <li><a href="#">其他百科</a></li>
-                            <li><a href="#">其他论坛</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="details.html">领养须知</a></li>
-                    <li><a href="#">使用助手</a></li>
-                </ul>
-            </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">首页</a>
         </div>
-    </nav>
+        <div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">发布消息<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="out-adopt.html">我要送养</a></li>
+                    <li><a href="adopt.html">我要领养</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">狗狗<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="dog-outadopt.html">送养信息</a></li>
+                    <li><a href="dog-adopt.html">领养信息</a></li>
+                    <li><a href="dog-baike.html">狗狗百科</a></li>
+                    <li><a href="dog-forum.html">狗狗论坛</a></li>
+                </ul>               
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">猫咪<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="cat-outadopt.html">送养信息</a></li>
+                    <li><a href="cat-adopt.html">领养信息</a></li>
+                    <li><a href="cat-baike.html">猫咪百科</a></li>
+                    <li><a href="#">猫咪论坛</a></li>
+                </ul>               
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他（如兔子、仓鼠）<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="other-outadopt.html">送养信息</a></li>
+                    <li><a href="other-adopt.html">领养信息</a></li>
+                    <li><a href="#">其他百科</a></li>
+                    <li><a href="#">其他论坛</a></li>
+                </ul>               
+            </li>
+            <li><a href="details.html">领养须知</a></li>
+            <li><a href="#">使用助手</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
 
-    <!--导航栏结束-->
+<!--导航栏结束-->
     <div class="tupian">
         <img src="images/soso.jpg" width="100%" height="100%" alt="">
     </div>
@@ -158,10 +145,10 @@
                             <h2>用户登录</h2>
                             <br/>
                             <br/>
-                            <label>用户名：<input type="text" name="userName" value="请输入用户名"></label>
+                            <label>邮箱：<input type="text" name="email" value="请输入邮箱"></label>
                             <br/>
                             <br/>
-                            <label>密&nbsp;&nbsp;&nbsp;码：<input type="text" name="passWord" value="请输入密码"></label>
+                            <label>密码：<input type="text" name="password" value="请输入密码"></label>
                             <br/>
                             <br/>
                             <label><input type="checkbox" name="">记住密码</label>
@@ -176,6 +163,16 @@
             </div>
         </div>
     </div>
+    <!--xiaogui 添加Cookie-->
+            <%
+                Cookie username = new Cookie("cookie1", request.getParameter("email"));
+                Cookie password = new Cookie("cookie2", request.getParameter("password"));
+                username.setMaxAge(60 * 60 * 24);
+                password.setMaxAge(60 * 60 * 24);
+                response.addCookie(email);
+                response.addCookie(password);
+            %>
+
     <!--主体内容开始-->
     <main>
         <h3>
@@ -220,7 +217,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="dog/d-adopt-detail-3.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-3.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-3.html"  data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/d-adopt-3.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:上海</h4>
                             <p>
@@ -236,7 +234,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="dog/d-adopt-detail-4.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-4.jpg" width="" height="" alt="领养狗图片">
+                    <a href="dog/d-adopt-detail-4.html"  data-toggle="tooltip" title="点击我查看更多详情">
+                        <img src="images/d-adopt-4.jpg" width="" height="" alt="领养狗图片">
                         <div class="caption">
                             <h4>地址:天津</h4>
                             <p>
@@ -489,7 +488,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="other/e-adopt-2.html"><img src="images/e-adopt-2.jpg" width="" height="" alt="领养兔图片"></a>
+                    <a href="other/e-adopt-2.html">
+                        <img src="images/e-adopt-2.jpg" width="" height="" alt="领养兔图片"></a>
                     <div class="caption">
                         <h4>地址：广东广州</h4>
                         <p>
@@ -504,7 +504,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="other/e-adopt-3.html"><img src="images/e-adopt-3.jpg" width="" height="" alt="领养猫图片"></a>
+                    <a href="other/e-adopt-3.html">
+                        <img src="images/e-adopt-3.jpg" width="" height="" alt="领养猫图片"></a>
                     <div class="caption">
                         <h4>地址：上海</h4>
                         <p>
@@ -519,7 +520,8 @@
             </div>
             <div class="col-xs-6 col-xs-3">
                 <div class="thumbnail" id="detail">
-                    <a href="#"><img src="images/e-adopt-4.jpg" width="" height="" alt="领养猫图片"></a>
+                    <a href="other/e-adopt-4.html">
+                        <img src="images/e-adopt-4.jpg" width="" height="" alt="领养猫图片"></a>
                     <div class="caption">
                         <h4>地址:广东广州</h4>
                         <p>
@@ -544,31 +546,19 @@
         <a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
     </footer>
 </body>
-<!--<script>
+<script>
 	$(function () { $("[data-toggle='tooltip']").tooltip();
 
 	 });
 	alert("欢迎登录Apet.com!");
-</script>-->
-<script>
+</script>
+<!--<script>
     var parent=getElementByTagName("header");
     var child=getElementById("first");
     var newnode=document.createElement("div");
     var text=document.createTextNode("欢迎您，用户名，退出")；
 newnode.appendChild(text);
     parent.replaceChild(newnode,child);
-</script>
+</script>-->
+
 </html>
-<!--<div class="nav navbar-fixed-top" id="first">
-<ul class="nav navbar-nav ">
-<li><a href="index.html">APet.com</a></li>
-<li><a class="disabled">|为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-<li><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
-<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
-</ul>
-</div>
-<div class="bj-img" id="second">
-<img src="images/keji.jpg" width="100%" height="100%" alt="导航栏上背景图">
-</div>->
