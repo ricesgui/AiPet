@@ -18,8 +18,7 @@
 		<!--公共头部开始-->
 	<header>	
 		<div class="nav navbar-fixed-top" >
-		<ul class="nav navbar-nav">
-			
+		<ul class="nav navbar-nav">		
 			<li id="l1"><a class="disabled" id="first"></a></li>
 			<li id="l2"><a class="disabled" id="second"><span id="s1">为使您有更好的用户体验，建议Google浏览器全屏显示</span></a></li>
 			<li><a href="index.html"><span id="third">APet.com</span></a></li>
@@ -147,7 +146,7 @@
 		&nbsp;&nbsp;<label><a href="#">忘记密码？</a></label>
 		<br/>
 		<br/>
-		<button type="submit" class="btn btn-default" onclick="login_login">登录</button>&nbsp;&nbsp;
+		<button type="submit" class="btn btn-default" onclick="">登录</button>&nbsp;&nbsp;
 		<button class="btn btn-default"><a href="register.html">注册</a></button>
 	</form>
 	</div>
@@ -527,17 +526,20 @@
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 </body>
-<script>
+<!--<script>
 	$(function () { $("[data-toggle='tooltip']").tooltip();
 		
 	 });
 	alert("欢迎登录Apet.com!");
 </script>
-
+-->
 <script>
+	
+	function fun(){
 	//实现用户名获取后替代
 	var node = document.createElement("span");
-	var text = document.createTextNode("用户名");
+	var txt = "用户名";
+	var text = document.createTextNode(txt);
 	node.appendChild(text); 
 	var parent = document.getElementById("first");
 	parent.appendChild(node);
@@ -551,7 +553,7 @@
 	parent1.replaceChild(node1,node2);
 
 	//结束第二个提示
-
+	}
 	
 </script>
 </html>
