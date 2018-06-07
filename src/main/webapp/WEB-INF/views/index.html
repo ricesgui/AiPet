@@ -17,13 +17,15 @@
 	<div>
 		<!--公共头部开始-->
 	<header>	
-		<div class="nav navbar-fixed-top" id="first">
-		<ul class="nav navbar-nav ">
-			<li><a href="index.html">APet.com</a></li>
-			<li><a class="disabled">|为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
+		<div class="nav navbar-fixed-top" >
+		<ul class="nav navbar-nav">
+			
+			<li id="l1"><a class="disabled" id="first"></a></li>
+			<li id="l2"><a class="disabled" id="second"><span id="s1">为使您有更好的用户体验，建议Google浏览器全屏显示</span></a></li>
+			<li><a href="index.html"><span id="third">APet.com</span></a></li>
 		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
+		<ul class="nav navbar-nav navbar-right" >
+			<li ><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
 			<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
 		</ul>
 		</div>
@@ -63,7 +65,7 @@
 					<li><a href="cat-outadopt.html">送养信息</a></li>
 					<li><a href="cat-adopt.html">领养信息</a></li>
 					<li><a href="cat-baike.html">猫咪百科</a></li>
-					<li><a href="#">猫咪论坛</a></li>
+					<li><a href="cat-forum.html">猫咪论坛</a></li>
 				</ul>				
 			</li>
 			<li class="dropdown">
@@ -71,12 +73,12 @@
 				<ul class="dropdown-menu">
 					<li><a href="other-outadopt.html">送养信息</a></li>
 					<li><a href="other-adopt.html">领养信息</a></li>
-					<li><a href="#">其他百科</a></li>
-					<li><a href="#">其他论坛</a></li>
+					<li><a href="other-baike.html">其他百科</a></li>
+					<li><a href="other-forum.html">其他论坛</a></li>
 				</ul>				
 			</li>
 			<li><a href="details.html">领养须知</a></li>
-			<li><a href="#">使用助手</a></li>
+			<li><a href="help.html">使用助手</a></li>
 		</ul>
 	</div>
 	</div>
@@ -135,17 +137,17 @@
 		<h2>用户登录</h2>
 		<br/>
 		<br/>
-		<label>邮箱：<input type="text" name="email" value="请输入您的邮箱" required="required"></label>
+		<label>邮箱：<input type="text" name="email" value="请输入您的邮箱" required></label>
 		<br/>
 		<br/>
-		<label>密&nbsp;&nbsp;&nbsp;码：<input type="text" name="password" value="请输入密码" required="required"></label>
+		<label>密&nbsp;&nbsp;&nbsp;码：<input type="text" name="password" value="请输入密码" required></label>
 		<br/>
 		<br/>
 		<label><input type="checkbox" name="">记住密码</label>
 		&nbsp;&nbsp;<label><a href="#">忘记密码？</a></label>
 		<br/>
 		<br/>
-		<button type="submit" class="btn btn-default" onclick="login_login">登录</button>&nbsp;&nbsp;
+		<button type="submit" class="btn btn-default"  id="b1" onclick="login_login">登录</button>&nbsp;&nbsp;
 		<button class="btn btn-default"><a href="register.html">注册</a></button>
 	</form>
 	</div>
@@ -525,19 +527,74 @@
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 </body>
-<script>
+</html>
+<!--<script>
 	$(function () { $("[data-toggle='tooltip']").tooltip();
 		
 	 });
 	alert("欢迎登录Apet.com!");
 </script>
-<
-<!--<script>
-var parent=getElementByTagName("header");
-var child=getElementById("first");
-var newnode=document.createElement("div");
-var text=document.createTextNode("欢迎您，用户名，退出")；
-newnode.appendChild(text);
-parent.replaceChild(newnode,child);
-</script>-->
-</html>
+-->
+<script type="text/javascript">
+
+/*$.getJSON("/resources/get_name",{param:"name"},function(data){  
+//此处返回的data已经是json对象  
+  $.each(data.root,function(idx,item){  
+    if(idx==0){  
+      return true;//同continue，返回false同break  
+    }  
+    console.log("name:"+item.name+",value:"+item.value);  
+  });  
+});
+if(data==name){
+	fun();
+	}
+else
+	return;
+ 
+
+//$("button").load("resources/get_name",name);//可选的 callback 参数是 load() 方法完成后所执行的函数名称。
+$("#b1").click(function(){
+  $.get("/resources/get_name",function(data,status){
+    alert("数据: " + data + "\n状态: " + status);
+  });
+});*/
+</script>
+
+<script>
+	$("#b1").click(function(){
+  $.get("/resources/get_name",function(data,status){
+  	if(status=="success")
+  	{	fun();
+  		alert("数据: " + data + "\n状态: " + status);
+  	}
+  	else if(status=="error")
+    	{
+    		alert("Error:"+data+"\n状态:"+status);
+    		return;
+    	}
+  });
+});
+
+	function fun(){
+	//实现用户名获取后替代
+	var node = document.createElement("span");
+	string txt = data;
+	var text = document.createTextNode(txt);
+	node.appendChild(text); 
+	var parent = document.getElementById("first");
+	parent.appendChild(node);
+	//结束用户名替代
+	//实现第二个提示
+	var node1 = document.createElement("span");
+	var text1 = document.createTextNode("您已登录");
+	node1.appendChild(text1); 
+	var parent1 = document.getElementById("second");
+	var node2 = document.getElementById("s1");
+	parent1.replaceChild(node1,node2);
+
+	//结束第二个提示
+	}
+	
+</script>
+
