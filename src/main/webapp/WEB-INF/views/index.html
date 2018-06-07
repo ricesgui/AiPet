@@ -147,7 +147,7 @@
 		&nbsp;&nbsp;<label><a href="#">忘记密码？</a></label>
 		<br/>
 		<br/>
-		<button type="submit" class="btn btn-default" onclick="login_login">登录</button>&nbsp;&nbsp;
+		<button type="submit" class="btn btn-default"  id="b1" onclick="login_login">登录</button>&nbsp;&nbsp;
 		<button class="btn btn-default"><a href="register.html">注册</a></button>
 	</form>
 	</div>
@@ -527,18 +527,60 @@
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 </body>
-<script>
+</html>
+<!--<script>
 	$(function () { $("[data-toggle='tooltip']").tooltip();
 		
 	 });
 	alert("欢迎登录Apet.com!");
 </script>
+-->
+<script type="text/javascript">
+
+/*$.getJSON("/resources/get_name",{param:"name"},function(data){  
+//此处返回的data已经是json对象  
+  $.each(data.root,function(idx,item){  
+    if(idx==0){  
+      return true;//同continue，返回false同break  
+    }  
+    console.log("name:"+item.name+",value:"+item.value);  
+  });  
+});
+if(data==name){
+	fun();
+	}
+else
+	return;
+ 
+
+//$("button").load("resources/get_name",name);//可选的 callback 参数是 load() 方法完成后所执行的函数名称。
+$("#b1").click(function(){
+  $.get("/resources/get_name",function(data,status){
+    alert("数据: " + data + "\n状态: " + status);
+  });
+});*/
+</script>
 
 <script>
+	$("#b1").click(function(){
+  $.get("/resources/get_name",function(data,status){
+  	if(status=="success")
+  	{	fun();
+  		alert("数据: " + data + "\n状态: " + status);
+  	}
+  	else if(status=="error")
+    	{
+    		alert("Error:"+data+"\n状态:"+status);
+    		return;
+    	}
+  });
+});
+
 	function fun(){
 	//实现用户名获取后替代
 	var node = document.createElement("span");
-	var text = document.createTextNode("用户名");
+	string txt = data;
+	var text = document.createTextNode(txt);
 	node.appendChild(text); 
 	var parent = document.getElementById("first");
 	parent.appendChild(node);
@@ -555,4 +597,4 @@
 	}
 	
 </script>
-</html>
+
