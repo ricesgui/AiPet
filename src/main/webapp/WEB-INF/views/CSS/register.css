@@ -1,0 +1,17 @@
+body{
+	background-color: #c7c7c7;
+}
+#head-c{
+	padding-bottom: 50px;
+}
+.rig{
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	margin-top: 20px;
+}
+.div-bor{
+	border: 1px,solid,black;
+	width: 50em;
+	height: 3em;
+}

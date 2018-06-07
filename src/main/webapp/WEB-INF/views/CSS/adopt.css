@@ -1,0 +1,33 @@
+.oa-text{
+	text-align: left;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-left: 10px;
+	padding-top: 20px;
+	border: 1px solid black;
+}
+h4{
+	padding-bottom: 20px;
+}
+body{
+	background-color: #c7c7c7;
+}
+.txt-left{
+	text-align: left;
+	color: red;
+}
+.txt-center{
+	text-align: center;
+	padding: 0 200px;
+}
+.decoration{
+	list-style-type: decimal;
+}
+#clear-row{
+	padding-left: 50px;
+}
+.rootnav{
+	color: #CCC;
+	content: "->"
+	padding: 0 5px;
+}
