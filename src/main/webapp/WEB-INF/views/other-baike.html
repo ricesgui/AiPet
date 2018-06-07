@@ -1,215 +1,300 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>小宠百科</title>
+<title>其他百科</title>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">-->
 <link rel="stylesheet" type="text/css" href="CSS/index.css">
+<link rel="stylesheet" type="text/css" href="CSS/baike.css">
 <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-#son ul {
-	list-style: none;
-	padding: 0px;
-	margin: 0;
-}
-#son li:nth-child(1) {
-	float: left;
-}
-li.wzbt{
-	font-size:16px;
-	color:#000;
-}
-li.wzbt a{color:#000;}
-li.wzbt a:hover{color:#F00;}
-#cen {
-	width: 800px;
-	margin: 0px auto;
-	background-color: #FFF;
-}
-#wptp{
-	float:left;
-	margin-top:0px;
-}
-#son {
-	height: 270px;
-}
-#wpts li{
-	height:50px;
-}
-#son1 ul{list-style:none}
-</style>
+
 </head>
 <body>
 <div> 
-  <!--公共头部开始-->
-  <header>
-    <div class="nav navbar-fixed-top" id="first">
-      <ul class="nav navbar-nav ">
-        <li><a href="index.html">APet.com</a></li>
-        <li><a class="disabled">|为使您有更好的用户体验，建议Google浏览器全屏显示</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
-        <li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
-      </ul>
+      <!--公共头部开始-->
+ <header> 
+    <div class="nav navbar-fixed-top" >
+    <ul class="nav navbar-nav">
+      
+      <li id="l1"><a class="disabled" id="first"></a></li>
+      <li id="l2"><a class="disabled" id="second"><span id="s1">为使您有更好的用户体验，建议Google浏览器全屏显示</span></a></li>
+      <li><a href="index.html"><span id="third">APet.com</span></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" >
+      <li ><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</a></li>
+      <li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</a></li>
+    </ul>
     </div>
-    <div class="bj-img" id="second"> <img src="images/keji.jpg" width="100%" height="100%" alt="导航栏上背景图"> </div>
+  <div class="bj-img" id="second">
+      <img src="images/keji.jpg" width="100%" height="" alt="导航栏上背景图">
+    </div>
   </header>
-  <!--公共头部结束--> 
-  
+  <!--公共头部结束-->
+
   <!--导航栏开始-->
-  <nav class="navbar navbar-default navbar-inverse" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header"> <a class="navbar-brand" href="index.html">首页</a> </div>
-      <div>
-        <ul class="nav navbar-nav">
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">发布消息<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="out-adopt.html">我要送养</a></li>
-              <li><a href="adopt.html">我要领养</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">狗狗<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#aaa">送养信息</a></li>
-              <li><a href="dog-outadopt.html">领养信息</a></li>
-              <li><a href="dog-baike.html">狗狗百科</a></li>
-              <li><a href="dog-forum.html">狗狗论坛</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">猫咪<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#bbb">送养信息</a></li>
-              <li><a href="#">领养信息</a></li>
-              <li><a href="cat-baike.html">猫咪百科</a></li>
-              <li><a href="#">猫咪论坛</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他（如兔子、仓鼠）<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#ccc">送养信息</a></li>
-              <li><a href="#">领养信息</a></li>
-              <li><a href="#">其他百科</a></li>
-              <li><a href="#">其他论坛</a></li>
-            </ul>
-          </li>
-          <li><a href="details.html">领养须知</a></li>
-          <li><a href="#">使用助手</a></li>
-        </ul>
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">首页</a>
       </div>
-    </div>
-  </nav>
-  </head>
-  <body>
-<div id="wpt" style="margin-left:100px">
-  <h3 style="color:#F00">小宠百科</h3>
-  <hr style="height:1px;border:none;border-top:1px solid #555555;" />
-  <div id="wptp">
-  <h4><div id="wptt" class="comiis_wzzfl" style="height:50px">下级分类:&nbsp;&nbsp;</div>
-  <div id="wpts">
-   <ul>
-   <li><a href="baike/wiki-rabbit-1.html" class="xi2">小宠品种</a><span class="pipe"></span></li>
-   <li><a href="baike/wiki-rabbit-4.html" class="xi2">小宠饲养</a><span class="pipe"></span></li>
-   <li><a href="baike/wiki-cangshu-1.html" class="xi2">小宠疾病</a><span class="pipe"></span></li>
-   <li><a href="baike/wiki-rabbit-7.html" class="xi2">小宠繁殖</a></li>
-   </ul>
-   </div>
- </h4>
- </div>
- </div>
+      <div>
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">发布消息<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="out-adopt.html">我要送养</a></li>
+          <li><a href="adopt.html">我要领养</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">狗狗<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="dog-outadopt.html">送养信息</a></li>
+          <li><a href="dog-adopt.html">领养信息</a></li>
+          <li><a href="dog-baike.html">狗狗百科</a></li>
+          <li><a href="dog-forum.html">狗狗论坛</a></li>
+        </ul>       
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">猫咪<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="cat-outadopt.html">送养信息</a></li>
+          <li><a href="cat-adopt.html">领养信息</a></li>
+          <li><a href="cat-baike.html">猫咪百科</a></li>
+          <li><a href="#">猫咪论坛</a></li>
+        </ul>       
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他（如兔子、仓鼠）<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="other-outadopt.html">送养信息</a></li>
+          <li><a href="other-adopt.html">领养信息</a></li>
+          <li><a href="other-baike.html">其他百科</a></li>
+          <li><a href="#">其他论坛</a></li>
+        </ul>       
+      </li>
+      <li><a href="details.html">领养须知</a></li>
+      <li><a href="#">使用助手</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+<!--导航栏结束-->
+<div class="container">
+      <div class="jumbbotron">
+               <h3><a href="#">宠物百科</a></h3>
+            </div>  
+        <div class="row">
+            <div class="col-xs-2" >    
+            <ul class="nav nav-tabs nav-stacked" data-offset-top="125">          
+            <li class="active">
+                <a href="#" aria-expanded="true">
+                     <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>常见品种</span>
+                </a>
+              
+                <ul class="sub-menu collapse in" aria-expanded="true">
+                     <li>
+                        <a href="../baike/wiki-rabbit-1.html"">
+                           <i class="fa fa-file-text-o "></i>
+                            <span>垂耳兔</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../baike/wiki-rabbit-5.html"">
+                           <i class="fa fa-file-text-o "></i>
+                            <span>磨光兔</span>
+                        </a>
+                    </li>
+                  </ul>
+                </li>
+                    <li class="active">
+                    <a href="#" aria-expanded="true">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>常见疾病</span>
+                    </a>
+              
+                     <ul class="sub-menu collapse in" aria-expanded="true">                   
+                   
+                     <li>
+                        <a href="../baike/wiki-rabbit-2.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span> 十一月兔事与兔病防治</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../baike/wiki-rabbit-6.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>关于兔子的有用小妙方</span>
+                        </a>
+                    </li>
+                   
+                  </ul>
+                </li>
+                    <li class="active">
+                <a href="#" aria-expanded="true">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>喂养知识</span>
+                </a>
+                     <ul class="sub-menu collapse in" aria-expanded="true">                           
+                     <li>
+                        <a href="../baike/wiki-rabbit-4.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>正确饲养用具可减少兔生病</span>
+                        </a>
+                    </li>
+                      <li>
+                        <a href="../baike/wiki-cangshu-1.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>仓鼠皮肤病</span>
+                        </a>
+                    </li>
+                  </ul>
+                </li>
+                    <li class="active">
+                <a href="#" aria-expanded="true">
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-down"></i>
+                    <span>其他知识</span>
+                </a>
+                     <ul class="sub-menu collapse in" aria-expanded="true">                   
+                    <li>
+                        <a href="../baike/wiki-rabbit-3.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>宠物兔降暑小妙招</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../baike/wiki-cangshu-2.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>繁殖黑线仓鼠要注意什么</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="../baike/wiki-rabbit-7.html">
+                            <i class="fa fa-file-text-o "></i>
+                            <span>母兔假孕的原因及危害</span>
+                        </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+                    <div class="col-xs-8">      
+                         <div class="help-content">
+            <form id="search-form" action="https://coding.net/help/search.html">           
+                        <div class="header-search">
+                            <input name="q" type="text">
+                            <button type="button" onclick="doSearch()">搜索</button>
+                        </div>   
+            </form>      
+            </div>
 <div class="xld comiis_wzlist" id="cen">
   <div id="son" class="comiis_wzli cl" onmouseout="this.className='comiis_wzli cl'" onmouseover="this.className='comiis_wzli cl wzon'">
     <ul>
       <li class="wzpic"><a href="baike/wiki-rabbit-1.html" target="_blank"><img src="images/wiki_rabbit_1.jpg" alt="垂耳兔的生活习性,垂耳兔兔粮一天喂多少比较合适" class="loader"></a></li>
-      <li class="wzbt"><a href="baike/wiki-rabbit-1.html" target="_blank">垂耳兔的生活习性,垂耳兔兔粮一天喂多少比较合适</a></li>
-      <li class="wztime">
-        <label><a href="baike/wiki-rabbit-1.html" style="color:#ff8b3d;">小宠品种</a></label>
-        &nbsp;&nbsp;时间: 2018-5-3 01:45</li><br />
-      <li class="wznr">垂耳兔的生活习性 垂耳兔是最迷你、超可爱的兔子，身圆骨重、多毛。由于天生的性情温驯，加上可爱的超小体型，垂耳兔是很适合小朋友的宠物。 一、主要习性是爱乾燥 兔兔怕潮湿，喜欢清洁，且讨厌污秽。因此在饲养管 ...</li><br />
+      <li class="wzbt"  id="b1"><a href="baike/wiki-rabbit-1.html" target="_blank">垂耳兔的生活习性,垂耳兔兔粮一天喂多少比较合适</a></li>
+      <li class="wztime"  id="b1">
+   
+     时间: 2018-5-3 01:45</li><br />
+  
+      <li class="wznr" id="b1">垂耳兔的生活习性 垂耳兔是最迷你、超可爱的兔子，身圆骨重、多毛。由于天生的性情温驯，加上可爱的超小体型，垂耳兔是很适合小朋友的宠物。 一、主要习性是爱乾燥 兔兔怕潮湿，喜欢清洁，且讨厌污秽。因此在饲养管 ...</li><br />
     </ul>
   </div>
-   <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+   <hr>
   <div id="son" class="comiis_wzli cl" onmouseout="this.className='comiis_wzli cl'" onmouseover="this.className='comiis_wzli cl wzon'">
     <ul>
       <li class="wzpic"><a href="baike/wiki-cangshu-1.html" target="_blank"><img src="images/wiki_cangshu_1.jpg" alt="仓鼠皮肤病,仓鼠患上皮肤病症状及治疗" class="loader"></a></li>
-      <li class="wzbt"><a href="baike/wiki-cangshu-1.html" target="_blank"  style="">仓鼠皮肤病,仓鼠患上皮肤病症状及治疗</a></li>
-      <li class="wztime">
-        <label><a href="baike/wiki-cangshu-1.html" style="color:#ff8b3d;">小宠疾病</a></label>
-        &nbsp;&nbsp;时间: 2018-2-23 23:30</li><br />
-      <li class="wznr">仓鼠患上皮肤病症状及治疗   仓鼠 皮肤病  症状： 皮肤出现红肿及脱毛的情况。 特征： 爱好清洁的仓鼠，每天都会自行冲凉数次。若居住环境潮湿或肮脏，便很容易患上皮肤病或出现甩毛之情况。仓鼠一旦患上皮肤病，整 ...</li><br />
+      <li class="wzbt"><a href="baike/wiki-cangshu-1.html" target="_blank"  id="b1">仓鼠皮肤病,仓鼠患上皮肤病症状及治疗</a></li>
+      <li class="wztime"  id="b1">
+      
+       时间: 2018-2-23 23:30</li><br />
+      <li class="wznr"  id="b1">仓鼠患上皮肤病症状及治疗   仓鼠 皮肤病  症状： 皮肤出现红肿及脱毛的情况。 特征： 爱好清洁的仓鼠，每天都会自行冲凉数次。若居住环境潮湿或肮脏，便很容易患上皮肤病或出现甩毛之情况。仓鼠一旦患上皮肤病，整 ...</li><br />
     </ul>
   </div>
-   <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+   <hr>
   <div id="son" class="comiis_wzli cl" onmouseout="this.className='comiis_wzli cl'" onmouseover="this.className='comiis_wzli cl wzon'">
     <ul>
       <li class="wzpic"><a href="baike/wiki-rabbit-2.html" target="_blank"><img src="images/wiki_rabbit_2.jpg" alt="钢琴兔宠物兔粮算好兔粮吗,十一月兔事与兔病防治" class="loader"></a></li>
-      <li class="wzbt"><a href="baike/wiki-rabbit-2.html" target="_blank"  style="">钢琴兔宠物兔粮算好兔粮吗,十一月兔事与兔病防治</a></li>
-      <li class="wztime">
-        <label><a href="baike/wiki-cangshu-1.html" style="color:#ff8b3d;">小宠疾病</a></label>
-        &nbsp;&nbsp;时间: 2018-2-23 23:10</li><br />
-      <li class="wznr">十一月兔事与兔病防治 本月是立冬、小雪两个节气到来的时间，标志着冬季开始了。虽然初冬的气候不是很冷，但是中午与早晚的温差大， 兔 子易感冒和患病。 一、御寒要早搞 由于温差大和随时有寒流侵袭，兔舍必须及早 ...</li><br />
+      <li class="wzbt"  id="b1"><a href="baike/wiki-rabbit-2.html" target="_blank">钢琴兔宠物兔粮算好兔粮吗,十一月兔事与兔病防治</a></li>
+      <li class="wztime"  id="b1">
+   时间: 2018-2-23 23:10</li><br />
+      <li class="wznr"  id="b1">十一月兔事与兔病防治 本月是立冬、小雪两个节气到来的时间，标志着冬季开始了。虽然初冬的气候不是很冷，但是中午与早晚的温差大， 兔 子易感冒和患病。 一、御寒要早搞 由于温差大和随时有寒流侵袭，兔舍必须及早 ...</li><br />
     </ul>
   </div>
-   <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+   <hr>
   <div id="son" class="comiis_wzli cl" onmouseout="this.className='comiis_wzli cl'" onmouseover="this.className='comiis_wzli cl wzon'">
     <ul>
       <li class="wzpic"><a href="baike/wiki-rabbit-3.html" target="_blank"><img src="images/wiki_rabbit_3.jpg" alt="宠物兔夏季防暑降温小妙招,宠物兔降暑小妙招" class="loader"></a></li>
-      <li class="wzbt"><a href="baike/wiki-rabbit-3.html" target="_blank"  style="">宠物兔夏季防暑降温小妙招,宠物兔降暑小妙招</a></li>
-      <li class="wztime">
-        <label><a href="baike/wiki-cangshu-1.html" style="color:#ff8b3d;">小宠疾病</a></label>
-        &nbsp;&nbsp;时间: 2018-2-23 22:50</li><br />
-      <li class="wznr">宠物兔降暑小妙招   中国白兔(详情介绍) 夏季天气炎热，宠物兔长着厚厚的皮毛，温度散发不出去很容易导致中暑，主人会在夏季为宠物兔降温，但是宠物兔又很容易着凉，下面小编教你在夏季，为宠物兔正确降温的方法。  ...</li><br />
+      <li class="wzbt"  id="b1"><a href="baike/wiki-rabbit-3.html" target="_blank"  style="">宠物兔夏季防暑降温小妙招,宠物兔降暑小妙招</a></li>
+      <li class="wztime"  id="b1">
+       时间: 2018-2-23 22:50</li><br />
+      <li class="wznr"  id="b1">宠物兔降暑小妙招   中国白兔(详情介绍) 夏季天气炎热，宠物兔长着厚厚的皮毛，温度散发不出去很容易导致中暑，主人会在夏季为宠物兔降温，但是宠物兔又很容易着凉，下面小编教你在夏季，为宠物兔正确降温的方法。  ...</li><br />
     </ul>
   </div>
-   <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+   <hr>
   <div id="son" class="comiis_wzli cl" onmouseout="this.className='comiis_wzli cl'" onmouseover="this.className='comiis_wzli cl wzon'">
     <ul>
       <li class="wzpic"><a href="baike/wiki-rabbit-4.html" target="_blank"><img src="images/wiki_rabbit_4.jpg" alt="饲养环境会影响兔兔呼吸系统" class="loader"></a></li>
-      <li class="wzbt"><a href="baike/wiki-rabbit-4.html" target="_blank"  style="">饲养环境会影响兔兔呼吸系统</a></li>
-      <li class="wztime">
-        <label><a href="baike/wiki-rabbit-4.html" style="color:#ff8b3d;">小宠饲养</a></label>
-        &nbsp;&nbsp;时间: 2018-2-23 21:50</li><br />
-      <li class="wznr">正确饲养用具可减少兔生病   白兔 用正确合适的用具来养兔兔，可以避免兔兔的很多问题。例如很多兔友用买兔兔送的笼子养兔兔，这是不合适的，因为这个笼子非常的狭窄，兔兔在里面很难受，再加上面对一个新的环境，很 ...</li><br />
+      <li class="wzbt"  id="b1"><a href="baike/wiki-rabbit-4.html" target="_blank"  style="">饲养环境会影响兔兔呼吸系统</a></li>
+      <li class="wztime"  id="b1">
+      
+      时间: 2018-2-23 21:50</li><br />
+      <li class="wznr"  id="b1">正确饲养用具可减少兔生病   白兔 用正确合适的用具来养兔兔，可以避免兔兔的很多问题。例如很多兔友用买兔兔送的笼子养兔兔，这是不合适的，因为这个笼子非常的狭窄，兔兔在里面很难受，再加上面对一个新的环境，很 ...</li><br />
     </ul>
   </div>
-   <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+   <hr>
   <div id="son" class="comiis_wzli cl" onmouseout="this.className='comiis_wzli cl'" onmouseover="this.className='comiis_wzli cl wzon'">
     <ul>
       <li class="wzpic"><a href="baike/wiki-cangshu-2.html" target="_blank"><img src="images/wiki_cangshu_2.jpg" alt="繁殖黑线仓鼠要注意什么,黑线仓鼠好动易受伤怎么办" class="loader"></a></li>
-      <li class="wzbt"><a href="baike/wiki-cangshu-2.html" target="_blank"  style="">繁殖黑线仓鼠要注意什么,黑线仓鼠好动易受伤怎么办</a></li>
-      <li class="wztime">
-        <label><a href="baike/wiki-rabbit-4.html" style="color:#ff8b3d;">小宠饲养</a></label>
-        &nbsp;&nbsp;时间: 2018-2-23 21:30</li><br />
-      <li class="wznr">繁殖黑线仓鼠要注意什么 饲养黑线仓鼠是一件快乐的事情，但是繁殖需要计划性，在计划之内你的生活会充满乐趣，但如果是意外或是非计划之内的繁殖，便会让饲主极度困扰。但无论你是否有计划性来让黑线仓鼠繁衍下一代 ...</li><br />
+      <li class="wzbt" id="b1"><a href="baike/wiki-cangshu-2.html" target="_blank"  style="">繁殖黑线仓鼠要注意什么,黑线仓鼠好动易受伤怎么办</a></li>
+      <li class="wztime" id="b1">
+     
+        时间: 2018-2-23 21:30</li><br />
+      <li class="wznr" id="b1">繁殖黑线仓鼠要注意什么 饲养黑线仓鼠是一件快乐的事情，但是繁殖需要计划性，在计划之内你的生活会充满乐趣，但如果是意外或是非计划之内的繁殖，便会让饲主极度困扰。但无论你是否有计划性来让黑线仓鼠繁衍下一代 ...</li><br />
     </ul>
   </div>
-   <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+   <hr>
   <div id="son" class="comiis_wzli cl" onmouseout="this.className='comiis_wzli cl'" onmouseover="this.className='comiis_wzli cl wzon'">
     <ul>
       <li class="wzpic"><a href="baike/wiki-rabbit-5.html" target="_blank"><img src="images/wiki_rabbit_5.jpg" alt="磨光兔的品种简介,如何给磨光兔喂牛奶" class="loader"></a></li>
-      <li class="wzbt"><a href="baike/wiki-rabbit-5.html" target="_blank"  style="">磨光兔的品种简介,如何给磨光兔喂牛奶</a></li>
-      <li class="wztime">
-        <label><a href="baike/wiki-rabbit-4.html" style="color:#ff8b3d;">小宠饲养</a></label>
-        &nbsp;&nbsp;时间: 2018-2-23 21:10</li><br />
-      <li class="wznr">宠物兔品种介绍——磨光兔 磨光兔 磨光兔原产于英格兰，体型非常娇小，可说是真正的“迷你兔”。由于已成为固定的品种，因此不会如夜市出售的“迷你兔”般长大。 一、挑选 看体格：体格发育良好的幼兔身体匀称，肌肉 ...</li><br />
+      <li class="wzbt"  id="b1"><a href="baike/wiki-rabbit-5.html" target="_blank"  style="">磨光兔的品种简介,如何给磨光兔喂牛奶</a></li>
+      <li class="wztime"  id="b1">
+        
+       时间: 2018-2-23 21:10</li><br />
+      <li class="wznr" id="b1">宠物兔品种介绍——磨光兔 磨光兔 磨光兔原产于英格兰，体型非常娇小，可说是真正的“迷你兔”。由于已成为固定的品种，因此不会如夜市出售的“迷你兔”般长大。 一、挑选 看体格：体格发育良好的幼兔身体匀称，肌肉 ...</li><br />
     </ul>
   </div>
-   <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+   <hr>
   <div id="son1" class="comiis_wzli cl" onmouseout="this.className='comiis_wzli cl'" onmouseover="this.className='comiis_wzli cl wzon'">
     <ul>
-      <li class="wzbt"><a href="baike/wiki-rabbit-6.html" target="_blank"  style="">如何选择一只健康的兔子,兔子成年需要多久</a></li>
-      <li class="wztime">
-        <label><a href="baike/wiki-rabbit-4.html" style="color:#ff8b3d;">小宠饲养</a></label>
-        &nbsp;&nbsp;时间: 2018-2-23 20:50</li>
-      <li class="wznr">关于兔子的有用小妙方 垂耳兔(详情介绍) 每一只兔子都会面临着死亡 ，你知道吗？兔子的寿命比狗狗还要更短一些，一般在7年左右，如果你的兔子生病了或者不幸死亡了，这个时候应该怎么做呢？ 如果兔子必须留在兽医那 ...</li>
+      <li class="wzbt" id="b1"><a href="baike/wiki-rabbit-6.html" target="_blank"  style="">如何选择一只健康的兔子,兔子成年需要多久</a></li>
+      <li class="wztime" id="b1">
+      
+       时间: 2018-2-23 20:50</li>
+      <li class="wznr" id="b1">关于兔子的有用小妙方 垂耳兔(详情介绍) 每一只兔子都会面临着死亡 ，你知道吗？兔子的寿命比狗狗还要更短一些，一般在7年左右，如果你的兔子生病了或者不幸死亡了，这个时候应该怎么做呢？ 如果兔子必须留在兽医那 ...</li>
     </ul>
   </div>
-</div>
-<hr style="height:1px;border:none;border-top:1px solid #555555;" />
+    <hr>
+                            </article>
+                        </div>
+                    </section>
+                    <div class="unfixed clearfix">
+                        <div class="pull-right">
+                            <span>问题仍未解决？</span>
+                            <a href="javascript:" class="ask-help">问题反馈</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!--页脚-->
 <footer class="rig"> <a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved. </footer>
 </body>
