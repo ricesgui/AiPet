@@ -5,6 +5,7 @@ import cn.edu.scnu.it.aipet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
@@ -15,7 +16,7 @@ public class loginController {
     @Autowired
     private UserService userService = null;
 
-    @RequestMapping("/loginEvent")
+    @RequestMapping(value = "/loginEvent",method =RequestMethod.POST)
     public ModelAndView judge(String email, String password, HttpSession session) {
         ModelAndView mv = new ModelAndView();
         User user = userService.selectUser(email);
