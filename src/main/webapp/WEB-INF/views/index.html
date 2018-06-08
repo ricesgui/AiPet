@@ -538,44 +538,24 @@
 -->
 <script type="text/javascript">
 
-/*$.getJSON("/resources/get_name",{param:"name"},function(data){
+$.getJSON("/resources/get_name",function(data){
 //此处返回的data已经是json对象  
-  $.each(data.root,function(idx,item){  
-    if(idx==0){  
-      return true;//同continue，返回false同break  
-    }  
-    console.log("name:"+item.name+",value:"+item.value);  
+  $.each(data.name,function(index){  
+   alert("name:"+data.name);  
   });  
 });
-if(data==name){
-	fun();
-	}
-else
-	return;
- 
 
+ 
+/*
 //$("button").load("resources/get_name",name);//可选的 callback 参数是 load() 方法完成后所执行的函数名称。
 $("#b1").click(function(){
   $.get("/resources/get_name",function(data,status){
     alert("数据: " + data + "\n状态: " + status);
   });
-});
+});*/
 </script>
 
 <script>
-	$("#b1").click(function(){
-  $.get("/resources/get_name",function(data,status){
-  	if(status=="success")
-  	{	fun();
-  		alert("数据: " + data + "\n状态: " + status);
-  	}
-  	else if(status=="error")
-    	{
-    		alert("Error:"+data+"\n状态:"+status);
-    		return;
-    	}
-  });
-});
 
 	function fun(){
 	//实现用户名获取后替代
