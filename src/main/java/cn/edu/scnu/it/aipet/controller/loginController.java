@@ -29,8 +29,8 @@ public class loginController {
             mv.setViewName("errorLogin");
             return mv;
         }
-        //session.setAttribute("user", user);
         session.setAttribute("name", user.getName());
+        session.setAttribute("password",user.getPassword());
         mv.setViewName("redirect:/views/index.html");
         return mv;
     }
