@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30b796dd-6ed7-465a-8622-bdc91d047510" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/FileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="188">
+              <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,8 +38,26 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="135" column="51" lean-forward="true" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
+            <state relative-caret-position="99">
+              <caret line="48" column="53" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="out-adopt.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/out-adopt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-112">
+              <caret line="132" column="9" lean-forward="true" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adopt.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adopt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="115" column="86" lean-forward="true" selection-start-line="115" selection-start-column="86" selection-end-line="115" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -49,22 +68,6 @@
             <state relative-caret-position="222">
               <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/js/register.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1042" />
           </provider>
         </entry>
       </file>
@@ -80,11 +83,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/help.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,25 +95,28 @@
       <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+            <state relative-caret-position="218">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="353">
+              <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/FileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
               <folding>
-                <element signature="e#3489#3524#0" expanded="true" />
-                <element signature="e#3567#3601#0" expanded="true" />
-                <element signature="e#3650#3690#0" expanded="true" />
-                <element signature="e#3738#3777#0" expanded="true" />
-                <element signature="e#3825#3864#0" expanded="true" />
-                <element signature="e#4197#4216#0" expanded="true" />
-                <element signature="e#4303#4318#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,8 +135,8 @@
         <option value="dispatcher" />
         <option value="Interface" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -152,6 +153,7 @@
       <find>json</find>
       <find>jackson</find>
       <find>用户登录</find>
+      <find>送养</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -204,9 +206,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/sessionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/resourcesController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/pojo/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/other/getJson.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
@@ -214,6 +214,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/getjson.html" />
         <option value="$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adopt.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/FileController.java" />
       </list>
     </option>
   </component>
@@ -481,6 +485,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -825,7 +830,7 @@
       <workItem from="1528120947903" duration="3976000" />
       <workItem from="1528158065133" duration="14026000" />
       <workItem from="1528184744618" duration="20759000" />
-      <workItem from="1528291083685" duration="24810000" />
+      <workItem from="1528291083685" duration="31485000" />
     </task>
     <task id="LOCAL-00001" summary="王俊:搭框架">
       <created>1528073731693</created>
@@ -953,11 +958,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528425992483</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="王俊:主页的登录大版块添加处理链接">
+      <created>1528427155007</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1528427155007</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86467000" />
+    <option name="totallyTimeSpent" value="93142000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -991,10 +1003,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32934132" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49713877" weight="0.32934132" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44610777" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44610777" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32934132" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32934132" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -1033,35 +1045,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="王俊:主页的登录大版块添加处理链接" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.1.4.RELEASE/spring-beans-4.1.4.RELEASE.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="212" selection-start-line="212" selection-end-line="212" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/pojo/ReplyPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/pojo/PrimaryPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/pojo/Pet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49">
@@ -1307,13 +1290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="33" column="68" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/registerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -1341,13 +1317,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -1413,17 +1382,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="135" column="51" lean-forward="true" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
+        <state relative-caret-position="188">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="99">
+          <caret line="48" column="53" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adopt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="115" column="86" lean-forward="true" selection-start-line="115" selection-start-column="86" selection-end-line="115" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/out-adopt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="132" column="9" lean-forward="true" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

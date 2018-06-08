@@ -40,7 +40,7 @@
     <load-on-startup>2</load-on-startup>
     <!--MultipartResolver参数 -->
     <multipart-config>
-      <location>e:/mvc/uploads/</location>
+      <location>/Users/wangjun/Documents/tmp/upload</location>
       <max-file-size>5242880</max-file-size>
       <max-request-size>10485760</max-request-size>
       <file-size-threshold>0</file-size-threshold>

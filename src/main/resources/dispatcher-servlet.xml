@@ -28,5 +28,8 @@
           p:prefix="/WEB-INF/views/" p:suffix=".html" p:order="10"/>
     <!--注解事务
     <tx:annotation-driven transaction-manager="transactionManager"/>
-    -->
+
+    --><bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+
+
 </beans>
