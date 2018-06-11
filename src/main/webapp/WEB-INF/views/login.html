@@ -16,7 +16,7 @@
 	<span class="pull-left"><a href="index.html"><h2>首页</h2></a></span>
 	</div>
 <div class="container">
-	<form method="post" action="/views/loginEvent">
+	<form method="post" action="/views/loginEvent"> <!---->
 		<label class=""><h1>用户登录</h1></label>
 		<div class="div-bor">
 		<label><h3>邮箱：<input type="text" name="email" value="" required="required"></h3></label>请输入您的邮箱
@@ -25,12 +25,15 @@
 		<label><h3>密码：<input type="password" name="password" value="" required="required"></h3></label>请输入密码
 		</div>
 		<br/>
-		<div ><span id=""><a href="#">忘记密码？</a>|&nbsp;<a href="register.html">免费注册</a></span>
+		<div ><span id=""><input type="checkbox" name="" onselect="remeberUser()">记住密码&nbsp;|&nbsp;<a href="#">忘记密码？</a></span>
 		</div>
 		<br/>
-		<button type="submit" class="btn btn-default" onclick="login_login">登录</button>&nbsp;&nbsp;
+		<button type="submit" class="btn btn-default" onclick="login_login()">登录</button>&nbsp;&nbsp;
 		<button class="btn btn-default"><a href="register.html">注册</a></button>
 	</form>
+
+</div>
+
 </div>
 
 <!--页脚-->
@@ -38,6 +41,27 @@
 	<br/>
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
-</body>
 
+<script src="js/login.js"></script>
+</body>
 </html>
+<script>
+	// 在点击登录时记录用户名信息
+function  remeberUser()
+{
+    var storage = window.localStorage;
+    storage["loginname"] = $("#email").val();
+    storage["bj"] =  "yes"; 
+    alert(email);
+}
+
+// 页面加载时判断缓存中isstorename是否为yes，是则取出用户名
+window.onload = function()
+{
+//判断是否存在过用户
+var storage = window.localStorage;
+if("yes" == storage["bj"])
+{               $("#email").val(storage["loginname"]);
+ }
+}
+</script>

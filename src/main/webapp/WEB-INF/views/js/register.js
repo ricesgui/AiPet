@@ -82,4 +82,34 @@
 	  }
   }
 
-
+/*
+//设置cookie
+function setCookie(name,cvalue,exdays){
+  var d = new Date();
+  d.setTime(d.getTime()+(exdays*24*60*60*1000));
+  var expires = "expires="+d.toGMTString();
+  document.cookie = name+"="+cvalue+"; "+expires;
+}
+function getCookie(name){
+  var name = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+    var c = ca[i].trim();
+    if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+  }
+  return "";
+}
+function checkCookie(){
+  setCookie("name",user,30);
+  var user=getCookie("name");
+  if (user!=""){
+    alert("欢迎 " + user + " 再次访问");
+  }
+  else {
+    user = prompt("请输入你的名字:","");
+      if (user!="" && user!=null){
+        setCookie("name",user,30);
+        alert("欢迎 " + user + " 再次访问");
+      }
+  }
+}*/

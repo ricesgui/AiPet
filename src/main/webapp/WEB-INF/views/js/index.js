@@ -6,7 +6,7 @@
 
 
 	function login_login(){ 
-		var username=$('.username').val();
+		var email=$('.email').val();
 		var password=$('.password').val();
 		$.post("/resources/get_name",{username:username,password:password},function(date){
 			if(date.status==100){
@@ -25,7 +25,7 @@
 		})
 	}
 */
-	
+
 	//实现用户名获取后替代
 	var node = document.createElement("span");
 	

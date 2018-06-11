@@ -1,4 +1,4 @@
-<!--xiaogui-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -151,7 +151,7 @@
 		<button class="btn btn-default"><a href="register.html">注册</a></button>
 	</form>
 	</div>
-	</div>y
+	</div>
 	</div>
 	</div>
 	</div>
@@ -200,7 +200,7 @@
 		</div>
 		<div class="col-xs-6 col-xs-3">
 			<div class="thumbnail" id="detail">
-				<a href="dog/d-adopt-3.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-3.jpg" width="" height="" alt="领养狗图片">
+				<a href="dog/d-adopt-detail-3.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-3.jpg" width="" height="" alt="领养狗图片">
 				<div class="caption">
 					<h4>地址:上海</h4>
 					<p>
@@ -216,7 +216,7 @@
 		</div>
 		<div class="col-xs-6 col-xs-3">
 			<div class="thumbnail" id="detail">
-				<a href="dog/d-adopt-4.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-4.jpg" width="" height="" alt="领养狗图片">
+				<a href="dog/d-adopt-detail-4.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-4.jpg" width="" height="" alt="领养狗图片">
 				<div class="caption">
 					<h4>地址:天津</h4>
 					<p>
@@ -234,7 +234,7 @@
 	<div class="row">
 		<div class="col-xs-6 col-xs-3">
 			<div class="thumbnail" id="detail">
-				<a href="dog/d-apopt-5.html"  data-toggle="tooltip" title="点击我查看更多详情">
+				<a href="dog/d-apopt-detail-5.html"  data-toggle="tooltip" title="点击我查看更多详情">
 					<img src="images/d-adopt-5.jpg" width="" height="" alt="领养狗图片">
 				<div class="caption">
 					<h4>地址:武汉</h4>
@@ -536,12 +536,16 @@
 	alert("欢迎登录Apet.com!");
 </script>
 -->
-<script type="text/javascript">
+<script>
+//对于服务器返回的JSON字符串，如果jquery异步请求将type设为“json”，或者利用$.getJSON()方法获得服务器返回，那么就不需要eval（）方法了，因为这时候得到的结果已经是json对象了，只需直接调用该对象即可
 
 $.getJSON("/resources/get_name",function(data){
 //此处返回的data已经是json对象  
-  $.each(data.name,function(index){  
-   alert("name:"+data.name);  
+  $.each(data.name,function(index){  //each为遍历函数
+  	if (name==data.name) {//邮箱存在则获取用户名
+
+  	}
+   alert("name:"+data.name);//显示用户名  
   });  
 });
 
@@ -553,14 +557,12 @@ $("#b1").click(function(){
     alert("数据: " + data + "\n状态: " + status);
   });
 });*/
-</script>
 
-<script>
 
 	function fun(){
 	//实现用户名获取后替代
 	var node = document.createElement("span");
-	string txt = data;
+	var txt = data.name;
 	var text = document.createTextNode(txt);
 	node.appendChild(text); 
 	var parent = document.getElementById("first");
