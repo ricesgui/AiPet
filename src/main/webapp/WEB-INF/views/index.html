@@ -21,7 +21,7 @@
 		<div class="nav navbar-fixed-top" >
 		<ul class="nav navbar-nav">
 			
-			<li id="l1"><a class="disabled" ><span id="first"></span></a></li>
+			<li id="l1"><a class="disabled" id="first"><span id="txtHint"></span></a></li>
 			<li id="l2"><a class="disabled" id="second"><span id="s1">为使您有更好的用户体验，建议Google浏览器全屏显示</span></a></li>
 			<li><a href="index.html"><span id="third">APet.com</span></a></li>
 		</ul>
@@ -550,14 +550,7 @@
   });  
 });
 
- 
 
-//$("button").load("resources/get_name",name);//可选的 callback 参数是 load() 方法完成后所执行的函数名称。
-$("#b1").click(function(){
-  $.get("/resources/get_name",function(data,status){
-    alert("数据: " + data + "\n状态: " + status);
-  });
-});*/
 
 	/*$.getJSON("/resources/get_name",function(str)
 	{
