@@ -27,7 +27,7 @@ public class registerController {
         user.setPassword(password);
         userService.insertUser(user);
         mv.addObject("user",user);
-        mv.setViewName("index");
+        mv.setViewName("redirect:/views/index.html");
         return mv;
     }
 }
