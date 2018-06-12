@@ -34,5 +34,14 @@ function showName(str)
             }
             xmlhttp.open("GET","/resources/get_name",true);
             xmlhttp.send();
+            //实现第二个提示
+			var node1 = document.createElement("span");
+			var text1 = document.createTextNode("您已登录");
+			node1.appendChild(text1); 
+			var parent1 = document.getElementById("second");
+			var node2 = document.getElementById("s1");
+			parent1.replaceChild(node1,node2);
+			var node3 = document.getElementById("third");
+			node3.innerHTML="退出";
         }
       window.onload=showName;//不要括号
