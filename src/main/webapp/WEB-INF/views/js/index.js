@@ -1,8 +1,10 @@
 
-	$(function () { $("[data-toggle='tooltip']").tooltip();
+	/*$(function () { $("[data-toggle='tooltip']").tooltip();
 		
 	 });
 	alert("欢迎登录Apet.com!");
+*/
+
 
 function showName(str)
         {
@@ -41,6 +43,27 @@ function showName(str)
 			parent1.replaceChild(node1,node2);
 			var node3 = document.getElementById("third");
 			node3.innerHTML="退出";
+            var node4 = document.getElementById("four");
+            node4.href = "login.html";
+
+            $("#third").click(function logout(){
+            $.ajax({ 
+                    url: "",  // 后台地址
+                    type:"POST", 
+                    dataType:"json", 
+                    data:1,  //自己需要传递的数据 {}
+                    success: function(data){
+                    //成功
+                    //window.location.href ="xx.com"; 跳转页面
+                    //或者处理其他注销后的逻辑
+
+                                },
+                                error:function(){
+                   //出错
+                }
+                            }); 
+            });
+
 			$("#yincang").hide();
     		$("#div-m").hide();
  			var im = document.getElementById("denglu");
@@ -52,3 +75,30 @@ function showName(str)
             
         }
       window.onload=showName;//不要括号
+
+   /*   function logout()
+      {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+         xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                { 
+                    var log = {"type":"1"};
+                    var myJSON = JSON.stringify(log);
+                   
+                }
+            }
+            xmlhttp.open("POST","url",true);
+            xmlhttp.send();
+}*/
+ 
