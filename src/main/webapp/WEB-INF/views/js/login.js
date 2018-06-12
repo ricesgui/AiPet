@@ -16,7 +16,7 @@
 				alert('您的账号或者密码错误');
 			}          
 		})
-	}*/
+	}
 	// 在点击登录时记录用户名信息
 function  remeberUser()
 {
@@ -34,4 +34,4 @@ window.onload = function()
 	{              
 	 	$("#password").val(storage["loginpassword"]);
 	}
-}
+}*/

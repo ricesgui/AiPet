@@ -23,11 +23,38 @@
 				alert('您的账号或者密码错误');
 			}          
 		})
-	}
-*/
+	}*/
+$.getJSON("/resources/get_name",function(data){
+//此处返回的data已经是json对象  
+  $.each(data.name,function(index){  //each为遍历函数
+  	if (name==data.name) {//邮箱存在则获取用户名
+
+  	}
+   alert("name:"+data.name);//显示用户名  
+  });  
+});
+	
+/*var txt = '{"user":['+'{ "name":"xiaogui" , "password":"123456" ,"email":"dengxiaogui@163.com"},' +
+'{ "name":"wangjun" , "password":"123456" },'+
+'{ "name":"jiayi" , "password":"123456" }]}';
+
+
+var obj = eval ("(" + txt + ")");
+
+alert(obj.user[0].name);
+var text = '"'+obj.user[0].name+'"';
+var t = document.createTextNode(text);
+alert(t.value);
+var parent= document.getElementById("first");
+var node = document.createElement("span");
+node.appendChild(t);
+//alert(node.value);
+
+parent.appendChild(node);
+//document.getElementById("password").innerHTML=obj.user[0].password;
 
 	//实现用户名获取后替代
-	var node = document.createElement("span");
+	/*var node = document.createElement("span");
 	
 	var txt="用户名";
 	var text = document.createTextNode(txt);
@@ -45,5 +72,5 @@
 
 	//结束第二个提示
 	
-	
+	*/
 
