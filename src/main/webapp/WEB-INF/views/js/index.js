@@ -1,11 +1,9 @@
 
-	/*$(function () { $("[data-toggle='tooltip']").tooltip();
+	$(function () { $("[data-toggle='tooltip']").tooltip();
 		
 	 });
 	alert("欢迎登录Apet.com!");
 
-
-*/
 function showName(str)
         {
             var xmlhttp;
@@ -43,5 +41,8 @@ function showName(str)
 			parent1.replaceChild(node1,node2);
 			var node3 = document.getElementById("third");
 			node3.innerHTML="退出";
+			
+    		$("#denglu").hide();
+ 			
         }
       window.onload=showName;//不要括号

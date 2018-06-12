@@ -131,10 +131,10 @@
 	</div>	
 
 <!--登录界面-->
-	<div class="row">
-	<div class="col-md-3" >
+	
+	<div class="col-md-3" id="denglu">
 		<div id="div-m">
-	<form method="post" action="/views/loginEvent">
+	<form  method="post" action="/views/login_in">
 		<h2>用户登录</h2>
 		<br/>
 		<br/>
@@ -153,10 +153,10 @@
 	</form>
 	</div>
 	</div>
+	
 	</div>
 	</div>
-	</div>
-</div>
+
 <!--主体内容开始-->
 <main>
 	<h3>
@@ -530,55 +530,5 @@
 </footer>
 </body>
 </html>
-<!--<script>
-	$(function () { $("[data-toggle='tooltip']").tooltip();
-		
-	 });
-	alert("欢迎登录Apet.com!");
-</script>
--->
-<script>
-//对于服务器返回的JSON字符串，如果jquery异步请求将type设为“json”，或者利用$.getJSON()方法获得服务器返回，那么就不需要eval（）方法了，因为这时候得到的结果已经是json对象了，只需直接调用该对象即可
 
-/*$.getJSON("/resources/get_name",function(data){
-//此处返回的data已经是json对象  
-  $.each(data.name,function(index){  //each为遍历函数
-  	if (name==data.name) {//邮箱存在则获取用户名
-
-  	}
-   alert("name:"+data.name);//显示用户名  
-  });  
-});
-
-
-
-	/*$.getJSON("/resources/get_name",function(str)
-	{
-		if (str==null) {
-			alert("请输入正确的用户名和密码！")
-		}
-		else {fun();return;}
-	});
-
-	function fun(){
-	//实现用户名获取后替代
-	var node = document.createElement("span");
-	var txt = data.name;
-	var text = document.createTextNode(txt);
-	node.appendChild(text); 
-	var parent = document.getElementById("first");
-	parent.appendChild(node);
-	//结束用户名替代
-	//实现第二个提示
-	var node1 = document.createElement("span");
-	var text1 = document.createTextNode("您已登录");
-	node1.appendChild(text1); 
-	var parent1 = document.getElementById("second");
-	var node2 = document.getElementById("s1");
-	parent1.replaceChild(node1,node2);
-
-	//结束第二个提示
-	}
-	*/
-</script>
 
