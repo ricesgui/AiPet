@@ -29,10 +29,11 @@
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
                     var obj =JSON.parse(xmlhttp.responseText);
-                    document.getElementById("txtHint").innerHTML=obj.tname;
+                    document.getElementById("txtHint").innerHTML=obj.user_name;
                 }
             }
-            xmlhttp.open("GET","/resources/get_name",true);
+            xmlhttp.open("POST","/resources/get_name",true);
+
             xmlhttp.send();
         }
         window.onload=showName;//不要括号

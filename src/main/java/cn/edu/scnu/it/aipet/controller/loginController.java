@@ -33,9 +33,9 @@ public class loginController {
             mv.setView(new MappingJackson2JsonView());
             return mv;
         }
-        user.setPassword("");
-        session.setAttribute("user", user.getName());
+        session.setAttribute("user_name", user.getName());
         mv.setViewName("redirect:/views/index.html");
+        System.out.println(user.getName()+":login success!");
         return mv;
     }
     @RequestMapping(value = "/log_out",method = RequestMethod.POST)

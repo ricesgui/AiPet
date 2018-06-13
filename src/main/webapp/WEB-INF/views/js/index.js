@@ -31,7 +31,7 @@ function showName(str)
                     var obj =JSON.parse(xmlhttp.responseText);
                     document.getElementById("txtHint").innerHTML=obj.user_name;
                
-                    xmlhttp.open("GET","/resources/get_name",true);
+                    xmlhttp.open("POST","/resources/get_name",true);
                     xmlhttp.send();
                     //实现第二个提示
         			var node1 = document.createElement("span");
