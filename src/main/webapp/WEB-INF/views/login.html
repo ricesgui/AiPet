@@ -10,6 +10,7 @@
 	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
 </head>
 <body>
 	<div id="head-c">
@@ -28,7 +29,7 @@
 		<div><input type="checkbox" name="" onselect="remeberUser()">记住密码&nbsp;|&nbsp;<a href="#">忘记密码？</a>
 		</div>
 		<br/>
-		<button type="submit" class="btn btn-default" onclick="">登录</button>&nbsp;&nbsp;
+		<button type="submit" class="btn btn-default" onclick="checkuser()">登录</button>&nbsp;&nbsp;
 		<button class="btn btn-default"><a href="register.html">注册</a></button>
 	</form>
 
@@ -42,26 +43,5 @@
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 
-<script src="js/login.js"></script>
 </body>
 </html>
-<script>
-	// 在点击登录时记录用户名信息
-/*function  remeberUser()
-{
-    var storage = window.localStorage;
-    storage["loginname"] = $("#email").val();
-    storage["bj"] =  "yes"; 
-    alert(email);
-}
-
-// 页面加载时判断缓存中isstorename是否为yes，是则取出用户名
-window.onload = function()
-{
-//判断是否存在过用户
-var storage = window.localStorage;
-if("yes" == storage["bj"])
-{               $("#email").val(storage["loginname"]);
- }
-}*/
-</script>
