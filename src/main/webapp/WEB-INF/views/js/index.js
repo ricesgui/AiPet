@@ -46,34 +46,7 @@
                     bigImg.src="images/maomi.jpg";   //给img元素的src属性赋值  
                     bigImg.height="400";  //320个像素 不用加px  
                   
-                    im.appendChild(bigImg);      //为dom添加子元素img   
-
-                    $("#third").click(function logout(){
-                    var xmlhttp1;
-                    var log ={"evenType":"1"};
-                    if (window.XMLHttpRequest)
-                    {
-                        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-                        xmlhttp1=new XMLHttpRequest();
-                    }
-                    else
-                    {
-                        // IE6, IE5 浏览器执行代码
-                        xmlhttp1=new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    xmlhttp.onreadystatechange=function()
-                    {
-                        if (xmlhttp1.readyState==4 && xmlhttp1.status==200)
-                        {
-                            alert("test");
-                            var log =JSON.stringify(log);
-                            
-                        }
-                    }
-                    xmlhttp1.open("POST","/views/log_out",true);
-                    xmlhttp1.send();
-                   }
-
+                    im.appendChild(bigImg);      //为dom添加子元素img  
                 }
             }
             xmlhttp.open("POST","/resources/get_name",true);
