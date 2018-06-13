@@ -50,7 +50,7 @@
 
                     $("#third").click(function logout(){
                     var xmlhttp1;
-                    var log =={"evenType":"1"};
+                    var log ={"evenType":"1"};
                     if (window.XMLHttpRequest)
                     {
                         // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
