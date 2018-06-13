@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 public class ResourcesController {
     @RequestMapping(value="/get_name",method = RequestMethod.POST)
     public ModelAndView rtUserInfo(HttpSession session){
+        System.out.println("收到请求");
         ModelAndView mv=new ModelAndView();
         mv.addObject("user_name",session.getAttribute("user_name"));
         mv.setView(new MappingJackson2JsonView());
