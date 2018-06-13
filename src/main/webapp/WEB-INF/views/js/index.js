@@ -6,7 +6,7 @@
 */
 
         /*    $("#third").click(function logout(){
-                var log = {"dataType":"1"};
+                var log = {"evenType":"1"};
             $.ajax({ 
                     url: "/views/log_out",  // 后台地址
                     type:"POST", 
