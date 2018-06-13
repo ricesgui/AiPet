@@ -49,6 +49,7 @@
                     im.appendChild(bigImg);      //为dom添加子元素img   
 
                     $("#third").click(function logout(){
+                        alert("test");
                     var log = {"evenType":"1"};
                     $.ajax({ 
                             url: "/views/log_out",  // 后台地址
@@ -66,7 +67,7 @@
                         }
                        }); 
                 });
-                    
+
                 }
             }
             xmlhttp.open("POST","/resources/get_name",true);
