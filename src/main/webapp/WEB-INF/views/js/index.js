@@ -65,12 +65,13 @@
                     {
                         if (xmlhttp1.readyState==4 && xmlhttp1.status==200)
                         {
+                            alert("test");
                             var log =JSON.stringify(log);
                             
                         }
                     }
-                    xmlhttp.open("POST","/views/log_out",true);
-                    xmlhttp.send();
+                    xmlhttp1.open("POST","/views/log_out",true);
+                    xmlhttp1.send();
                    }
 
                 }
