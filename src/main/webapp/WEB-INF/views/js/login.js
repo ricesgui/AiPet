@@ -23,9 +23,7 @@
                     if(obk.evenType=="1"){
                         alert("用户名错误！")；
                     }
-                else if(obk.evenType=="2"){
-                        alert("密码错误");
-                }
+              
                 else {
                     alert("error");
                 }

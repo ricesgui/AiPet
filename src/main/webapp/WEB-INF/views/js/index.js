@@ -37,8 +37,8 @@
                     parent1.replaceChild(node1,node2);
                     var node3 = document.getElementById("third");
                     node3.innerHTML="退出";
-                    //var node4 = document.getElementById("four");
-                   // node4.href = "login.html";
+                    var node4 = document.getElementById("four");
+                    node4.href = "login.html";
                    $("#yincang").hide();
                     $("#div-m").hide();
                     var im = document.getElementById("denglu");
@@ -49,24 +49,29 @@
                     im.appendChild(bigImg);      //为dom添加子元素img   
 
                     $("#third").click(function logout(){
-                        alert("test");
-                    var log = {"evenType":"1"};
-                    $.ajax({ 
-                            url: "/views/log_out",  // 后台地址
-                            type:"POST", 
-                            dataType:"json",
-                            data:JSON.stringify(log),
-                            success: function(data){
-                            //成功
-                            //window.location.href ="xx.com"; 跳转页面
-                            //或者处理其他注销后的逻辑
-
-                        },  //自己需要传递的数据 {}
-                            error:function(){
-                           //出错
+                    var xmlhttp1;
+                    var log =={"evenType":"1"};
+                    if (window.XMLHttpRequest)
+                    {
+                        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                        xmlhttp1=new XMLHttpRequest();
+                    }
+                    else
+                    {
+                        // IE6, IE5 浏览器执行代码
+                        xmlhttp1=new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange=function()
+                    {
+                        if (xmlhttp1.readyState==4 && xmlhttp1.status==200)
+                        {
+                            var log =JSON.stringify(log);
+                            
                         }
-                       }); 
-                });
+                    }
+                    xmlhttp.open("POST","/views/log_out",true);
+                    xmlhttp.send();
+                   }
 
                 }
             }
