@@ -22,8 +22,12 @@
 
     <!--定义视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-          p:prefix="/WEB-INF/views/jsp/" p:suffix=".jsp"/>
+          p:prefix="/WEB-INF/views/" p:suffix=".jsp" p:order="10"/>
+    <!--定义视图解析器-->
     <!--注解事务
     <tx:annotation-driven transaction-manager="transactionManager"/>
-    -->
+
+    --><bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+
+
 </beans>

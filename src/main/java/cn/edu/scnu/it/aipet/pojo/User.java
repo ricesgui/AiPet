@@ -1,8 +1,12 @@
 package cn.edu.scnu.it.aipet.pojo;
 
 import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
+
 @Component
-public class User {
+public class User implements Serializable {
+
     private Long idusers=null;
     private String name=null;
     private String realname=null;
