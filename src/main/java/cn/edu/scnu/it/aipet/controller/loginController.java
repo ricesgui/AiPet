@@ -33,15 +33,19 @@ public class loginController {
             mv.setView(new MappingJackson2JsonView());
             return mv;
         }
-        user.setPassword("");
-        session.setAttribute("user", user.getName());
+        session.setAttribute("user_name", user.getName());
         mv.setViewName("redirect:/views/index.html");
+        System.out.println(user.getName()+":login success!");
         return mv;
     }
     @RequestMapping(value = "/log_out",method = RequestMethod.POST)
     public ModelAndView loginOut(@RequestBody Event event,HttpSession session){
-        if(event.getEventType().equals("1"))
+        System.out.println(session.getAttribute("user_name")+":log out");
+        if(event.getEventType().equals("1")){
             session.invalidate();
+            System.out.println(" success!");
+        }
+
         ModelAndView mv = new ModelAndView();
         mv.setViewName("redirect:/views/index.html");
         return mv;
