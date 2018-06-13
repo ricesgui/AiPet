@@ -6,7 +6,7 @@
 */
 
 
-function showName(str)
+/*function showName(str)
         {
             var xmlhttp;
             if (str=="")
@@ -69,15 +69,44 @@ function showName(str)
                     //或者处理其他注销后的逻辑
 
                 },  //自己需要传递的数据 {}
-                                error:function(){
+                    error:function(){
                    //出错
                 }
-                            }); 
+               }); 
             });
 
 			
-            
-        
+       */     
+      function showName(str)
+    {
+        var xmlhttp;
+        if (str=="")
+        {
+            document.getElementById("txtHint").innerHTML="";
+            return;
+        }
+        if (window.XMLHttpRequest)
+        {
+            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+            // IE6, IE5 浏览器执行代码
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                var obj =JSON.parse(xmlhttp.responseText);
+                document.getElementById("txtHint").innerHTML=obj.user_name;
+            }
+        }
+        xmlhttp.open("GET","/resources/get_name",true);
+        xmlhttp.send();
+    }
+    
       window.onload=showName;//不要括号
 
    /*   function logout()
