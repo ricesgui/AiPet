@@ -47,6 +47,26 @@
                     bigImg.height="400";  //320个像素 不用加px  
                   
                     im.appendChild(bigImg);      //为dom添加子元素img   
+
+                    $("#third").click(function logout(){
+                    var log = {"evenType":"1"};
+                    $.ajax({ 
+                            url: "/views/log_out",  // 后台地址
+                            type:"POST", 
+                            dataType:"json",
+                            data:JSON.stringify(log),
+                            success: function(data){
+                            //成功
+                            //window.location.href ="xx.com"; 跳转页面
+                            //或者处理其他注销后的逻辑
+
+                        },  //自己需要传递的数据 {}
+                            error:function(){
+                           //出错
+                        }
+                       }); 
+                });
+                    
                 }
             }
             xmlhttp.open("POST","/resources/get_name",true);
