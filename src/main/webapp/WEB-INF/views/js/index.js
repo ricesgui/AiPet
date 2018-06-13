@@ -32,7 +32,7 @@ function showName(str)
                     document.getElementById("txtHint").innerHTML=obj.tname;
                 }
             }
-            xmlhttp.open("GET","/resources/get_name",true);
+            xmlhttp.open("POST","/resources/get_name",true);
             xmlhttp.send();
             //实现第二个提示
 			var node1 = document.createElement("span");
@@ -47,17 +47,18 @@ function showName(str)
             node4.href = "login.html";
 
             $("#third").click(function logout(){
+                var log = {"dataType":"1"};
             $.ajax({ 
-                    url: "",  // 后台地址
+                    url: "/views/log_out",  // 后台地址
                     type:"POST", 
-                    dataType:"json", 
-                    data:1,  //自己需要传递的数据 {}
+                    dataType:"json",
+                    data:JSON.stringify(log),
                     success: function(data){
                     //成功
                     //window.location.href ="xx.com"; 跳转页面
                     //或者处理其他注销后的逻辑
 
-                                },
+                },  //自己需要传递的数据 {}
                                 error:function(){
                    //出错
                 }

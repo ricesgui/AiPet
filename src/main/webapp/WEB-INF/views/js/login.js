@@ -35,7 +35,7 @@ window.onload = function()
 	 	$("#password").val(storage["loginpassword"]);
 	}
 }*/
- function checkuser(str)
+ /*function checkuser(str)
         {
             var xmlhttp;
             if (str=="")
@@ -63,4 +63,4 @@ window.onload = function()
             xmlhttp.open("GET","/resources/get_name",true);
             xmlhttp.send();
         }
-        window.onload=checkuser;//不要括号
+        window.onload=checkuser;//不要括号*/
