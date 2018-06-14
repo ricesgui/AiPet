@@ -7,12 +7,12 @@
  function showName(str)
         {
             var xmlhttp;
-            if (str=="")
+            if (str==null)
             {
-                document.getElementById("txtHint").innerHTML="";
+               // document.getElementById("txtHint").innerHTML="";
                 return;
             }
-            if (window.XMLHttpRequest)
+           else if (window.XMLHttpRequest)
             {
                 // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
                 xmlhttp=new XMLHttpRequest();
