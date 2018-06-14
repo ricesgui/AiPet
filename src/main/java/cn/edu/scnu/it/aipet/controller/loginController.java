@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
@@ -39,18 +40,12 @@ public class loginController {
         return mv;
     }
     @RequestMapping(value = "/log_out",method = RequestMethod.POST)
-    public ModelAndView loginOut(@RequestBody Event event,HttpSession session){
-        System.out.println(session.getAttribute("user_name")+":log out");
+    public void loginOut(@RequestBody Event event,HttpSession session){
+        System.out.print(session.getAttribute("user_name")+":log out");
         if(event.getEventType().equals("1")){
             session.invalidate();
             System.out.println(" success!");
         }
-
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("redirect:/views/index.html");
-        return mv;
-
-
     }
 
     

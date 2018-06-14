@@ -45,7 +45,7 @@ var imgs=[];//存储图片链接
  
   //发送ajax请求
   $.ajax({
-  url:"...",
+  url:"/file/upload/pet_picture",
   data:{
    parameter :JSON.stringify(stu)
   },

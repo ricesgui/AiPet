@@ -2,6 +2,7 @@ package cn.edu.scnu.it.aipet.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -16,8 +17,9 @@ import java.io.IOException;
 @Controller
 @RequestMapping(value = "/flie")
 public class FileController {
-    @RequestMapping(value="/upload/pet_picture")
+    @RequestMapping(value="/upload/pet_picture",method = RequestMethod.POST)
     public ModelAndView uploadPetPicture(@RequestParam("file") MultipartFile file){
+        System.out.println("文件接口收到请求！");
         String root="/Users/wangjun/Documents/upload/aipet/petpicture";
         ModelAndView mv=new ModelAndView();
         String fileName=file.getOriginalFilename();
