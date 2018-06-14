@@ -27,6 +27,7 @@ document.getElementById("third").onclick=function(){
         dataType: "json",
         success: function () {//回调函数
          console.log(success);
+         window.location.href="index.html"
         },
         error: function (xhr,error) {
             console.debug(xhr);
