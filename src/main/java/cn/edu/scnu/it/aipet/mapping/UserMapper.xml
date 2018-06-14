@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.scnu.it.aipet.dao.UserMapper">
+   <insert id="insertUser" keyProperty="iduser">
+       insert into users(idusers,name,password,email) values(0,#{name},
+      #{password},#{email})
+   </insert>
+
+    <delete id="deleteUser" parameterType="long">
+        delete from users where id=#{id}
+    </delete>
+    <select id="selectUserByEmail" parameterType="string" resultType="cn.edu.scnu.it.aipet.pojo.User">
+        select name,email,password from users where email=#{email}
+    </select>
+</mapper>
