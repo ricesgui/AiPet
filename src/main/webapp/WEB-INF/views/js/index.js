@@ -17,15 +17,17 @@
             {
                 // IE6, IE5 浏览器执行代码
                 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
+            } 
             xmlhttp.onreadystatechange=function()
             {
+                document.getElementById("txtHint").innerHTML="j";
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
-                   
+                   alert("test");
                     var obj =JSON.parse(xmlhttp.responseText);
+                    document.getElementById("txtHint").innerHTML="obj";
                     if(obj.user_name==null)
-                         document.getElementById("txtHint").innerHTML="obj";
+                        
                         
                     
                     else {

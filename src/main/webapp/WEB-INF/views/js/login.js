@@ -1,5 +1,5 @@
 
- function checkuser(str)
+/* function checkuser(str)
         {
             var xmlhttp;
            
@@ -31,7 +31,7 @@
             }
             xmlhttp.open("POST","/resources/get_name",true);
             xmlhttp.send();
-        }
+        }*/
       $("#third").click(function logout(){
                     var xmlhttp1;
                     var log ={"evenType":"1"};
@@ -49,7 +49,7 @@
                     {
                         if (xmlhttp1.readyState==4 && xmlhttp1.status==200)
                         {
-                            alert("test");
+                            
                             var log =JSON.stringify(log);
                             
                         }
