@@ -16,7 +16,7 @@
         });  $("#third").click(function() {
 
 
-*/
+
 function log(){
     console.log('1');
     $.ajax({
@@ -35,4 +35,4 @@ function log(){
         }
     });
 }
-   window.onload=log;//不要括号
+   window.onload=log;//不要括号*/
