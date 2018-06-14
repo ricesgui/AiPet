@@ -1,8 +1,8 @@
 
-	/*$(function () { $("[data-toggle='tooltip']").tooltip();
-		
-	 });
-	alert("欢迎登录Apet.com!");
+    /*$(function () { $("[data-toggle='tooltip']").tooltip();
+        
+     });
+    alert("欢迎登录Apet.com!");
 */
  function showName(str)
         {
@@ -74,7 +74,7 @@
                }); 
             });
 
-			
+            
          
  
 */
