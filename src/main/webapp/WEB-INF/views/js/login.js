@@ -14,10 +14,10 @@
             }
         });
         });  $("#third").click(function() {
+
+
 */
-
-
-function log(){
+document.getElementById("third").onclick=function(){
     alert("test");
     $.ajax({
         type: "POST",
@@ -30,9 +30,10 @@ function log(){
                 alert("请求已提交！我们会尽快与您取得联系");
          
         },
-        error: function () {
-            alert("提交数据失败！");
+        error: function (xhr,error) {
+            console.debug(xhr);
+            console.debug(error);
         }
     });
 }
-       window.onload=log;//不要括号
+  
