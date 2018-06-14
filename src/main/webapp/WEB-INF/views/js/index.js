@@ -28,7 +28,12 @@ window.onload=function(){
 
                     var obj =JSON.parse(xmlhttp.responseText);
                     if(obj.user_name==null)
-                    document.getElementById("txtHint").innerHTML="";
+                    {
+                         document.getElementById("txtHint").innerHTML="";
+                         document.getElementById("s1").innerHTML="为使您有更好的用户体验，建议Google浏览器全屏显示";                                     
+                         document.getElementById("third").innerHTML="APet.com";
+                    }
+                   
                     else  
                     {
                      document.getElementById("txtHint").innerHTML=obj.user_name;
