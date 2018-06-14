@@ -29,7 +29,7 @@
         } );
         */
 
-        $("#third").click(function(){  
+        $("#s1").click(function(){  
             alert("test");
         $.ajax({
             type:"POST",
