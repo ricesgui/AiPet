@@ -50,12 +50,12 @@
             xmlhttp.send();
 
             document.getElementById("third").onclick=function(){
+
             alert("test");
             $.ajax({
                 type: "POST",
                 url: "/views/log_out",
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify({"evenType":"1"}),
+                data: {"evenType":"1"},
                 dataType: "json",
                 success: function () {
                     
