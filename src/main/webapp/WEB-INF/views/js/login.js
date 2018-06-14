@@ -52,6 +52,6 @@
                 }
             }
             xmlhttp.open("POST","/views/log_out",true);
-            xmlhttp.send();
+            xmlhttp.send(log);
         } 
         window.onload=showName;
