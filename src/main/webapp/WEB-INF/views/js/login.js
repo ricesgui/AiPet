@@ -25,10 +25,8 @@ document.getElementById("third").onclick=function(){
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({"evenType":"1"}),
         dataType: "json",
-        success: function () {
-            
-                alert("请求已提交！我们会尽快与您取得联系");
-         
+        success: function () {//回调函数
+         console.log(success);
         },
         error: function (xhr,error) {
             console.debug(xhr);
