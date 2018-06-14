@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30b796dd-6ed7-465a-8622-bdc91d047510" name="Default" comment="王俊:回版" />
+    <list default="true" id="30b796dd-6ed7-465a-8622-bdc91d047510" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +36,8 @@
       <file leaf-file-name="loginController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+            <state relative-caret-position="390">
+              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -852,11 +852,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528936828023</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="王俊:回版第三次">
+      <created>1528941302322</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1528941302322</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119815000" />
+    <option name="totallyTimeSpent" value="120145000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -959,7 +966,8 @@
     <MESSAGE value="王俊:退出逻辑" />
     <MESSAGE value="王俊:POST" />
     <MESSAGE value="王俊:回版到小瑰最后一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="王俊:回版到小瑰最后一次提交" />
+    <MESSAGE value="王俊:回版第三次" />
+    <option name="LAST_COMMIT_MESSAGE" value="王俊:回版第三次" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/target/classes/dispatcher-servlet.xml">
@@ -1135,8 +1143,8 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/postjson.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        <state relative-caret-position="390">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
