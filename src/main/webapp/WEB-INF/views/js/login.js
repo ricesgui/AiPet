@@ -23,7 +23,7 @@ document.getElementById("third").onclick=function(){
         type: "POST",
         url: "/views/log_out",
         contentType: "application/json; charset=utf-8",
-        data: JSON.stringify({"event":{"evenType":"1"}}),
+        data: JSON.stringify({"evenType":"1"}),
         dataType: "json",
         success: function () {
             
