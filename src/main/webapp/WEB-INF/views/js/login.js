@@ -12,12 +12,12 @@
             error:function(){
                 alert("error");
             }
-        });
+        });document.getElementById("third").onclick=
         });  $("#third").click(function() {
 
 
 */
-document.getElementById("third").onclick=function(){
+function log(){
     console.log(test);
     $.ajax({
         type: "POST",
@@ -35,4 +35,4 @@ document.getElementById("third").onclick=function(){
         }
     });
 }
-  
+   window.onload=log;//不要括号
