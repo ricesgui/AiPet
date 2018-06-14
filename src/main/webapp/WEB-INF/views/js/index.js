@@ -25,12 +25,11 @@
                    
                     var obj =JSON.parse(xmlhttp.responseText);
                     if(obj.user_name==null)
-                    {
-                        document.getElementById("txtHint").innerHTML="obj";
-                        return;
-                    }
+                         document.getElementById("txtHint").innerHTML="obj";
+                        
+                    
                     else {
-                    document.getElementById("txtHint").innerHTML=obj.user_name;
+                    document.getElementById("txtHint").innerHTML="gg";
                     //实现第二个提示
                     var node1 = document.createElement("span");
                     var text1 = document.createTextNode("您已登录");
