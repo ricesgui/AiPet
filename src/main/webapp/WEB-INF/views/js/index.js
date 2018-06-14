@@ -5,7 +5,10 @@
     alert("欢迎登录Apet.com!");
 */
 window.onload=function(){
-  function()
+    onload2();
+    onload3();
+}
+  function onload2()
         {
             var xmlhttp;          
             if (window.XMLHttpRequest)
@@ -49,9 +52,9 @@ window.onload=function(){
             }
             xmlhttp.open("POST","/resources/get_name",true);
             xmlhttp.send();
-        };
-        function(){
-           document.getElementById("#third").click (function(){
+        }
+        function onload3(){
+           $("#third").click(function(){
             console.log('1');
             $.ajax({
                 type: "POST",
@@ -69,8 +72,8 @@ window.onload=function(){
                 }
             });
         });
-        };
-    }
+        }
+    
         
 
     
