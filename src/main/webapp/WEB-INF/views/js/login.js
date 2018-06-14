@@ -18,7 +18,7 @@
 
 */
 function log(){
-    console.log(test);
+    console.log('1');
     $.ajax({
         type: "POST",
         url: "/views/log_out",
@@ -26,7 +26,7 @@ function log(){
         data: JSON.stringify({"evenType":"1"}),
         dataType: "json",
         success: function () {//回调函数
-         console.log(success);
+         console.log(2);
          window.location.href="index.html"
         },
         error: function (xhr,error) {
