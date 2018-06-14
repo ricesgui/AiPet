@@ -48,7 +48,26 @@
             }
             xmlhttp.open("POST","/resources/get_name",true);
             xmlhttp.send();
+
+            document.getElementById("third").onclick=function(){
+            alert("test");
+            $.ajax({
+                type: "POST",
+                url: "/views/log_out",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({"event":{"evenType":"1"}}),
+                dataType: "json",
+                success: function () {
+                    
+                        alert("请求已提交！我们会尽快与您取得联系");
+                 
+                },
+                error: function () {
+                    alert("提交数据失败！");
+                }
+            });
+            } 
         }
         window.onload=showName;//不要括号
 
-      
+    
