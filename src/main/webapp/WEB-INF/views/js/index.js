@@ -55,12 +55,11 @@ window.onload=function(){
         }
         function onload3(){
            $("#third").click(function(){
-            console.log('1');
             $.ajax({
                 type: "POST",
                 url: "/views/log_out",
                 contentType: "application/json; charset=utf-8",
-                data: JSON.stringify({"evenType":"1"}),
+                data: JSON.stringify({"eventType":"1"}),
                 dataType: "json",
                 success: function () {//回调函数
                  console.log(2);
