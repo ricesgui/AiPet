@@ -12,7 +12,7 @@ var imgs=[];//存储图片链接
   //创建ajax对象
  var ajax=new XMLHttpRequest();
  //发送POST请求
- ajax.open("POST","...",true);
+ ajax.open("POST","/file/upload/pet_picture",true);
  ajax.send(formData);
  ajax.onreadystatechange=function(){
  if (ajax.readyState == 4&&ajax.status==200){

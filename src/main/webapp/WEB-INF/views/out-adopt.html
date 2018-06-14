@@ -102,7 +102,7 @@
 	</div>
 	
 	<div class="oa-text">	
-		<form method="post" action="">
+		<form method="post" action="adopt.js" id="form">
 	<h4><label>*送养种类：<input type="radio" name="kind" class="btn-group"=> 狗狗</input><input type="radio" name="kind" class="btn-group"> 猫咪</input><input type="radio" name="kind" class="btn-group"> 其他</input></label>
 	</h4>
 	<h4>
@@ -131,7 +131,7 @@
 	</h4>
 	<h4>
 		<label for="inputfile">上传照片:</label>
-		<input type="file" id="inputfile"/>
+		<input type="file" id="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"/>
 	</h4>
 	<h4>
 		<label>宠物描述：
@@ -143,8 +143,10 @@
 		</div>
 	</label>
 	</h4>
-	<h4><button type="submit" class="btn btn-success">发布</button></h4>
+	<h4><button type="submit" class="btn btn-success" id="btn">发布</button></h4>
 	</form>
+	<div class="con">
+	</div>
 	</div>
 	</div>
 </main>
