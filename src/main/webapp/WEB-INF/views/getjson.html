@@ -28,8 +28,12 @@
             {
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
+
                     var obj =JSON.parse(xmlhttp.responseText);
-                    document.getElementById("txtHint").innerHTML=obj.user_name;
+                    if(obj.user_name==null)
+                    document.getElementById("txtHint").innerHTML="gdga";
+                    else  
+                     document.getElementById("txtHint").innerHTML=obj.user_name;
                 }
             }
             xmlhttp.open("POST","/resources/get_name",true);

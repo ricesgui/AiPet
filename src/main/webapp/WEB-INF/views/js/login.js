@@ -25,7 +25,7 @@
                     xmlhttp1.open("POST","/views/log_out",true);
                     xmlhttp1.send();
                    }*/
-        function showName()
+    /*   $("#third").click(function showName()
         {
             var xmlhttp;
             var log = {"event":{"evenType":"1"}};
@@ -47,11 +47,24 @@
                 {
                     var log =JSON.stringify(log);
                     alert(event.evenType);
-
                     
                 }
             }
+            xmlhttp.setRequestHeader('Content-Type','application/json');
             xmlhttp.open("POST","/views/log_out",true);
             xmlhttp.send(log);
-        } 
-        window.onload=showName;
+        } );
+        
+*/
+        $("#third").click(function(){  
+        $.ajax({
+            type:"POST",
+            url:"/views/log_out",
+            content-Type:"application/json",
+            dataType:"json",
+            data:JSON.stringify({"event":{"evenType":"1"}}),
+            success:function(){
+                alert("success");
+            }
+        })
+        });  
