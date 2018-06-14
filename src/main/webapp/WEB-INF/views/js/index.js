@@ -4,8 +4,8 @@
      });
     alert("欢迎登录Apet.com!");
 */
-function show(){
-  function showName()
+window.onload=function(){
+  function()
         {
             var xmlhttp;          
             if (window.XMLHttpRequest)
@@ -50,7 +50,7 @@ function show(){
             xmlhttp.open("POST","/resources/get_name",true);
             xmlhttp.send();
         };
-        function log(){
+        function(){
            document.getElementById("#third").click (function(){
             console.log('1');
             $.ajax({
@@ -71,6 +71,6 @@ function show(){
         });
         };
     }
-        window.onload=show;//不要括号
+        
 
     
