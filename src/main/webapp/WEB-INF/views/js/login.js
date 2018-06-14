@@ -25,7 +25,7 @@
                     xmlhttp1.open("POST","/views/log_out",true);
                     xmlhttp1.send();
                    }*/
-    /*   $("#third").click(function showName()
+     /*  $("#third").click(function showName()
         {
             var xmlhttp;
             var log = {"event":{"evenType":"1"}};
@@ -54,8 +54,8 @@
             xmlhttp.open("POST","/views/log_out",true);
             xmlhttp.send(log);
         } );
-        
-*/
+        */
+
         $("#third").click(function(){  
         $.ajax({
             type:"POST",
@@ -65,6 +65,9 @@
             data:JSON.stringify({"event":{"evenType":"1"}}),
             success:function(){
                 alert("success");
+            },
+            error:function(){
+                alert("error");
             }
-        })
+        });
         });  
