@@ -24,7 +24,7 @@
 
                     var obj =JSON.parse(xmlhttp.responseText);
                     if(obj.user_name==null)
-                    document.getElementById("txtHint").innerHTML="gdga";
+                    document.getElementById("txtHint").innerHTML="";
                     else  
                     {
                      document.getElementById("txtHint").innerHTML=obj.user_name;
