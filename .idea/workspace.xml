@@ -24,8 +24,8 @@
       <file leaf-file-name="registerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/registerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="435">
+              <caret line="29" column="53" lean-forward="true" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,7 +36,7 @@
       <file leaf-file-name="loginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="420">
               <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -66,7 +66,7 @@
       <file leaf-file-name="ResourcesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/ResourcesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="285">
               <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -105,7 +105,7 @@
       <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/FileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="525">
               <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -367,14 +367,24 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AiPet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AiPet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,753 +405,6 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/views/js/index.js</PATH>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1292,6 +555,7 @@
       <workItem from="1528814644586" duration="1754000" />
       <workItem from="1528849703593" duration="2674000" />
       <workItem from="1528878835809" duration="10869000" />
+      <workItem from="1528936773387" duration="942000" />
     </task>
     <task id="LOCAL-00001" summary="王俊:搭框架">
       <created>1528073731693</created>
@@ -1454,11 +718,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528888298876</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="王俊:回版到小瑰最后一次提交">
+      <created>1528936828022</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1528936828023</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118720000" />
+    <option name="totallyTimeSpent" value="119662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1471,7 +742,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="788" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5028612" side_tool="true" weight="0.32934132" />
@@ -1486,7 +756,6 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32934132" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32934132" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32934132" />
@@ -1495,41 +764,17 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.44610777" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32934132" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32934132" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498503" visible="true" weight="0.29756796" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29756796" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" sideWeight="0.50149703" side_tool="true" visible="true" weight="0.29756796" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44610777" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5028612" side_tool="true" weight="0.32934132" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2932761" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32934132" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32934132" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32934132" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32934132" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49713877" weight="0.32934132" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32934132" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32934132" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1560,7 +805,8 @@
     <MESSAGE value="王俊:添加loginout逻辑" />
     <MESSAGE value="王俊:退出逻辑" />
     <MESSAGE value="王俊:POST" />
-    <option name="LAST_COMMIT_MESSAGE" value="王俊:POST" />
+    <MESSAGE value="王俊:回版到小瑰最后一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="王俊:回版到小瑰最后一次提交" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/target/classes/dispatcher-servlet.xml">
@@ -1721,7 +967,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/FileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="525">
           <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1746,7 +992,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/postjson.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/loginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="420">
           <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1770,8 +1016,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/registerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="435">
+          <caret line="29" column="53" lean-forward="true" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1781,7 +1027,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/VisitController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/scnu/it/aipet/controller/ResourcesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="285">
           <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />

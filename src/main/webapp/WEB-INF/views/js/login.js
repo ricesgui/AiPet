@@ -1,24 +1,24 @@
 
  function checkuser(str)
         {
-            var xmlhttp2;
+            var xmlhttp;
            
             if (window.XMLHttpRequest)
             {
                 // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-                xmlhttp2=new XMLHttpRequest();
+                xmlhttp=new XMLHttpRequest();
             }
             else
             {
                 // IE6, IE5 浏览器执行代码
-                xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP");
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
             }
             var txt={"email":"dengxiaogui@163.com","password":"123456"};
             xmlhttp.onreadystatechange=function()
             {
-                if (xmlhtt2.readyState==4 && xmlhttp2.status==200)
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
-                    var test =JSON.parse(xmlhttp2.responseText);
+                    var test =JSON.parse(xmlhttp.responseText);
                     var obk = eval("("+value+")");
                     if(obk.evenType=="1"){
                         alert("用户名错误！")；
@@ -54,6 +54,6 @@
                             
                         }
                     }
-                    xmlhttp1.open("POST","/views/log_out",false);//false表示异步
+                    xmlhttp1.open("POST","/views/log_out",true);
                     xmlhttp1.send();
                    }
