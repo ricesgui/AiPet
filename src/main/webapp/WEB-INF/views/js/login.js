@@ -30,6 +30,7 @@
         */
 
         $("#third").click(function(){  
+            alert("test");
         $.ajax({
             type:"POST",
             url:"/views/log_out",
