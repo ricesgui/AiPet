@@ -4,11 +4,10 @@
      });
     alert("欢迎登录Apet.com!");
 */
- function showName()
+  function showName()
         {
-            var xmlhttp;
-            
-           if (window.XMLHttpRequest)
+            var xmlhttp;          
+            if (window.XMLHttpRequest)
             {
                 // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
                 xmlhttp=new XMLHttpRequest();
@@ -17,21 +16,26 @@
             {
                 // IE6, IE5 浏览器执行代码
                 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            } 
+            }
             xmlhttp.onreadystatechange=function()
             {
-                document.getElementById("txtHint").innerHTML="j";
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
-                   alert("test");
+
                     var obj =JSON.parse(xmlhttp.responseText);
-                    document.getElementById("txtHint").innerHTML="obj";
                     if(obj.user_name==null)
-                        
-                        
-                    
-                    else {
-                    document.getElementById("txtHint").innerHTML="gg";
+                    document.getElementById("txtHint").innerHTML="gdga";
+                    else  
+                     document.getElementById("txtHint").innerHTML=obj.user_name;
+                }
+            }
+            xmlhttp.open("POST","/resources/get_name",true);
+            xmlhttp.send();
+        }
+        window.onload=showName;//不要括号
+
+
+        /*  document.getElementById("txtHint").innerHTML="gg";
                     //实现第二个提示
                     var node1 = document.createElement("span");
                     var text1 = document.createTextNode("您已登录");
@@ -51,16 +55,7 @@
                     bigImg.height="400";  //320个像素 不用加px  
                   
                     im.appendChild(bigImg);      //为dom添加子元素img  
-                }
-                }
-            }
-            xmlhttp.open("POST","/resources/get_name",true);
-            xmlhttp.send();
-        }
-        window.onload=showName;//不要括号
-
-
-        /*    $("#third").click(function logout(){
+           $("#third").click(function logout(){
                 var log = {"evenType":"1"};
             $.ajax({ 
                     url: "/views/log_out",  // 后台地址
