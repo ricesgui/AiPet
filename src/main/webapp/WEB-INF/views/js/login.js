@@ -28,7 +28,7 @@
         function showName()
         {
             var xmlhttp;
-            var log ={"evenType":"1"};
+            var log = {"event":{"evenType":"1"}};
             if (window.XMLHttpRequest)
             {
                 // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -46,7 +46,7 @@
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
                     var log =JSON.stringify(log);
-                    alert(log.evenType);
+                    alert(event.evenType);
 
                     
                 }
