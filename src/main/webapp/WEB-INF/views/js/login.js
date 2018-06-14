@@ -18,7 +18,7 @@
 
 */
 document.getElementById("third").onclick=function(){
-    alert("test");
+    console.log(test);
     $.ajax({
         type: "POST",
         url: "/views/log_out",
