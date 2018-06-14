@@ -26,7 +26,7 @@
                     var obj =JSON.parse(xmlhttp.responseText);
                     if(obj.user_name==null)
                     {
-                        document.getElementById("txtHint").innerHTML="";
+                        document.getElementById("txtHint").innerHTML="obj";
                         return;
                     }
                     else {
@@ -40,8 +40,8 @@
                     parent1.replaceChild(node1,node2);
                     var node3 = document.getElementById("third");
                     node3.innerHTML="退出";
-                    var node4 = document.getElementById("four");
-                    node4.href = "login.html";
+                    //var node4 = document.getElementById("four");
+                    //node4.href = "login.html";
                     $("#yincang").hide();
                     $("#div-m").hide();
                     var im = document.getElementById("denglu");
