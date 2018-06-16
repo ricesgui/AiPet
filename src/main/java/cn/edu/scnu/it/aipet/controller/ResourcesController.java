@@ -1,5 +1,6 @@
 package cn.edu.scnu.it.aipet.controller;
 
+import cn.edu.scnu.it.aipet.pojo.Event;
 import cn.edu.scnu.it.aipet.pojo.User;
 import org.springframework.session.Session;
 import org.springframework.stereotype.Controller;
@@ -15,11 +16,24 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/resources")
 public class ResourcesController {
-    @RequestMapping(value="/get_name",method = RequestMethod.POST)
+   @RequestMapping(value="/get_name",method = RequestMethod.POST)
+   // @RequestMapping(value="/get_name")
     public ModelAndView rtUserInfo(HttpSession session){
-        System.out.println("收到请求");
+        System.out.println("获取name接口收到请求");
         ModelAndView mv=new ModelAndView();
         mv.addObject("user_name",session.getAttribute("user_name"));
+        mv.setView(new MappingJackson2JsonView());
+        return mv;
+    }
+
+    @RequestMapping(value="/get_event",method = RequestMethod.POST)
+    // @RequestMapping(value="/get_name")
+    public ModelAndView rtUserInfo(){
+        System.out.println("收到请求");
+        ModelAndView mv=new ModelAndView();
+        Event event=new Event();
+        event.setEventType("1");
+        mv.addObject(event);
         mv.setView(new MappingJackson2JsonView());
         return mv;
     }

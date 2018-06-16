@@ -4,7 +4,11 @@
      });
     alert("欢迎登录Apet.com!");
 */
-  function showName()
+window.onload=function(){
+    onload2();
+    onload3();
+}
+  function onload2()
         {
             var xmlhttp;          
             if (window.XMLHttpRequest)
@@ -24,7 +28,12 @@
 
                     var obj =JSON.parse(xmlhttp.responseText);
                     if(obj.user_name==null)
-                    document.getElementById("txtHint").innerHTML="";
+                    {
+                         document.getElementById("txtHint").innerHTML="";
+                         document.getElementById("s1").innerHTML="为使您有更好的用户体验，建议Google浏览器全屏显示";                                     
+                         document.getElementById("third").innerHTML="APet.com";
+                    }
+                   
                     else  
                     {
                      document.getElementById("txtHint").innerHTML=obj.user_name;
@@ -48,14 +57,14 @@
             }
             xmlhttp.open("POST","/resources/get_name",true);
             xmlhttp.send();
-
-           document.getElementById("#third").addEventListener('click', function(){
-            console.log('1');
+        }
+        function onload3(){
+           $("#third").click(function(){
             $.ajax({
                 type: "POST",
                 url: "/views/log_out",
                 contentType: "application/json; charset=utf-8",
-                data: JSON.stringify({"evenType":"1"}),
+                data: JSON.stringify({"eventType":"1"}),
                 dataType: "json",
                 success: function () {//回调函数
                  console.log(2);
@@ -66,8 +75,9 @@
                     console.debug(error);
                 }
             });
-        },false);
+        });
         }
-        window.onload=showName;//不要括号
+    
+        
 
     
