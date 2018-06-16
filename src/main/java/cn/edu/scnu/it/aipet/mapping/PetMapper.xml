@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.scnu.it.aipet.dao.PetMapper">
+    <insert id="insertPet" keyProperty="idpet">
+       insert into pet(idusers,petspecies,name,sex,age_year,weight,petdescri,petphotourl) values(0,#{petspecies},
+      #{name},#{sex}),#{age_year},#{weight},#{petdescri},#{petphotourl})
+   </insert>
+
+    <delete id="deletePet" parameterType="long">
+        delete from pet where id=#{id}
+    </delete>
+</mapper>
+
+

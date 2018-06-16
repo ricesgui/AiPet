@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/views")
-public class loginController {
+public class StateController {
     @Autowired
     private UserService userService = null;
 
@@ -46,6 +46,23 @@ public class loginController {
             session.invalidate();
             System.out.println(" success!");
         }
+    }
+    @Autowired
+    private User user=null;
+    @RequestMapping("/registerEvent")
+    public ModelAndView register(String name,String password,String email){
+        ModelAndView mv=new ModelAndView();
+        if(userService.selectUser(email)!=null){
+            mv.setViewName("errorRegister");
+            return mv;
+        }
+        user.setName(name);
+        user.setEmail(email);
+        user.setPassword(password);
+        userService.insertUser(user);
+        mv.addObject("user",user);
+        mv.setViewName("redirect:/views/index.html");
+        return mv;
     }
 
     
