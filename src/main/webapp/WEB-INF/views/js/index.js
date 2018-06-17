@@ -66,12 +66,12 @@ window.onload=function(){
                 contentType: "application/json; charset=utf-8",
                 data: JSON.stringify({"eventType":"1"}),
                 dataType: "json",
-                success: function () {//回调函数
-                // if(data.status=='ok'){
+                success: function (data) {//回调函数
+                 if(data.status=='ok'){
                     console.log("success");
                     window.location.href="index.html";
-                
-               // else console.log("出错");
+                }
+                else console.log("出错");
                  
                 },
                 error: function (xhr,error) {
