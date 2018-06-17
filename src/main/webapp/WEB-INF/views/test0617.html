@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>  
+<html>  
+    <head>  
+        <meta charset="utf-8"/>  
+        <title>ajax学习</title>  
+        <script src="jquery-3.1.1.min.js"></script>  
+        <script type="text/javascript">  
+            function checkUserByAjax(){  
+                var user = $("#user").val();//获取表单元素值  
+                if(user==""){  
+                    $("#checkmsg").html("用户名不能为空");  
+                    return;  
+                }  
+                /*第一步 实例化 XMLHttpRequest对象*/  
+                var xmlhttp;  
+                if(window.XMLHttpRequest){  
+                //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码  
+                    xmlhttp = new XMLHttpRequest();  
+                }else{  
+                // IE6, IE5 浏览器执行代码  
+                    xmlhttp =  new ActiveXObject("Microsoft.XMLHTTP");  
+                }  
+                /*第二步 调用open方法设置参数，调用send发送请求 true表示异步  false表示同步*/  
+                xmlhttp.open("GET","http://192.168.5.3/ajax/checkuser.servlet?userName="+eval(document.getElementById('user')).value,true);  
+                xmlhttp.send();  
+                /*第三步 监听服务端响应*/  
+                xmlhttp.onreadystatechange=function(){  
+                    if(xmlhttp.readyState==4 & xmlhttp.readyStatus==200){  
+                        var text = xmlhttp.responseText; //用户已存在  
+                        document.getElementById("checkmsg").innerHTML=text;  
+                    }  
+                }  
+            }     
+        </script>  
+    </head>  
+      
+    <body>  
+      
+        用户名：<input id="user" type="text" name="userName"/>  
+        <span id="checkmsg"></span><br><br>  
+        <button onclick="checkUserByAjax()">检查用户</button><br><br>  
+    </body>  
+</html>  
