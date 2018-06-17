@@ -1,8 +1,10 @@
 // JavaScript Document
 var imgs=[];//存储图片链接
  //为文件上传添加change事件
- var fileM=document.querySelector("#file");
- $("#file").on("change",function(){
+ //var fileM=document.getElementById('file');
+ $(document).ready(function() {
+ $("#file").change(function(){
+  var fileM=document.getElementById('file');
   console.log(fileM.files);
   //获取文件对象，files是文件选取控件的属性，存储的是文件选取控件选取的文件对象，类型是一个数组
   var fileObj=fileM.files[0];
@@ -53,4 +55,4 @@ var imgs=[];//存储图片链接
    console.log(res.msg);
   }
   });
- });
+ })});
