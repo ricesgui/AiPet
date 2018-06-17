@@ -1,39 +1,5 @@
-/* function checkUserByAjax(){  
-                var email = $("#email").val();//获取表单元素值  
-                var password = $("#password").val();//获取表单元素值  
-                if(email==""){  
-                    $("#check_email").html("邮箱不能为空");  
-                    return;  
-                }  else if(password==""){
-                    $("#check_pass").html("密码不能为空");  
-                    return; 
-                }
-                //第一步 实例化 XMLHttpRequest对象
-                var xmlhttp;  
-                if(window.XMLHttpRequest){  
-                //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码  
-                    xmlhttp = new XMLHttpRequest();  
-                }else{  
-                // IE6, IE5 浏览器执行代码  
-                    xmlhttp =  new ActiveXObject("Microsoft.XMLHTTP");  
-                }  
-                //第二步 调用open方法设置参数，调用send发送请求 true表示异步  false表示同步
-                xmlhttp.open("POST","/views/log_in",true);  
-                xmlhttp.send();  
-                //第三步 监听服务端响应  
-                xmlhttp.onreadystatechange=function(){  
-                    if(xmlhttp.readyState==4 & xmlhttp.readyStatus==200){  
-                        function(data){
-                          if(data.status=='fail'){
-                            if (data.errorType=='1') alert("邮箱不存在！");
-                           else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
-                        }
-                        else window.location.href="index.html";
-                      }
-                    }  
-                }  
-            }     */
-function sendJSON(formName, urlName) {
+
+/*function sendJSON(formName, urlName) {
     //获取表单数据，并序列化
     var formData = $("#" + formName).serializeArray();
 
@@ -51,13 +17,46 @@ function sendJSON(formName, urlName) {
         contentType: "application/json; charset=utf-8",  //一定要设置这一行，很关键
         data: formJSON,
         datatype: "json",
-        success: function (data) {
-            if(data.status=='fail'){
-                if (data.errorType=='1') alert("邮箱不存在！");
-                else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
-            }
-            else window.location.href="index.html";
-        }
-        
+        success:function (data) {//回调函数
+                 if(data.status=='ok'){
+                    window.location.href="index.html";
+                }
+                else console.log("error");
+                },
+                error: function (xhr,error) {
+                    console.debug(xhr);
+                    console.debug(error);
+                }
     });
 }
+$('#email').blur(function(){   
+    var email=$(this).val();  
+    if(email!=""){  
+     $.ajax({  
+        url:"/views/log_in",    //请求的url地址  
+        contentType: "application/json; charset=utf-8",  
+        dataType:"json",   //返回格式为json  
+        async:true,//请求是否异步，默认为异步，这也是ajax重要特性  
+        data:JSON.stringify({"email":email}), //使用这个函数可以转化为json格式   //参数值  
+        type:"POST",   //请求方式  
+       /*  beforeSend:function(){ 
+            //请求前的处理 
+        }, */  
+        /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
+        /* JSON.stringify用于把json对象解析成string 
+        JSON.parse()用于把json字符串解析成json对象 */  
+      /*  success: function (data) {
+                if(data.status=='fail'){
+                    if (data.errorType=='1') alert("邮箱不存在！");
+                    else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
+                }
+                else window.location.href="index.html";
+            },
+        error: function (xhr,error) {
+                console.debug(xhr);
+                console.debug(error);
+            }
+            
+     });  
+    }
+});*/

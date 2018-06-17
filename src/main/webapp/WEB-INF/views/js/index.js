@@ -1,12 +1,13 @@
 
-$(function () { $("[data-toggle='tooltip']").tooltip();
+/*$(function () { $("[data-toggle='tooltip']").tooltip();
         
      });
     alert("欢迎登录Apet.com!");
-
+*/
 window.onload=function(){
     onload2();
     onload3();
+    onload4();
 }
   function onload2()
         {
@@ -78,6 +79,40 @@ window.onload=function(){
                 }
             });
         });
+
+        function onload4(){
+            $('#email').blur(function(){   
+            var email=$(this).val();  
+            if(email!=""){  
+             $.ajax({  
+                url:"/views/log_in",    //请求的url地址  
+                contentType: "application/json; charset=utf-8",  
+                dataType:"json",   //返回格式为json  
+                async:true,//请求是否异步，默认为异步，这也是ajax重要特性  
+                data:JSON.stringify({"email":email}), //使用这个函数可以转化为json格式   //参数值  
+                type:"POST",   //请求方式  
+               /*  beforeSend:function(){ 
+                    //请求前的处理 
+                }, */  
+                /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
+                /* JSON.stringify用于把json对象解析成string 
+                JSON.parse()用于把json字符串解析成json对象 */  
+                success: function (data) {
+                        if(data.status=='fail'){
+                            if (data.errorType=='1') alert("邮箱不存在！");
+                            else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
+                        }
+                        else window.location.href="index.html";
+                    },
+                error: function (xhr,error) {
+                        console.debug(xhr);
+                        console.debug(error);
+                    }
+                    
+     });  
+    }
+});
+        }
         }
     
         
