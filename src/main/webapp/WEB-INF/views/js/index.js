@@ -67,8 +67,12 @@ window.onload=function(){
                 data: JSON.stringify({"eventType":"1"}),
                 dataType: "json",
                 success: function () {//回调函数
-                 console.log(2);
-                 window.location.href="index.html"
+                // if(data.status=='ok'){
+                    console.log("success");
+                    window.location.href="index.html";
+                
+               // else console.log("出错");
+                 
                 },
                 error: function (xhr,error) {
                     console.debug(xhr);
