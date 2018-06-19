@@ -81,19 +81,17 @@ window.onload=function(){
         });
 
         function onload4(){
-            $('#email').blur(function(){   
+            $("#email").blur(function(){   
             var email=$(this).val();  
-            if(email!=""){  
+            if(email==""){ $('#e1').html="请输入用户名";}
+            else {
              $.ajax({  
+                type:"POST",   //请求方式
                 url:"/views/log_in",    //请求的url地址  
                 contentType: "application/json; charset=utf-8",  
                 dataType:"json",   //返回格式为json  
                 async:true,//请求是否异步，默认为异步，这也是ajax重要特性  
-                data:JSON.stringify({"email":email}), //使用这个函数可以转化为json格式   //参数值  
-                type:"POST",   //请求方式  
-               /*  beforeSend:function(){ 
-                    //请求前的处理 
-                }, */  
+                data:JSON.stringify({"email":email}), //使用这个函数可以转化为json格式   //参数值                   
                 /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
                 /* JSON.stringify用于把json对象解析成string 
                 JSON.parse()用于把json字符串解析成json对象 */  
@@ -107,12 +105,13 @@ window.onload=function(){
                 error: function (xhr,error) {
                         console.debug(xhr);
                         console.debug(error);
-                    }
-                    
-     });  
+                    }                        
+    });
     }
-});
+        });
         }
+
+        
         }
     
         

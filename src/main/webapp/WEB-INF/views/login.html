@@ -11,6 +11,7 @@
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引入百度jquery包-->
+	<script src="https://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
@@ -21,19 +22,17 @@
 	<form id="form1" method="post" action="/views/log_in"> 
 		<label class=""><h2>用户登录</h2></label>
 		<div class="div-bor">
-		<label>邮箱：<input type="text" name="email" id="email" placeholder="请输入您的邮箱" value="" required="required" onblur=""></label>
+		<label>邮箱：<input type="text" name="email" id="email" placeholder="请输入您的注册邮箱" value="" required="required"></label><span id="e1"></span>
 		</div>
 		<div class="div-bor">
 		<label>密码：<input type="password" name="password" id="password" placeholder="请输入密码" value="" required="required"></label>
-		</div>
-		
-		<div><input type="checkbox" name="" onselect="remeberUser()">记住密码&nbsp;|&nbsp;<a href="#">忘记密码？</a>
+		</div>	
+		<div><input type="checkbox" name="" onselect="">记住密码&nbsp;|&nbsp;<a href="#">忘记密码？</a>
 		</div>
 		<br/>
-		<button type="button" class="btn btn-default" onclick="sendJSON('form1','<%=basePath%>/views/log_in')">登录</button>&nbsp;&nbsp;
+		<button type="button" class="btn btn-default" id="log" onclick="">登录</button>&nbsp;&nbsp;
 		<button class="btn btn-default"><a href="register.html">注册</a></button>
 	</form>
-
 </div>
 
 </div>
