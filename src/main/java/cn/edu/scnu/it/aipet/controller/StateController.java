@@ -19,33 +19,40 @@ import javax.servlet.http.HttpSession;
 public class StateController {
     @Autowired
     private UserService userService = null;
-
     @RequestMapping(value = "/log_in",method =RequestMethod.POST)
     public ModelAndView loginIn(String email, String password, HttpSession session) {
         ModelAndView mv = new ModelAndView();
+        mv.setView(new MappingJackson2JsonView());
         User user = userService.selectUser(email);
         if (user == null) {
-            mv.addObject("error", 1);
-            mv.setView(new MappingJackson2JsonView());
+            //用户名不存在
+            mv.addObject("status", "fail");
+            mv.addObject("errorType", "1");
             return mv;
         }
         if (!user.getPassword().equals(password)) {
-            mv.addObject("error", 2);
-            mv.setView(new MappingJackson2JsonView());
+            //用户名或密码错误
+            mv.addObject("status", "fail");
+            mv.addObject("errorType", "2");
             return mv;
         }
         session.setAttribute("user_name", user.getName());
-        mv.setViewName("redirect:/views/index.html");
+        mv.addObject("status", "ok");
+        mv.addObject("errorType", "0");
         System.out.println(user.getName()+":login success!");
         return mv;
     }
     @RequestMapping(value = "/log_out",method = RequestMethod.POST)
-    public void loginOut(@RequestBody Event event,HttpSession session){
-        System.out.print(session.getAttribute("user_name")+":log out");
+    public ModelAndView loginOut(@RequestBody Event event,HttpSession session){
+        ModelAndView mv=new ModelAndView();
         if(event.getEventType().equals("1")){
             session.invalidate();
-            System.out.println(" success!");
+            mv.addObject("status","success");
         }
+        else
+            mv.addObject("status","fail");
+        mv.setView(new MappingJackson2JsonView());
+        return  mv;
     }
     @Autowired
     private User user=null;
