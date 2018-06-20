@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-$("#log").click(function() {
+/*$("#log").click(function() {
     var em1=$(this).val();
     var pa1=$(this).val();
     if(em1!=""&&pa1!=""){
@@ -34,7 +34,7 @@ $("#log").click(function() {
     });
 }
 });
-/*
+*/
 $("#log").click(function(){   
     var email=$(this).val();  
     var password=$(this).val();
@@ -65,7 +65,7 @@ $("#log").click(function(){
      });  
     }
 
-});*/
+});
 /*
 $("#email").blur(function(){   
     var email=$(this).val();  
