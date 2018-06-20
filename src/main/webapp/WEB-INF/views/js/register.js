@@ -93,8 +93,6 @@ $("#email").blur(function(){
         data: JSON.stringify({"email":email}), //使用这个函数可以转化为json格式   //参数值  
         type: "POST",   //请求方式  
          /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
-        /* JSON.stringify用于把json对象解析成string 
-        JSON.parse()用于把json字符串解析成json对象 */  
        success: function (data) {
                 if(data.validity=='fail'){
                  $("#e2").html("邮箱不存在");

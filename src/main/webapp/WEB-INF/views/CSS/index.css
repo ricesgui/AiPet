@@ -20,7 +20,7 @@ body{
 	background-image: url(images/soso.jpg);
 	background-position: center;
 	margin-bottom: 2px;
-
+	margin-top: 50px;
 }
 a{
 	text-decoration: none;
@@ -61,4 +61,7 @@ a{
 }
 #buju{
 	margin-left: 5px;
+}
+#outAdopt{
+	margin-top: 60px;
 }

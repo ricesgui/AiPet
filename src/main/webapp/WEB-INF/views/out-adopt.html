@@ -19,24 +19,6 @@
 		<!--公共头部开始-->
 	<header>	
 		<div class="nav navbar-fixed-top" >
-		<ul class="nav navbar-nav">
-			
-			<li id="l1"><a class="disabled" id="first"><span id="txtHint"></span></a></li>
-			<li id="l2"><a class="disabled" id="second"><span id="s1">为使您有更好的用户体验，建议Google浏览器全屏显示</span></a></li>
-			<li><a href="#" id="four"><span id="third">APet.com</span></a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right" id="yincang">
-			<li ><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</span></a></li>
-			<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</span></a></li>
-		</ul>
-		</div>
-	<div class="bj-img">
-			<img src="images/keji.jpg" width="100%" height="" alt="导航栏上背景图">
-		</div>
-	</header>
-	</header>
-
-	<!--公共头部结束-->
 	<!--导航栏开始-->
     <nav class="navbar navbar-default navbar-inverse" role="navigation">
     	<div class="container-fluid">
@@ -82,14 +64,28 @@
 			<li><a href="details.html">领养须知</a></li>
 			<li><a href="help.html">使用助手</a></li>
 		</ul>
+			<ul class="nav navbar-nav">			
+			<li id="l1"><a class="disabled" id="first"><span id="txtHint"></span></a></li>
+			<li id="l2"><a class="disabled" id="second"><span id="s1"></span></a></li>
+			<li><a href="#" id="third"></a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right" id="yincang">
+			<li ><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</span></a></li>
+			<li><a href="register.html"><span class="glyphicon glyphicon-user">[注册]</span></a></li>
+		</ul>	
 	</div>
 	</div>
 </nav>
-
+</div>		
+	<!--<div class="bj-img">
+			<img src="images/keji.jpg" width="100%" height="" alt="导航栏上背景图">
+		</div>-->
+</header>
+	<!--公共头部结束-->
 <main>	
 	<!--面包屑导航-->
 	<div class="container">
-	<div class="row clearfix">
+	<div class="row clearfix" id="outAdopt">
 		<div class="col-md-2 column">
 			<ul class="nav nav-pills" id="rootnav">
 				<li>
@@ -105,7 +101,6 @@
 	<div class="oa-text">	
 
 		<form method="post" id="form" enctype="multipart/form-data" onsubmit="return false;">
-
 
 	<h4><label>*送养种类：<input type="radio" name="petspecies" class="btn-group"=> 狗狗</input><input type="radio" name="petspecies" class="btn-group"> 猫咪</input><input type="radio" name="petspecies" class="btn-group"> 其他</input></label>
 	</h4>
@@ -153,8 +148,11 @@
 	</div>
 </main>
 <!--页脚-->
+<div id="d-img">
+	<img src="images/soso2.jpg" width="100%" height="100%" alt="sos图片">
+</div>
 <footer class="rig">
-	<br/>
+	
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 <script type="text/javascript" src="js/adopt.js"></script>
