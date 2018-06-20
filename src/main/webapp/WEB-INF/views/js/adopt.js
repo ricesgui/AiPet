@@ -12,23 +12,23 @@ var imgs=[];//存储图片链接
   var formData=new FormData();
   formData.append('file',fileObj);
   //创建XMLHttpRequest对象
- var xmlhttp=new XMLHttpRequest();
+  $.ajax({
+	  type:POST,
+	  url:"/file/upload/pet_picture",
+	  data:formData,
+	  contentType:false,
+	  processData:false,
+	  success: function(data){
+		  console.log(data)
+	  }});
+ //var xmlhttp=new XMLHttpRequest();
  //发送POST请求
-<<<<<<< HEAD
- ajax.open("POST","/file/upload/pet_picture",true);
- ajax.send(formData);
- ajax.onreadystatechange=function(){
- if (ajax.readyState == 4 && ajax.status==200){
-  console.log(ajax.responseText);
-  var obj=JSON.parse(ajax.responseText);
-=======
- xmlhttp.open("POST","/file/upload/pet_picture",true);
- xmlhttp.send(formData);
-xmlhttp.onreadystatechange=function(){
- if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+ //xmlhttp.open("POST","/file/upload/pet_picture",true);
+ //xmlhttp.send(formData);
+ xmlhttp.onreadystatechange=function(){
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
   console.log(xmlhttp.responseText);
   var obj=JSON.parse(xmlhttp.responseText);
->>>>>>> 637104eddc72078723c40c94637b6b378a18f37f
   alert(obj.msg);
   if(obj.err == 0){
    //上传成功后自动动创建img标签放在指定位置
