@@ -1,4 +1,4 @@
- 
+ $(document).ready(function(){
 	var str1="";
   /**生成一个随机数**/
   function randomNum(min,max){
@@ -83,7 +83,7 @@
   }
 
 $("#email").blur(function(){   
-    var email=$(this).val();  
+    var email=$("#email").val();  
     if(email!=""){  
      $.ajax({  
         url: "/check/username",    //请求的url地址  
@@ -97,12 +97,12 @@ $("#email").blur(function(){
         JSON.parse()用于把json字符串解析成json对象 */  
        success: function (data) {
                 if(data.validity=='fail'){
-                 $("#e2").html("用户名不存在");
+                 $("#e2").html("邮箱不存在");
                 }
                 &（"#e2"）.css("color","red");
              ｝
                 else{ 
-                    $("#e2").html("用户名存在");
+                    $("#e2").html("邮箱存在");
                     $("#e2").css("color","red");
             }
             },
@@ -114,3 +114,4 @@ $("#email").blur(function(){
      });  
     }
 });
+}

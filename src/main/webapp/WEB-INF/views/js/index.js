@@ -75,6 +75,7 @@ window.onload=function(){
             });
         });
        }
+       /*
    function onload4(){
     $("#log").click(function(){  
     var email=$("#email").val();  
@@ -106,9 +107,9 @@ window.onload=function(){
      });  
     }
 
-});
+});*/
    
-}
+
        
         
     
