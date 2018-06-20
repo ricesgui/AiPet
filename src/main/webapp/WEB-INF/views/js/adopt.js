@@ -17,7 +17,7 @@ var imgs=[];//存储图片链接
  ajax.open("POST","/file/upload/pet_picture",true);
  ajax.send(formData);
  ajax.onreadystatechange=function(){
- if (ajax.readyState == 4&&ajax.status==200){
+ if (ajax.readyState == 4 && ajax.status==200){
   console.log(ajax.responseText);
   var obj=JSON.parse(ajax.responseText);
   alert(obj.msg);
