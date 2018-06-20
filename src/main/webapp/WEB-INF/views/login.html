@@ -27,7 +27,12 @@
 		</div>
 		<div class="div-bor">
 		<label>密码：<input type="password" name="password" id="password" placeholder="请输入密码" value="" required="required"></label>
-		</div>	
+		</div>
+		<div class="div-bor">
+		<label>验证码：<input type="text" id="checknum" placeholder="请输入验证码" height="50" onchange="return check_checknum(this.value)" required="required"><span id="checknum_result"></label></div><canvas id="canvas" width="150" height="50"></canvas>
+ 		<a href="#" id="changeImg">看不清，换一张</a> (不区分大小写）		
+		<br>
+		<br>
 		<div><input type="checkbox" name="" onselect="">记住密码&nbsp;|&nbsp;<a href="#">忘记密码？</a>
 		</div>
 		<br/>
@@ -35,14 +40,10 @@
 		<button class="btn btn-default"><a href="register.html">注册</a></button>
 	
 </div>
-
-</div>
-
 <!--页脚-->
-<footer class="rig">
-	
+<footer class="rig">	
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
-
+<script src="js/register.js"></script>
 </body>
 </html>
