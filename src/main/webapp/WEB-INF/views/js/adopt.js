@@ -106,6 +106,7 @@ var input = document.getElementById('file');
    parameter :JSON.stringify(stu)
   },
   success:function(res){
+    console("1");
    if(res.status==success){
     window.location.href="index.html";
    }
