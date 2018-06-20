@@ -96,8 +96,11 @@ var input = document.getElementById('file');
   stu["imgs"] = imgs[0];
    //发送ajax请求
   $.ajax({
-  contentType:"application/json; charset=utf-8",
-  url:"/file/upload/pet_picture",
+  url:"/views/sendpet",
+  type:'POST',
+  async:true,
+  dataType:"json",
+  contentType:false,
   data:{
    parameter :JSON.stringify(stu)
   },
