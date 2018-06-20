@@ -11,6 +11,6 @@
 <p>
     欢迎登录AIPet网
 </p>
-<a href="/views/register.html">返回注册界面</a>
+<a href="/views/index.html">首页</a>
 </body>
 </html>

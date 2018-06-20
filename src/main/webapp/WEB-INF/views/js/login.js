@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+/*$(document).ready(function(){
      $("#log").click(function(){  
     var email=$("#email").val();  
     var password=$("#password").val();
@@ -32,3 +32,4 @@ $(document).ready(function(){
     }
 });
  });
+*/
