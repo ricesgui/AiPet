@@ -72,11 +72,20 @@ var input = document.getElementById('file');
     processData:false,
     contentType:false,
     success:function(responseStr){
-      console.log("success");
-      console.log(responseStr.url);
+      if(responseStr.status=="success"){
+        $("#loadPic").html("上传成功");
+        $("#loadPic").css("color:green");
+        //console.log("success");
+      //console.log(responseStr.url);
       var img =$("<img src='"+responseStr.url+"' alt='' />");
       $("#con").append(img);
       stu["petphotourl"] = responseStr.url;
+      }
+      else if(responseStr.status=="fail")
+      {
+        $("#loadPic").html("上传失败，请重传");
+        $("#loadPic").css("color:red");
+      }
     },
     error:function(responseStr){
       console.log("error");
@@ -84,11 +93,10 @@ var input = document.getElementById('file');
   });
   }, false);
 //完成form表单数据的提交
- $("#btn").on("click",function(){
+ $("#btn").click(function(){
 //  serializeArray()将form表单控件中的数据序列化成数组,数组中含有若干对象,对象包含对应控件的name和value
-
-  var infor = $("#form").serializeArray();
-//  console.log(infor);
+ //var infor = $("#form").serializeArray();
+ console.log(infor);
   var stu = {};
   var infor = $('#form').serializeArray();
   console.log(infor);

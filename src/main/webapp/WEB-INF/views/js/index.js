@@ -37,8 +37,7 @@ window.onload=function(){
                     var im = document.getElementById("denglu");
                     var bigImg = document.createElement("img");     //创建一个img元素  
                     bigImg.src="images/maomi.jpg";   //给img元素的src属性赋值  
-                    bigImg.height="400";  //320个像素 不用加px  
-                  
+                    bigImg.height="400";  //320个像素 不用加px                   
                     im.appendChild(bigImg);      //为dom添加子元素img  
                     }
                 }
