@@ -68,7 +68,7 @@ window.onload=function(){
                 data: JSON.stringify({"eventType":"1"}),
                 dataType: "json",
                 success: function (data) {//回调函数
-                 if(data.status=='ok'){
+                 if(data.status=='success'){
                     window.location.href="index.html";
                 }
                  else console.log("error");
@@ -93,6 +93,7 @@ window.onload=function(){
         dataType: "json",   //返回格式为json  
         //async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
         success: function (data) {//回调函数
+                alert("test");
                 if(data.status=='ok'){
                     window.location.href="index.html";
                 }
