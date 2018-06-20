@@ -102,7 +102,6 @@ var input = document.getElementById('file');
   async:true,
   dataType:"json",
   contentType: "application/json; charset=utf-8",
-  contentType:false,
   data:{
    parameter :JSON.stringify(stu)
   },
