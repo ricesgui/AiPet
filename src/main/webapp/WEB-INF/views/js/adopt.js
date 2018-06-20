@@ -101,9 +101,7 @@ var input = document.getElementById('file');
   async:true,
   dataType:"json",
   contentType: "application/json; charset=utf-8",
-  data:{
-   parameter :JSON.stringify(stu)
-  },
+  data:JSON.stringify(stu),
   success:function(res){
     console("1");
    if(res.status==success){
