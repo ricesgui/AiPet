@@ -77,8 +77,8 @@ window.onload=function(){
        }
    function onload4(){
     $("#log").click(function(){  
-    var email=$(this).val();  
-    var password=$(this).val();
+    var email=$("#email").val();  
+    var password=$("#password").val();
     if(email!=""&&password!=""){  
      $.ajax({  
         type: "POST",   //请求方式  
@@ -104,6 +104,7 @@ window.onload=function(){
             }  
      });  
     }
+    else alert("请输入您的用户名和密码！")；
    
 });
    
