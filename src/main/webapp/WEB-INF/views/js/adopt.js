@@ -92,6 +92,7 @@ var input = document.getElementById('file');
   var obj=infor[i];
   stu[obj.name] = obj.value;
   }
+  //stu["petdescri"]=document.getElementById("txt1").value;
   console.log(stu);
    //发送ajax请求
   $.ajax({
