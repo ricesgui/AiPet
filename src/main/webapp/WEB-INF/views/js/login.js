@@ -34,7 +34,7 @@
     });
 }
 });
-*/
+
 $(document).ready(function(){
 $("#log").click(function(){   
     var email=$(this).val();  
@@ -44,11 +44,10 @@ $("#log").click(function(){
         url: "/log_in",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",   //返回格式为json  
-      //  async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
         data: JSON.stringify({"email":email,"password":password}), //使用这个函数可以转化为json格式   //参数值  
         type: "POST",   //请求方式  
        success: function (data) {//回调函数
-                 if(data.status=='ok'){
+                if(data.status=='ok'){
                     window.location.href="index.html";
                 }
                 else if(data.status=='fail')
@@ -67,7 +66,7 @@ $("#log").click(function(){
     }
 
 });
-});
+});*/
 /*
 $("#email").blur(function(){   
     var email=$(this).val();  
