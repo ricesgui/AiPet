@@ -101,10 +101,9 @@ window.onload=function(){
     xmlhttp1.open("POST","/views/log_in",true);
     xmlhttp1.send();
     xmlhttp1.onreadystatechange=function(){
-        if(xmlhttp1.readyState==4&&xmlhttp1.readyStatus){
+        if(xmlhttp1.readyState==4&& xmlhttp1.status==200){
              if(data.status=='success'){
-
-                    window.location.href="index.html";
+                   window.location.href="index.html";
                 }
                 else if(data.status=='fail')
                     {
