@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 
 /*$("#log").click(function() {
     var em1=$(this).val();
@@ -35,6 +35,7 @@ $(document).ready(function(){
 }
 });
 */
+$(document).ready(function(){
 $("#log").click(function(){   
     var email=$(this).val();  
     var password=$(this).val();
@@ -47,7 +48,7 @@ $("#log").click(function(){
         data: JSON.stringify({"email":email,"password":password}), //使用这个函数可以转化为json格式   //参数值  
         type: "POST",   //请求方式  
        success: function (data) {//回调函数
-                 if(data.status=='ok'){
+                 if(data.status=='success'){
                     window.location.href="index.html";
                 }
                 else if(data.status=='fail')
@@ -65,6 +66,7 @@ $("#log").click(function(){
      });  
     }
 
+});
 });
 /*
 $("#email").blur(function(){   
@@ -100,4 +102,3 @@ $("#email").blur(function(){
     }
 });
 */
-});
