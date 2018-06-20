@@ -84,9 +84,9 @@ var input = document.getElementById('file');
   })
   }, false);
 //完成form表单数据的提交
- $('#btn').on('click',function(){
+ $("#btn").on("click",function(){
 //  serializeArray()将form表单控件中的数据序列化成数组,数组中含有若干对象,对象包含对应控件的name和value
-  var infor = $('#form').serializeArray();
+  var infor = $("#form").serializeArray();
 //  console.log(infor);
   var stu = {};
   for (var i=0;i<infor.length;i++) {
