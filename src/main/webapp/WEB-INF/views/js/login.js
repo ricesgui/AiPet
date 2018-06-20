@@ -41,7 +41,7 @@ $("#log").click(function(){
     var password=$(this).val();
     if(email!=""&&password!=""){  
      $.ajax({  
-        url: "/check/username",    //请求的url地址  
+        url: "/log_in",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",   //返回格式为json  
         async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
