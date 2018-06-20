@@ -134,7 +134,9 @@
 	</h4>
 	<h4>
 		<label for="inputfile">上传照片:</label>
-		<input type="file" id="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"/>
+		<input type="file" id="file" name="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" enctype="multipart/form-data"/>
+		<div class="con">
+	</div>
 	</h4>
 	<h4>
 		<label>宠物描述：
@@ -148,8 +150,6 @@
 	</h4>
 	<h4><button type="submit" class="btn btn-success" id="btn">发布</button></h4>
 	</form>
-	<div class="con">
-	</div>
 	</div>
 	</div>
 </main>

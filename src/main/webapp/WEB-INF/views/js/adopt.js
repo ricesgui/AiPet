@@ -12,26 +12,17 @@ var imgs=[];//存储图片链接
   var formData=new FormData();
   formData.append('file',fileObj);
   //创建XMLHttpRequest对象
-  $.ajax({
-	  type:POST,
-	  url:"/file/upload/pet_picture",
-	  data:formData,
-	  contentType:false,
-	  processData:false,
-	  success: function(data){
-		  console.log(data)
-	  }});
- //var xmlhttp=new XMLHttpRequest();
+ var xmlhttp=new XMLHttpRequest();
  //发送POST请求
- //xmlhttp.open("POST","/file/upload/pet_picture",true);
- //xmlhttp.send(formData);
+ xmlhttp.open("POST","/file/upload/pet_picture",true);
+ xmlhttp.send(formData);
  xmlhttp.onreadystatechange=function(){
   if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
   console.log(xmlhttp.responseText);
   var obj=JSON.parse(xmlhttp.responseText);
   alert(obj.msg);
   if(obj.err == 0){
-   //上传成功后自动动创建img标签放在指定位置
+   //上传成功后自动创建img标签放在指定位置
    var img =$("<img src='"+obj.msg+"' alt='' />");
    $(".con").append(img);
    imgs.push(obj.msg);
