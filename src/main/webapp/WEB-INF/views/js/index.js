@@ -21,25 +21,17 @@ window.onload=function(){
             {
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
-
                     var obj =JSON.parse(xmlhttp.responseText);
                     if(obj.user_name==null)
                     {
-                         document.getElementById("txtHint").innerHTML="";
-                         //document.getElementById("s1").innerHTML="为使您有更好的用户体验，建议Google浏览器全屏显示";                                     
-                        // document.getElementById("third").innerHTML="APet.com";
-                    }
-                   
+                         document.getElementById("txtHint").innerHTML="";                   
+                    }                  
                     else  
                     {
                      document.getElementById("txtHint").innerHTML=obj.user_name;
-                      //实现第二个提示
-                    
+                      //实现第二个提示                   
                     document.getElementById("s1").innerHTML="您已登录";                                     
-                    document.getElementById("third").innerHTML="退出";
-        
-                    //var node4 = document.getElementById("four");
-                    //node4.href = "login.html";
+                    document.getElementById("third").innerHTML="退出";        
                     $("#yincang").hide();
                     $("#div-m").hide();
                     var im = document.getElementById("denglu");

@@ -100,18 +100,21 @@ var input = document.getElementById('file');
   console.log(stu);
    //发送ajax请求
   $.ajax({
+  type:'POST',  
   url:"/views/sendpet",
-  type:'POST',
-  async:true,
-  dataType:"json",
   contentType: "application/json; charset=utf-8",
   data:JSON.stringify(stu),
-  success:function(res){
+  dataType:"json",
+  success:function(data){
   console.log(2);
-   if(res.status==success){
+   if(data.status=='success'){
     window.location.href="index.html";
    }
    else alert("请重新输入");
-  }
+  },
+  error: function (xhr,error) {
+                console.debug(xhr);
+                console.debug(error);
+            }  
   });
  });
