@@ -107,10 +107,10 @@
 		<form method="post" id="form" enctype="multipart/form-data" onsubmit="return false;">
 
 
-	<h4><label>*送养种类：<input type="radio" name="kind" class="btn-group"=> 狗狗</input><input type="radio" name="kind" class="btn-group"> 猫咪</input><input type="radio" name="kind" class="btn-group"> 其他</input></label>
+	<h4><label>*送养种类：<input type="radio" name="petspecies" class="btn-group"=> 狗狗</input><input type="radio" name="petspecies" class="btn-group"> 猫咪</input><input type="radio" name="petspecies" class="btn-group"> 其他</input></label>
 	</h4>
 	<h4>
-		<label>*宠物昵称：<input type="text" name="" required="required"></label>
+		<label>*宠物昵称：<input type="text" name="name" required="required"></label>
 	</h4>
 	<h4>
 		<label>*性别选择：<input type="radio" name="sex" class="btn-group" required="required">男</input><input type="radio" name="sex" class="btn-group">女</input></label>
@@ -119,10 +119,10 @@
 		<label>*标题:<input type="text" name="placeouttitle" required="required"></label>
 	</h4>
 	<h4>
-		<label>宠物年龄：<input type="number" name="age" min="0" max="100" step="1">年<input type="number" name="age" min="0" max="100" step="1">月</label>
+		<label>宠物年龄：<input type="number" name="age_year" min="0" max="100" step="1">年<input type="number" name="age_month" min="0" max="100" step="1">月</label>
 	</h4>
 	<h4>
-		<label>宠物体重：<input type="text" name="">kg</label>
+		<label>宠物体重：<input type="text" name="weight">kg</label>
 	</h4>
 	<h4>
 		<label>*联系人姓名:<input type="text" name="name" required="required" ></label>
@@ -142,7 +142,7 @@
 		<div class="panel panel-default" id="d-p">
 			<h5>请描述您的宠物的性格和喜好。</h5>
 			<div class="panel-body">
-				<textarea rows="5" required="required"></textarea>
+				<textarea name="petdescri" id="txt1" rows="5" required="required"></textarea>
 			</div>
 		</div>
 	</label>
