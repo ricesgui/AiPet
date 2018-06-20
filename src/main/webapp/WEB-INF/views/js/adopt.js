@@ -11,15 +11,24 @@ var imgs=[];//存储图片链接
   //创建formdata对象，formData用来存储表单的数据，表单数据时以键值对形式存储的。
   var formData=new FormData();
   formData.append('file',fileObj);
-  //创建ajax对象
- var ajax=new XMLHttpRequest();
+  //创建XMLHttpRequest对象
+ var xmlhttp=new XMLHttpRequest();
  //发送POST请求
+<<<<<<< HEAD
  ajax.open("POST","/file/upload/pet_picture",true);
  ajax.send(formData);
  ajax.onreadystatechange=function(){
  if (ajax.readyState == 4 && ajax.status==200){
   console.log(ajax.responseText);
   var obj=JSON.parse(ajax.responseText);
+=======
+ xmlhttp.open("POST","/file/upload/pet_picture",true);
+ xmlhttp.send(formData);
+xmlhttp.onreadystatechange=function(){
+ if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+  console.log(xmlhttp.responseText);
+  var obj=JSON.parse(xmlhttp.responseText);
+>>>>>>> 637104eddc72078723c40c94637b6b378a18f37f
   alert(obj.msg);
   if(obj.err == 0){
    //上传成功后自动动创建img标签放在指定位置
@@ -31,7 +40,7 @@ var imgs=[];//存储图片链接
   }
   }
  }
-});
+})});
 //完成form表单数据的提交
  $('#btn').on('click',function(){
 //  serializeArray()将form表单控件中的数据序列化成数组,数组中含有若干对象,对象包含对应控件的name和value
@@ -47,6 +56,7 @@ var imgs=[];//存储图片链接
  
   //发送ajax请求
   $.ajax({
+  contentType:"application/json; charset=utf-8",
   url:"/file/upload/pet_picture",
   data:{
    parameter :JSON.stringify(stu)
@@ -55,4 +65,4 @@ var imgs=[];//存储图片链接
    console.log(res.msg);
   }
   });
- })});
+ });
