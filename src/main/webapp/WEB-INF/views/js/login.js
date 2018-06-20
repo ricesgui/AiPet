@@ -15,6 +15,7 @@ $(document).ready(function(){
          success: function (data) {//回调函数
                 if(data.status=='ok'){
                     window.location.href="index.html";
+                    //设置cookies
                 }
                 else if(data.status=='fail')
                     {
@@ -29,6 +30,5 @@ $(document).ready(function(){
             }  
      });  
     }
-
 });
- }
+ });
