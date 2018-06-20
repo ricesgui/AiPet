@@ -2,20 +2,25 @@
 var imgs=[];//存储图片链接
  //为文件上传添加change事件
  //var fileM=document.getElementById('file');
- $(document).ready(function() {
+ /*$(document).ready(function() {
  $("#file").change(function(){
   var fileM=document.getElementById('file');
   console.log(fileM.files);
   //获取文件对象，files是文件选取控件的属性，存储的是文件选取控件选取的文件对象，类型是一个数组
-  var fileObj=fileM.files[0];
+  /*var fileObj=fileM.files[0];
   //创建formdata对象，formData用来存储表单的数据，表单数据时以键值对形式存储的。
   var formData=new FormData();
   formData.append('file',fileObj);
+  //formData.append('username', 'Justin');
+  console.log(formData);*/
+  /*var data = new FormData($('#file')[0]);
+  console.log(data);
   $.ajax({
     url:"/file/upload/pet_picture",
     type:'POST',
-    async:type,
+    async:true,
     data:formData,
+    fileElementId:"file",
     processData:false,
     contentType:false,
     success:function(responseStr){
@@ -48,7 +53,34 @@ var imgs=[];//存储图片链接
   }
   }
  }*/
-})});
+var input = document.getElementById('file');
+    input.addEventListener('change', function(e){
+        var file = e.target.files[0];
+
+        var formData = new FormData();
+        formData.append('file', file);
+        for (var value of formData.values()) {
+        console.log(value); 
+        }
+         $.ajax({
+    url:"/file/upload/pet_picture",
+    type:'POST',
+    async:true,
+    data:formData,
+    fileElementId:"file",
+    processData:false,
+    contentType:false,
+    success:function(responseStr){
+      console.log("success");
+      var img =$("<img src='"+responseStr+"' alt='' />");
+      $(".con").append(img);
+       imgs.push(responseStr);
+    },
+    error:function(responseStr){
+      console.log("error");
+    }
+  })
+  }, false);
 //完成form表单数据的提交
  $('#btn').on('click',function(){
 //  serializeArray()将form表单控件中的数据序列化成数组,数组中含有若干对象,对象包含对应控件的name和value
