@@ -79,7 +79,7 @@ window.onload=function(){
     $("#log").click(function(){  
     var email=$("#email").val();  
     var password=$("#password").val();
-    if(email==""&&password=""){  alert("请输入您的用户名和密码！"); }
+    if(email==""&&password==""){  alert("请输入您的用户名和密码！"); }
      else {
         $.ajax({  
         type: "POST",   //请求方式  
