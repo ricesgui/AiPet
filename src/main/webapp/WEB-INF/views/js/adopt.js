@@ -73,6 +73,7 @@ var input = document.getElementById('file');
     contentType:false,
     success:function(responseStr){
       console.log("success");
+      console.log(responseStr.url);
       var img =$("<img src='"+responseStr.url+"' alt='' />");
       $("#con").append(img);
        imgs.push(responseStr.url);
