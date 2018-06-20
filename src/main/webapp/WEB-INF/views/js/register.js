@@ -97,13 +97,13 @@ $("#email").blur(function(){
         JSON.parse()用于把json字符串解析成json对象 */  
        success: function (data) {
                 if(data.validity=='fail'){
-                 $("#e1").html("用户名不存在");
+                 $("#e2").html("用户名不存在");
                 }
-                &（"#e1"）.css("color","red");
+                &（"#e2"）.css("color","red");
              ｝
                 else{ 
-                    $("#e1").html("用户名存在");
-                    $("#e1").css("color","red");
+                    $("#e2").html("用户名存在");
+                    $("#e2").css("color","red");
             }
             },
         error: function (xhr,error) {

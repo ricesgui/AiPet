@@ -68,7 +68,7 @@ window.onload=function(){
                 data: JSON.stringify({"eventType":"1"}),
                 dataType: "json",
                 success: function (data) {//回调函数
-                 if(data.status=='ok'){
+                 if(data.status=='success'){
                     window.location.href="index.html";
                 }
                  else console.log("error");
@@ -93,7 +93,16 @@ window.onload=function(){
         dataType: "json",   //返回格式为json  
         //async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
         success: function (data) {//回调函数
-                if(data.status=='ok'){
+            if(data.status=='success'){
+                    window.location.href="index.html";
+                }
+                 else console.log("error");
+                },
+                error: function (xhr,error) {
+                    console.debug(xhr);
+                    console.debug(error);
+                }
+               /* if(data.status=='ok'){
                     window.location.href="index.html";
                 }
                 else if(data.status=='fail')
@@ -101,52 +110,15 @@ window.onload=function(){
                         if (data.errorType=='1') alert("邮箱不存在！");
                         else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
                 }
-                
-            },
-        error: function (xhr,error) {
-                console.debug(xhr);
-                console.debug(error);
-            }
+                */
+            
             
      });  
     }
 
 });
 }
-        /*   function onload4(){
-            $("#log").click(function(){   
-            var email=$(this).val();  
-            var password=$(this).val();
-            if(email!=""&&password!=""){  
-             $.ajax({  
-            url: "/check/username",    //请求的url地址  
-            contentType: "application/json; charset=utf-8",  
-            dataType: "json",   //返回格式为json  
-            async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
-            data: JSON.stringify({"email":email,"password":password}), //使用这个函数可以转化为json格式   //参数值  
-            type: "POST",   //请求方式  
-           success: function (data) {//回调函数
-                     if(data.status=='success'){
-                        window.location.href="index.html";
-                    }
-                    else if(data.status=='fail')
-                        {
-                            if (data.errorType=='1') alert("邮箱不存在！");
-                            else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
-                    }                  
-                },
-            error: function (xhr,error) {
-                console.debug(xhr);
-                console.debug(error);
-            }
-            
-     });  
-    }
-
-});*/
        
-
-        
         
     
         
