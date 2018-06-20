@@ -81,19 +81,17 @@ var input = document.getElementById('file');
     error:function(responseStr){
       console.log("error");
     }
-  })
+  });
   }, false);
 //完成form表单数据的提交
  $("#btn").on("click",function(){
 //  serializeArray()将form表单控件中的数据序列化成数组,数组中含有若干对象,对象包含对应控件的name和value
-<<<<<<< HEAD
+
   var infor = $("#form").serializeArray();
 //  console.log(infor);
   var stu = {};
-=======
   var infor = $('#form').serializeArray();
   console.log(infor);
->>>>>>> e30ec5d5c005532ea79f5a9d6e730d5742a4f006
   for (var i=0;i<infor.length;i++) {
   var obj=infor[i];
   stu[obj.name] = obj.value;
@@ -109,7 +107,7 @@ var input = document.getElementById('file');
   contentType: "application/json; charset=utf-8",
   data:JSON.stringify(stu),
   success:function(res){
-
+  console.log(2);
    if(res.status==success){
     window.location.href="index.html";
    }
