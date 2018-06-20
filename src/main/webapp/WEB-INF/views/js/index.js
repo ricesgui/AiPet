@@ -1,9 +1,4 @@
 
-/*$(function () { $("[data-toggle='tooltip']").tooltip();
-        
-     });
-    alert("欢迎登录Apet.com!");
-*/
 window.onload=function(){
     onload2();
     onload3();
@@ -91,27 +86,25 @@ window.onload=function(){
         contentType: "application/json; charset=utf-8",  
         data: JSON.stringify({"email":email,"password":password}), //使用这个函数可以转化为json格式   //参数值  
         dataType: "json",   //返回格式为json  
-        //async: true,//请求是否异步，默认为异步，这也是ajax重要特性     
-     });  
-    }
-    var xmlhttp1;
-    if (window.XMLHttpRequest) {
-        xmlhttp1 = new XMLHttpRequest();
-    } 
-    xmlhttp1.open("POST","/views/log_in",true);
-    xmlhttp1.send();
-    xmlhttp1.onreadystatechange=function(){
-        if(xmlhttp1.readyState==4&& xmlhttp1.status==200){
-             if(data.status=='success'){
-                   window.location.href="index.html";
+        //async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
+         success: function (data) {//回调函数
+                if(data.status=='ok'){
+                    window.location.href="index.html";
                 }
                 else if(data.status=='fail')
                     {
                         if (data.errorType=='1') alert("邮箱不存在！");
                         else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
                 }
-        }
+                
+            },
+        error: function (xhr,error) {
+                console.debug(xhr);
+                console.debug(error);
+            }  
+     });  
     }
+   
 });
    
 }

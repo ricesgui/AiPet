@@ -6,26 +6,29 @@
     if(em1!=""&&pa1!=""){
     //获取表单数据，并序列化
     //var formData = $("#" + formName).serializeArray();
-    var formData = $("#form1").serializeArray();//自动将form表单封装成json
+   // var formData = $("#form1").serializeArray();//自动将form表单封装成json
     //将序列化数据转为对象
     //var formObject = {};
-    for (var item in formData) {
-        formObject[formData[item].name] = formData[item].value;
-    }
-    var formJSON = JSON.stringify(formObject);
+    //for (var item in formData) {
+     //   formObject[formData[item].name] = formData[item].value;
+    //}
+   // var formJSON = JSON.stringify(formObject);
 
     //发送JSON到服务器
     $.ajax({
         type: "POST",
         url: "/views/log_in",
         contentType: "application/json; charset=utf-8",  //一定要设置这一行，很关键
-        data: formJSON,
+        data: JSON.stringify({"email":email,"password":password}),
         datatype: "json",
         success: function (data) {//回调函数
-                 if(data.status=='ok'){
+                 if(data.status=='success'){
                     window.location.href="index.html";
                 }
-                else console.log("error");
+                else if (data.status=='fail') {
+                    if (errorType=='1') {alert("邮箱不存在！");}
+                    else if (errorType=='2') {alert("邮箱或密码错误，请重新输入！");}
+                }
                 },
         error: function (xhr,error) {
                 console.debug(xhr);
@@ -67,7 +70,24 @@ $("#log").click(function(){
 
 });
 });*/
-/*
+/* var xmlhttp1;
+    if (window.XMLHttpRequest) {
+        xmlhttp1 = new XMLHttpRequest();
+    } 
+    xmlhttp1.open("POST","/views/log_in",true);
+    xmlhttp1.send();
+    xmlhttp1.onreadystatechange=function(){
+        if(xmlhttp1.readyState==4 && xmlhttp1.status==200){
+             if(data.status=='success'){
+                   window.location.href="index.html";
+                }
+                else if(data.status=='fail')
+                    {
+                        if (data.errorType=='1') alert("邮箱不存在！");
+                        else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
+                }
+        }
+    }
 $("#email").blur(function(){   
     var email=$(this).val();  
     if(email!=""){  
