@@ -104,7 +104,7 @@ window.onload=function(){
             }  
      });  
     }
-    else alert("请输入您的用户名和密码！")；
+    else alert("请输入您的用户名和密码！");
    
 });
    
