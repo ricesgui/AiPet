@@ -11,8 +11,25 @@ var imgs=[];//存储图片链接
   //创建formdata对象，formData用来存储表单的数据，表单数据时以键值对形式存储的。
   var formData=new FormData();
   formData.append('file',fileObj);
+  $.ajax({
+    url:"/file/upload/pet_picture",
+    type:'POST',
+    async:type,
+    data:formData,
+    processData:false,
+    contentType:false,
+    success:function(responseStr){
+      console.log("success");
+      var img =$("<img src='"+responseStr+"' alt='' />");
+      $(".con").append(img);
+       imgs.push(responseStr);
+    },
+    error:function(responseStr){
+      console.log("error");
+    }
+  })
   //创建XMLHttpRequest对象
- var xmlhttp=new XMLHttpRequest();
+ /*var xmlhttp=new XMLHttpRequest();
  //发送POST请求
  xmlhttp.open("POST","/file/upload/pet_picture",true);
  xmlhttp.send(formData);
@@ -30,7 +47,7 @@ var imgs=[];//存储图片链接
    alert(obj.msg);
   }
   }
- }
+ }*/
 })});
 //完成form表单数据的提交
  $('#btn').on('click',function(){
