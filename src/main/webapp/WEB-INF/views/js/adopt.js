@@ -1,5 +1,4 @@
 // JavaScript Document
-var imgs=[];//存储图片链接
  //为文件上传添加change事件
  //var fileM=document.getElementById('file');
  /*$(document).ready(function() {
@@ -53,6 +52,7 @@ var imgs=[];//存储图片链接
   }
   }
  }*/
+  var stu = {};
 var input = document.getElementById('file');
     input.addEventListener('change', function(e){
         var file = e.target.files[0];
@@ -76,7 +76,7 @@ var input = document.getElementById('file');
       console.log(responseStr.url);
       var img =$("<img src='"+responseStr.url+"' alt='' />");
       $("#con").append(img);
-       imgs.push(responseStr.url);
+      stu["petphotourl"] = responseStr.url;
     },
     error:function(responseStr){
       console.log("error");
@@ -87,14 +87,12 @@ var input = document.getElementById('file');
  $('#btn').on('click',function(){
 //  serializeArray()将form表单控件中的数据序列化成数组,数组中含有若干对象,对象包含对应控件的name和value
   var infor = $('#form').serializeArray();
-//  console.log(infor);
-  var stu = {};
+  console.log(infor);
   for (var i=0;i<infor.length;i++) {
   var obj=infor[i];
   stu[obj.name] = obj.value;
   }
-  stu["imgs"] = imgs;
-  stu["imgs"] = imgs[0];
+  console.log(stu);
    //发送ajax请求
   $.ajax({
   url:"/views/sendpet",
