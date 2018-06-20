@@ -97,7 +97,9 @@ window.onload=function(){
             if(data.status=='success'){
                     window.location.href="index.html";
                 }
-                 else console.log("error");
+                 else if(data.status=='fail'){
+                    alert("用户名或密码错误，请重新输入！");
+                 }
                 },
                 error: function (xhr,error) {
                     console.debug(xhr);
