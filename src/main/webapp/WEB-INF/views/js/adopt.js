@@ -101,12 +101,16 @@ var input = document.getElementById('file');
   type:'POST',
   async:true,
   dataType:"json",
+  contentType: "application/json; charset=utf-8",
   contentType:false,
   data:{
    parameter :JSON.stringify(stu)
   },
   success:function(res){
-   console.log(res.msg);
+   if(res.status==success){
+    window.location.href="index.html";
+   }
+   else alert("请重新输入");
   }
   });
  });
