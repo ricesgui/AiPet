@@ -62,19 +62,20 @@ var input = document.getElementById('file');
         for (var value of formData.values()) {
         console.log(value); 
         }
-         $.ajax({
+  $.ajax({
     url:"/file/upload/pet_picture",
     type:'POST',
     async:true,
     data:formData,
     fileElementId:"file",
+    dataType:"json",
     processData:false,
     contentType:false,
     success:function(responseStr){
       console.log("success");
-      var img =$("<img src='"+responseStr+"' alt='' />");
-      $(".con").append(img);
-       imgs.push(responseStr);
+      var img =$("<img src='"+responseStr.url+"' alt='' />");
+      $("#con").append(img);
+       imgs.push(responseStr.url);
     },
     error:function(responseStr){
       console.log("error");
@@ -93,8 +94,7 @@ var input = document.getElementById('file');
   }
   stu["imgs"] = imgs;
   stu["imgs"] = imgs[0];
- 
-  //发送ajax请求
+   //发送ajax请求
   $.ajax({
   contentType:"application/json; charset=utf-8",
   url:"/file/upload/pet_picture",
