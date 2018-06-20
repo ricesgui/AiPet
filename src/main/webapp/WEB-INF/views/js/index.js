@@ -80,7 +80,7 @@ window.onload=function(){
             });
         });
 
-        function onload4(){
+       /* function onload4(){
             $("#email").blur(function(){   
             var email=$(this).val();  
             if(email==""){ $('#e1').html="请输入用户名";}
@@ -95,7 +95,7 @@ window.onload=function(){
                 /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
                 /* JSON.stringify用于把json对象解析成string 
                 JSON.parse()用于把json字符串解析成json对象 */  
-                success: function (data) {
+                /*success: function (data) {
                         if(data.status=='fail'){
                             if (data.errorType=='1') alert("邮箱不存在！");
                             else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
@@ -109,7 +109,7 @@ window.onload=function(){
     });
     }
         });
-        }
+        }*/
 
         
         }

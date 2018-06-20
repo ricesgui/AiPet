@@ -1,4 +1,4 @@
-/*$(document).ready(function(){
+$(document).ready(function(){
 
 $("#log").click(function() {
     //获取表单数据，并序列化
@@ -44,7 +44,7 @@ $("#email").blur(function(){
          /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
         /* JSON.stringify用于把json对象解析成string 
         JSON.parse()用于把json字符串解析成json对象 */  
-       /*success: function (data) {
+       success: function (data) {
                 if(data.status=='fail'){
                     if (data.errorType=='1') alert("邮箱不存在！");
                     else if (data.errorType=='2') alert("邮箱或密码错误，请重新输入！");
@@ -60,4 +60,4 @@ $("#email").blur(function(){
     }
 });
 
-});*/
+});
