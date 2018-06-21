@@ -11,28 +11,33 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 
 @Controller
-@RequestMapping(value = "/flie")
+@RequestMapping(value = "/file")
 public class FileController {
     @RequestMapping(value="/upload/pet_picture",method = RequestMethod.POST)
-    public ModelAndView uploadPetPicture(@RequestParam("file") MultipartFile file){
+    public ModelAndView uploadPetPicture(MultipartFile file, HttpSession session){
         System.out.println("文件接口收到请求！");
         String root="/Users/wangjun/Documents/upload/aipet/petpicture";
         ModelAndView mv=new ModelAndView();
-        String fileName=file.getOriginalFilename();
-        File dest= new File(root+File.separator+fileName);
+        //文件名+sessionid+当前时间戳确保文件名唯一
+       String fileName=System.currentTimeMillis()+"_"+session.getId()+"_"+file.getOriginalFilename();
+        String finalName=root+File.separator+fileName;
+        File dest= new File(finalName);
         try{
             file.transferTo(dest);
             //保存成功
-            mv.addObject("sucess",true);
+            mv.addObject("status","success");
             mv.addObject("msg","上传文件成功");
+            mv.addObject("url",finalName);
         }catch (IllegalStateException|IOException e){
             //保存失败
-            mv.addObject("success",false);
+            mv.addObject("status","fail");
             mv.addObject("msg","上传文件失败");
+            mv.addObject("url",null);
             e.printStackTrace();
         }
         mv.setView(new MappingJackson2JsonView());

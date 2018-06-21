@@ -1,4 +1,4 @@
-package cn.edu.scnu.it.aipet.pojo;
+package cn.edu.scnu.it.aipet.util;
 
 public class Event {
     private String eventType=null;

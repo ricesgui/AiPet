@@ -8,7 +8,8 @@ public class Pet {
     private String petspecies=null;
     private String name=null;
     private String sex=null;
-    private Long age_year=null;
+    private int age_year=0;
+    private int age_month=0;
     private Long weight=null;
     private String petdescri=null;
     private String petphotourl=null;
@@ -45,12 +46,20 @@ public class Pet {
         this.sex = sex;
     }
 
-    public Long getAge_year() {
+    public int getAge_year() {
         return age_year;
     }
 
-    public void setAge_year(Long age_year) {
+    public void setAge_year(int age_year) {
         this.age_year = age_year;
+    }
+
+    public int getAge_month() {
+        return age_month;
+    }
+
+    public void setAge_month(int age_month) {
+        this.age_month = age_month;
     }
 
     public Long getWeight() {
