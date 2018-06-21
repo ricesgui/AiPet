@@ -74,9 +74,7 @@ var input = document.getElementById('file');
     success:function(responseStr){
       if(responseStr.status=="success"){
         $("#loadPic").html("上传成功");
-        $("#loadPic").css("color:green");
-        //console.log("success");
-      //console.log(responseStr.url);
+        $("#loadPic").css({"color":"green","font-size":"20px"});
       var img =$("<img src='"+responseStr.url+"' alt='' />");
       $("#con").append(img);
       stu["petphotourl"] = responseStr.url;
@@ -84,7 +82,7 @@ var input = document.getElementById('file');
       else if(responseStr.status=="fail")
       {
         $("#loadPic").html("上传失败，请重传");
-        $("#loadPic").css("color:red");
+        $("#loadPic").css({"color":"red","font-size":"20px"});
       }
     },
     error:function(responseStr){

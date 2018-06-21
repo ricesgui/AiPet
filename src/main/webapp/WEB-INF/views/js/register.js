@@ -1,4 +1,3 @@
- $(document).ready(function(){
 	var str1="";
   /**生成一个随机数**/
   function randomNum(min,max){
@@ -24,7 +23,6 @@
     var height=canvas.height;
     var ctx = canvas.getContext('2d');
     ctx.textBaseline = 'bottom';
-
     /**绘制背景色**/
     ctx.fillStyle = randomColor(180,240); //颜色若太深可能导致看不清
     ctx.fillRect(0,0,width,height);
@@ -97,11 +95,11 @@ $("#email").blur(function(){
                 if(data.validity=='fail'){
                  $("#e2").html("邮箱不存在");
                 }
-                $("#e2"）.css("color","red");
+                $("#e2"）.css({"color":"red","font-size":"20px"});
              ｝
                 else{ 
                     $("#e2").html("邮箱存在");
-                    $("#e2").css("color","red");
+                    $("#e2").css({"color":"red","font-size":"20px"});
             }
             },
         error: function (xhr,error) {
@@ -112,4 +110,3 @@ $("#email").blur(function(){
      });  
     }
 });
-}
