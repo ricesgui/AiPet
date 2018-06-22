@@ -1,4 +1,4 @@
-$(function() { 
+
 $("#email").blur(function(){   
     var email=$("#email").val();  
     if(email!=""){  
@@ -11,13 +11,13 @@ $("#email").blur(function(){
         type: "POST",   //请求方式  
          /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
        success: function (data) {
-                if(data.validity=='false')
-                {$("#e2").html("邮箱不存在");                
-                $("#e2").css({"color":"red","font-size":"20px"});
+                if(data.validity=='true')
+                {$("#e2").html("此邮箱可以注册");                
+                $("#e2").css({"color":"green","font-size":"20px"});
               }             
-                else{ 
-                    $("#e2").html("邮箱存在");
-                    $("#e2").css({"color":"green","font-size":"20px"});
+                else { 
+                    $("#e2").html("邮箱已存在");
+                    $("#e2").css({"color":"red","font-size":"20px"});
             }
             },
         error: function (xhr,error) {
@@ -59,4 +59,3 @@ $("#email").blur(function(){
      else {alert("请完整填写个人信息！"); }
       
  });
-});
