@@ -29,15 +29,15 @@ $("#email").blur(function(){
 });
 
     $("#reg").click(function(){  
-    var username =$("#userName").val();
+    var name =$("#userName").val();
     var email=$("#email").val();  
     var password=$("#password").val();
-    if(username!=""&&email!=""&&password!=""){  
+    if(name!=""&&email!=""&&password!=""){  
      $.ajax({  
         type: "POST",   //请求方式  
         url: "/views/registerEvent",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
-        data: JSON.stringify({"username":username,"email":email,"password":password}), 
+        data: JSON.stringify({"name":name,"email":email,"password":password}), 
         dataType: "json",   //返回格式为json  
         //async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
          success: function (data) {//回调函数
