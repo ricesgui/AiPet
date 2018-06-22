@@ -68,7 +68,7 @@
   url:"/views/sendpet",
   contentType: "application/json; charset=utf-8",
   //data:JSON.stringify(stu),
-  data.JSON.stringify({"pet":{"petspecies":petspecies,"name":petname,"sex":petsex,"age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,"petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"address":address}}),
+  data:JSON.stringify({"pet":{"petspecies":petspecies,"name":petname,"sex":petsex,"age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,"petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"address":address}}),
   dataType:"json",
   success:function(data){
   console.log(2);
