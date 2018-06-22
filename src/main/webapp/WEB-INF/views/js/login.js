@@ -36,7 +36,7 @@ $("#email").blur(function(){
     if(userName!=""&&email!=""&&password!=""){  
      $.ajax({  
         type: "POST",   //请求方式  
-        url: "/views/log_in",    //请求的url地址  
+        url: "/views/registerEvent",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
         data: JSON.stringify({"username":userName"email":email,"password":password}), 
         dataType: "json",   //返回格式为json  
@@ -59,5 +59,5 @@ $("#email").blur(function(){
        }
      else {alert("请完整填写个人信息！"); }
       
- }
+ });
 }
