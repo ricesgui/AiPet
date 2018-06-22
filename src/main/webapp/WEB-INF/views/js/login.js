@@ -48,7 +48,7 @@ $("#email").blur(function(){
          success: function (data) {//回调函数
                 if(data.status=='success'){
                   
-                    alert("前往登录");
+                    alert("注册成功，请登录!");
                     window.location.href="index.html";
                 }
                 else if(data.status=='fail')
