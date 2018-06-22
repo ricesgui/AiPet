@@ -53,14 +53,12 @@
   }
  }*/
 //  var stu = {};
-var input = document.getElementById('file');
-    input.addEventListener('change', function(e){
+//var input = document.getElementById('file');
+    $("file").addEventListener('change', function(e){
         var file = e.target.files[0];
-
         var formData = new FormData();
         formData.append('file', file);
         for (var value of formData.values()) {
-       
         }
   $.ajax({
     url:"/file/upload/pet_picture",
@@ -93,8 +91,7 @@ var input = document.getElementById('file');
 //完成form表单数据的提交
  $("#btn").click(function(){
 //  serializeArray()将form表单控件中的数据序列化成数组,数组中含有若干对象,对象包含对应控件的name和value
- //var infor = $("#form").serializeArray();
-/* console.log(infor);
+ 
   var stu = {};
   var infor = $('#form').serializeArray();
   console.log(infor);
@@ -102,10 +99,10 @@ var input = document.getElementById('file');
   var obj=infor[i];
   stu[obj.name] = obj.value;
   }
-  //stu["petdescri"]=document.getElementById("txt1").value;
-  console.log(stu);$("input[name='xxx']").val();  
-   //发送ajax请求$("input[name='xxx']:checked").val()*/;  
-  var petspecies=$("input[name='petSpecies']:checked").val();  
+  stu["petDescri"]=document.getElementById("txt1").value;
+  console.log(stu);
+   //发送ajax请求$("input[name='xxx']:checked").val()$("input[name='xxx']").val();
+  /*var petspecies=$("input[name='petSpecies']:checked").val();  
   var petname=$("input[name='petName']").val();
   var petsex=$("input[name='petSex']:checked").val();
   var placeouttitle=$("input[name='placeOutTitle").val();
@@ -118,13 +115,15 @@ var input = document.getElementById('file');
   var telNumber=$("input[name='telNumber']").val();
   var userAddress=$("input[name='userAddress']").val();
 
-  
+  */
   $.ajax({
   type:'POST',  
   url:"/views/sendpet",
   contentType: "application/json; charset=utf-8",
   //data:JSON.stringify(stu),
-  data.JSON.stringify({"petSpecies":petSpecies,"petName":petName,}{}),
+  data.JSON.stringify({"petspecies":petspecies,"petname":petname,"petsex":pexsex,
+    "age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,
+    "petphotourl":petphotourl}{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"address":address}),
   dataType:"json",
   success:function(data){
   console.log(2);

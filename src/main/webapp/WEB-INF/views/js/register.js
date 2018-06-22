@@ -1,4 +1,5 @@
-	var str1="";
+	$(function() { 
+  var str1="";
   /**生成一个随机数**/
   function randomNum(min,max){
     return Math.floor( Math.random()*(max-min)+min);
@@ -92,11 +93,11 @@ $("#email").blur(function(){
         type: "POST",   //请求方式  
          /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
        success: function (data) {
-                if(data.validity=='fail'){
-                 $("#e2").html("邮箱不存在");
-                }
+                if(data.validity=='fail')
+                {$("#e2").html("邮箱不存在");                
                 $("#e2"）.css({"color":"red","font-size":"20px"});
-             ｝
+              }
+             
                 else{ 
                     $("#e2").html("邮箱存在");
                     $("#e2").css({"color":"green","font-size":"20px"});
@@ -105,8 +106,8 @@ $("#email").blur(function(){
         error: function (xhr,error) {
                 console.debug(xhr);
                 console.debug(error);
-            }
-            
+            }      
      });  
     }
 });
+}
