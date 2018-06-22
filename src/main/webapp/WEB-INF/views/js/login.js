@@ -13,7 +13,7 @@ $("#email").blur(function(){
        success: function (data) {
                 if(data.validity=='false')
                 {$("#e2").html("邮箱不存在");                
-                $("#e2"）.css({"color":"red","font-size":"20px"});
+                $("#e2").css({"color":"red","font-size":"20px"});
               }
              
                 else{ 
