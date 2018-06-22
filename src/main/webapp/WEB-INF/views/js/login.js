@@ -26,30 +26,34 @@ $("#email").blur(function(){
             }      
      });  
     }
-    
 });
 
     $("#reg").click(function(){  
     var name =$("#name").val();
     var email=$("#email").val();  
     var password=$("#password").val();
-    if(name!=""&&email!=""&&password!=""){  
+    var realname =$("#realname").val();
+    var sex=$("#userSex").val();  
+    var number=$("#telNumber").val();
+    var address =$("#address").val();
+   
+    if(name!=""&&email!=""&&password!=""&&number!=""){  
      $.ajax({  
         type: "POST",   //请求方式  
         url: "/views/registerEvent",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
-        data: JSON.stringify({"name":name,"email":email,"password":password}), 
+        data: JSON.stringify({"name":name,"email":email,"password":password,"realname":realname,"sex":sex,"number":number,"address":address}), 
         dataType: "json",   //返回格式为json  
         //async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
          success: function (data) {//回调函数
                 if(data.status=='success'){
-                    console.log(2);
+                  
                     alert("前往登录");
                     window.location.href="index.html";
                 }
                 else if(data.status=='fail')
                     {
-                       console.log(3);
+                       
                        alert("请确认您的邮箱是否已注册！");
                 }
                 
