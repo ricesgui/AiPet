@@ -13,14 +13,12 @@ $("#email").blur(function(){
        success: function (data) {
                 if(data.validity=='true')
                  {   
-                // $("#e2").html("此邮箱可以注册");                
-                // $("#e2").css({"color":"green","font-size":"20px"});
+                    console.log("邮箱可以注册");              
               }             
                 else { 
+                    console.log("邮箱已存在！");
                     alert("邮箱已存在！")
-                    // $("#e2").html("邮箱已存在");
-                    // $("#e2").css({"color":"red","font-size":"20px"});
-            }
+                    }
             },
         error: function (xhr,error) {
                 console.debug(xhr);
@@ -28,6 +26,7 @@ $("#email").blur(function(){
             }      
      });  
     }
+    
 });
 
     $("#reg").click(function(){  
@@ -44,10 +43,13 @@ $("#email").blur(function(){
         //async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
          success: function (data) {//回调函数
                 if(data.status=='success'){
+                    console.log(2);
+                    alert("前往登录");
                     window.location.href="index.html";
                 }
                 else if(data.status=='fail')
                     {
+                       console.log(3);
                        alert("请确认您的邮箱是否已注册！");
                 }
                 
@@ -61,4 +63,4 @@ $("#email").blur(function(){
      else {alert("请完整填写个人信息！"); }
       
  });
-})
+});
