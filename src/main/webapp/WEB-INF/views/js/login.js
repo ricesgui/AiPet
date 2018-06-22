@@ -12,12 +12,14 @@ $("#email").blur(function(){
          /*  因为服务器端返回的是json对象所以可以直接用对象名。属性名 */  
        success: function (data) {
                 if(data.validity=='true')
-                {$("#e2").html("此邮箱可以注册");                
-                $("#e2").css({"color":"green","font-size":"20px"});
+                 {   
+                // $("#e2").html("此邮箱可以注册");                
+                // $("#e2").css({"color":"green","font-size":"20px"});
               }             
                 else { 
-                    $("#e2").html("邮箱已存在");
-                    $("#e2").css({"color":"red","font-size":"20px"});
+                    alert("邮箱已存在！")
+                    // $("#e2").html("邮箱已存在");
+                    // $("#e2").css({"color":"red","font-size":"20px"});
             }
             },
         error: function (xhr,error) {

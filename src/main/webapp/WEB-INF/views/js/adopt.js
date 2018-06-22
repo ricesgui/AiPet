@@ -1,57 +1,3 @@
-// JavaScript Document
- //为文件上传添加change事件
- //var fileM=document.getElementById('file');
- /*$(document).ready(function() {
- $("#file").change(function(){
-  var fileM=document.getElementById('file');
-  console.log(fileM.files);
-  //获取文件对象，files是文件选取控件的属性，存储的是文件选取控件选取的文件对象，类型是一个数组
-  /*var fileObj=fileM.files[0];
-  //创建formdata对象，formData用来存储表单的数据，表单数据时以键值对形式存储的。
-  var formData=new FormData();
-  formData.append('file',fileObj);
-  //formData.append('username', 'Justin');
-  console.log(formData);*/
-  /*var data = new FormData($('#file')[0]);
-  console.log(data);
-  $.ajax({
-    url:"/file/upload/pet_picture",
-    type:'POST',
-    async:true,
-    data:formData,
-    fileElementId:"file",
-    processData:false,
-    contentType:false,
-    success:function(responseStr){
-      console.log("success");
-      var img =$("<img src='"+responseStr+"' alt='' />");
-      $(".con").append(img);
-       imgs.push(responseStr);
-    },
-    error:function(responseStr){
-      console.log("error");
-    }
-  })
-  //创建XMLHttpRequest对象
- /*var xmlhttp=new XMLHttpRequest();
- //发送POST请求
- xmlhttp.open("POST","/file/upload/pet_picture",true);
- xmlhttp.send(formData);
- xmlhttp.onreadystatechange=function(){
-  if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-  console.log(xmlhttp.responseText);
-  var obj=JSON.parse(xmlhttp.responseText);
-  alert(obj.msg);
-  if(obj.err == 0){
-   //上传成功后自动创建img标签放在指定位置
-   var img =$("<img src='"+obj.msg+"' alt='' />");
-   $(".con").append(img);
-   imgs.push(obj.msg);
-  }else{
-   alert(obj.msg);
-  }
-  }
- }*/
 //  var stu = {};
 //var input = document.getElementById('file');
     $("file").addEventListener('change', function(e){
@@ -121,9 +67,9 @@
   url:"/views/sendpet",
   contentType: "application/json; charset=utf-8",
   //data:JSON.stringify(stu),
-  data.JSON.stringify({"petspecies":petspecies,"petname":petname,"petsex":pexsex,
+  data.JSON.stringify({"pet":{"petspecies":petspecies,"name":petname,"sex":petsex,
     "age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,
-    "petphotourl":petphotourl}{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"address":address}),
+    "petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"address":address}}),
   dataType:"json",
   success:function(data){
   console.log(2);
