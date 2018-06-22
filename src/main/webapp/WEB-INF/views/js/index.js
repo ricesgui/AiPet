@@ -28,7 +28,7 @@ window.onload=function(){
                     }                  
                     else  
                     {
-                     document.getElementById("txtHint").innerHTML=obj.user_name;
+                    document.getElementById("txtHint").innerHTML=obj.user_name;
                       //实现第二个提示                   
                     document.getElementById("s1").innerHTML="您已登录";                                     
                     document.getElementById("third").innerHTML="退出";        

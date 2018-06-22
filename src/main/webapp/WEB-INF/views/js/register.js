@@ -99,7 +99,7 @@ $("#email").blur(function(){
              ｝
                 else{ 
                     $("#e2").html("邮箱存在");
-                    $("#e2").css({"color":"red","font-size":"20px"});
+                    $("#e2").css({"color":"green","font-size":"20px"});
             }
             },
         error: function (xhr,error) {
