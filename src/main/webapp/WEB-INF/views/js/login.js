@@ -37,7 +37,7 @@ $("#email").blur(function(){
         type: "POST",   //请求方式  
         url: "/views/registerEvent",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
-        data: JSON.stringify({"username":username"email":email,"password":password}), 
+        data: JSON.stringify({"username":username,"email":email,"password":password}), 
         dataType: "json",   //返回格式为json  
         //async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
          success: function (data) {//回调函数
@@ -59,4 +59,4 @@ $("#email").blur(function(){
      else {alert("请完整填写个人信息！"); }
       
  });
-}
+});
