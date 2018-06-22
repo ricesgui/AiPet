@@ -1,4 +1,4 @@
-
+$(function(){
 $("#email").blur(function(){   
     var email=$("#email").val();  
     if(email!=""){  
@@ -61,3 +61,4 @@ $("#email").blur(function(){
      else {alert("请完整填写个人信息！"); }
       
  });
+})
