@@ -3,6 +3,7 @@ package cn.edu.scnu.it.aipet.pojo;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Component
 public class User implements Serializable {
@@ -15,6 +16,7 @@ public class User implements Serializable {
     private String number=null;
     private String email=null;
     private String address=null;
+    private List<MePlaceout> mePlaceouts=null;
 
     public Long getIdusers() {
         return idusers;
@@ -80,4 +82,11 @@ public class User implements Serializable {
         this.address = address;
     }
 
+    public List<MePlaceout> getMePlaceouts() {
+        return mePlaceouts;
+    }
+
+    public void setMePlaceouts(List<MePlaceout> mePlaceouts) {
+        this.mePlaceouts = mePlaceouts;
+    }
 }

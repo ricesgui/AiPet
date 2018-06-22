@@ -11,7 +11,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper=null;
     @Override
-    public int insertUser(User user) {
+    public Long insertUser(User user) {
         return userMapper.insertUser(user);
     }
 

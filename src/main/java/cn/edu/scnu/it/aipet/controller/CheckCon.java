@@ -13,11 +13,11 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 @Controller
 @RequestMapping("/check")
-public class CheckController {
+public class CheckCon {
     private UserService userService = null;
 
     @Autowired
-    public CheckController(UserService userService) {
+    public CheckCon(UserService userService) {
         this.userService = userService;
     }
 
@@ -27,9 +27,7 @@ public class CheckController {
         User user = userService.selectUser(email);
         if (user == null)
             //用户名不存在
-            mv.addObject("validity", "" +
-                    "" +
-                    "true");
+            mv.addObject("validity","true");
         else
             mv.addObject("validity", "false");
             mv.setView(new MappingJackson2JsonView());

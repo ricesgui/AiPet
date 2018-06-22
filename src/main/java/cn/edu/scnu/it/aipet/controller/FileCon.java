@@ -17,7 +17,7 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping(value = "/file")
-public class FileController {
+public class FileCon {
     @RequestMapping(value="/upload/pet_picture",method = RequestMethod.POST)
     public ModelAndView uploadPetPicture(MultipartFile file, HttpSession session){
         System.out.println("文件接口收到请求！");

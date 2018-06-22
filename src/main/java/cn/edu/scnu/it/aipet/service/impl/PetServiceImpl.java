@@ -16,8 +16,12 @@ public class PetServiceImpl implements PetService {
     }
 
     @Override
-    public int insertPet(Pet pet) {
+    public Long insertPet(Pet pet) {
         return petMapper.insertPet(pet);
+    }
+
+    public  Pet selectPet(Long idpet){
+        return petMapper.getPet(idpet);
     }
 
 }

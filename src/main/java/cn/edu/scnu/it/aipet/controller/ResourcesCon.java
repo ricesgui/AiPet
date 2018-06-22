@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/resources")
-public class ResourcesController {
+public class ResourcesCon {
    @RequestMapping(value="/get_name",method = RequestMethod.POST)
    // @RequestMapping(value="/get_name")
     public ModelAndView rtUserInfo(HttpSession session){

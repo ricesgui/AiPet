@@ -10,6 +10,10 @@
     <delete id="deletePet" parameterType="long">
         delete from pet where id=#{id}
     </delete>
+
+    <select id="getPet" parameterType="Long">
+        select petspecies,name,sex,age_year,weight,petdescri,petphotourl from pet where idpet=#{idpet}
+    </select>
 </mapper>
 
 

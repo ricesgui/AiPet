@@ -7,6 +7,7 @@ public class Adopt {
     private Long idadopt=null;
     private Long iduser=null;
     private String adoptdescri=null; //the description of the adoption
+    private String adoptspecies=null;
 
     public Long getIdadopt() {
         return idadopt;
@@ -30,5 +31,13 @@ public class Adopt {
 
     public void setAdoptdescri(String adoptdescri) {
         this.adoptdescri = adoptdescri;
+    }
+
+    public String getAdoptspecies() {
+        return adoptspecies;
+    }
+
+    public void setAdoptspecies(String adoptspecies) {
+        this.adoptspecies = adoptspecies;
     }
 }

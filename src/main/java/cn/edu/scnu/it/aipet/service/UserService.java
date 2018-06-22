@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 public interface UserService {
-    public int insertUser(User user);
+    public Long insertUser(User user);
     public User selectUser(String email);
 }

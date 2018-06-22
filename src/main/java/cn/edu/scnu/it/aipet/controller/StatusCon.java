@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/views")
-public class StatusController {
+public class StatusCon {
     @Autowired
     private UserService userService = null;
     @RequestMapping(value = "/log_in",method =RequestMethod.POST)
@@ -37,6 +37,7 @@ public class StatusController {
             return mv;
         }
         session.setAttribute("user_name", user.getName());
+        session.setAttribute("id",user.getIdusers());
         mv.addObject("status", "ok");
         mv.addObject("errorType", "0");
         System.out.println(user.getName()+":login success!");
@@ -57,18 +58,21 @@ public class StatusController {
     @Autowired
     private User user=null;
     @RequestMapping("/registerEvent")
-    public ModelAndView register(String name,String password,String email){
+    public ModelAndView register(@RequestBody User user,HttpSession session){
         ModelAndView mv=new ModelAndView();
-        if(userService.selectUser(email)!=null){
-            mv.setViewName("errorRegister");
+        mv.setView(new MappingJackson2JsonView());
+        String status="fail";
+        String email=user.getEmail();
+        User userJudge=userService.selectUser(email);
+        if(userJudge==null){
+            mv.addObject("status",status);
             return mv;
         }
-        user.setName(name);
-        user.setEmail(email);
-        user.setPassword(password);
         userService.insertUser(user);
-        mv.addObject("user",user);
-        mv.setViewName("redirect:/views/index.html");
+        session.setAttribute("name",user.getName());
+        session.setAttribute("id",user.getIdusers());
+        status="success";
+        mv.addObject("status",status);
         return mv;
     }
 
