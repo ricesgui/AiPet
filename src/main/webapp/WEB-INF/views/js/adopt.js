@@ -46,6 +46,7 @@ var even= document.getElementById('file');
   stu[obj.name] = obj.value;
   }
   stu["petDescri"]=document.getElementById("txt1").value;
+  var datatime=new Date();
   console.log(stu);
    //发送ajax请求
   // var petspecies=$("input[name='petSpecies']:checked").val();  
@@ -61,14 +62,12 @@ var even= document.getElementById('file');
   // var sex=$("input[name='userSex']").val();
   // var telNumber=$("input[name='telNumber']").val();
   // var address=$("input[name='userAddress']").val();
-
-
   $.ajax({
   type:'POST',  
   url:"/views/sendpet",
   contentType: "application/json; charset=utf-8",
   //data:JSON.stringify(stu),
-  data:JSON.stringify({"pet":{"petspecies":petspecies,"name":petname,"sex":petsex,"age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,"petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"address":address}}),
+  data:JSON.stringify({"pet":{"petspecies":petspecies,"name":name,"sex":sex,"age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,"petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"address":address}}),
   dataType:"json",
   success:function(data){
   console.log(2);
