@@ -31,7 +31,7 @@ $("#email").blur(function(){
 });
 
     $("#reg").click(function(){  
-    var name =$("#userName").val();
+    var name =$("#name").val();
     var email=$("#email").val();  
     var password=$("#password").val();
     if(name!=""&&email!=""&&password!=""){  
@@ -48,7 +48,7 @@ $("#email").blur(function(){
                 }
                 else if(data.status=='fail')
                     {
-                       alert("请确认您是否填写完成");
+                       alert("请确认您的邮箱是否已注册！");
                 }
                 
             },
