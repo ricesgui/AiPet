@@ -1,4 +1,5 @@
-  var stu;
+  var stu = {};
+  var path;
 var even= document.getElementById('file');
     even.addEventListener('change', function(e){
         var file = e.target.files[0];
@@ -21,7 +22,8 @@ var even= document.getElementById('file');
         $("#loadPic").css({"color":"green","font-size":"20px"});
       var img =$("<img src='"+responseStr.url+"' alt='' />");
       $("#con").append(img);
-      stu= responseStr.url;//stu["petPhotourl"] = responseStr.url;
+      stu["petPhotourl"] = responseStr.url;
+      path = responseStr.url;
       }
       else if(responseStr.status=="fail")
       {
@@ -44,7 +46,7 @@ var even= document.getElementById('file');
   var age_month=$("input[name='age_month']").val();
   var weight=$("input[name='weight']").val();
   var petdescri=$("#txt1").val();
-  var petphotourl=stu;
+  var petphotourl=path;
   var placeouttitle=$("input[name='placeouttitle").val();
   var datatime=new Date();
   var realname=$("input[name='realname']").val();
