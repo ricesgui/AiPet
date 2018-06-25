@@ -38,30 +38,31 @@ var even= document.getElementById('file');
  $("#btn").click(function(){
 //  serializeArray()将form表单控件中的数据序列化成数组,数组中含有若干对象,对象包含对应控件的name和value
  
-  var stu = {};
-  var infor = $('#form').serializeArray();
-  console.log(infor);
-  for (var i=0;i<infor.length;i++) {
-  var obj=infor[i];
-  stu[obj.name] = obj.value;
-  }
-  stu["petDescri"]=document.getElementById("txt1").value;
-  var datatime=new Date();
-  console.log(stu);
+  // var stu = {};
+  // var infor = $('#form').serializeArray();
+  // console.log(infor);
+  // for (var i=0;i<infor.length;i++) {
+  // var obj=infor[i];
+  // stu[obj.name] = obj.value;
+  // }
+  // stu["petDescri"]=document.getElementById("txt1").value;
+  // var datatime=new Date();
+  // console.log(stu);
    //发送ajax请求
-  // var petspecies=$("input[name='petSpecies']:checked").val();  
-  // var name=$("input[name='petName']").val();
-  // var sex=$("input[name='petSex']:checked").val(); 
-  // var age_year=$("input[name='petAgeYear']").val();
-  // var age_month=$("input[name='petAgeMonth']").val();
-  // var weight=$("input[name='weight']").val();
-  // var petdescri=$("input[name='petDescri']").val();
-  // var petphotourl=stu["petPhotourl"];
-  // var placeouttitle=$("input[name='placeOutTitle").val();
-  // var realname=$("input[name='realName']").val();
-  // var sex=$("input[name='userSex']").val();
-  // var telNumber=$("input[name='telNumber']").val();
-  // var address=$("input[name='userAddress']").val();
+  var petspecies=$("input[name='petspecies']:checked").val();  
+  var name=$("input[name='name']").val();
+  var sex=$("input[name='sex']:checked").val(); 
+  var age_year=$("input[name='age_year']").val();
+  var age_month=$("input[name='age_month']").val();
+  var weight=$("input[name='weight']").val();
+  var petdescri=$("input[name='petdescri']").val();
+  var petphotourl=stu["petphotourl"];
+  var placeouttitle=$("input[name='placeouttitle").val();
+  var datatime=new Date();
+  var realname=$("input[name='realname']").val();
+  var number=$("input[name='telnumber']").val();
+  var address=$("input[name='address']").val();
+
   $.ajax({
   type:'POST',  
   url:"/views/sendpet",

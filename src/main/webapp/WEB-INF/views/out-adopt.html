@@ -100,13 +100,13 @@
 	<div class="oa-text">	
 
 	<form method="post" id="form" enctype="multipart/form-data" onsubmit="return false;">
-	<h4><label>*送养种类：<input type="radio" name="petspecies" class="btn-group"=> 狗狗</input><input type="radio" name="petspecies" class="btn-group"> 猫咪</input><input type="radio" name="petspecies" class="btn-group"> 其他</input></label>
+	<h4><label>*送养种类：<input type="radio" name="petspecies" class="btn-group"> 狗狗</input><input type="radio" name="petspecies" class="btn-group"> 猫咪</input><input type="radio" name="petspecies" class="btn-group"> 其他</input></label>
 	</h4>
 	<h4>
 		<label>*宠物昵称：<input type="text" name="name" required="required"></label>
 	</h4>
 	<h4>
-		<label>*性别选择：<input type="radio" name="sex" class="btn-group" required="required">男</input><input type="radio" name="sex" class="btn-group">女</input></label>
+		<label>性别选择：<input type="radio" name="sex" class="btn-group" >男</input><input type="radio" name="sex" class="btn-group">女</input></label>
 	</h4>
 	<h4>
 		<label>*标题:<input type="text" name="placeouttitle" required="required"></label>
@@ -118,20 +118,17 @@
 		<label>宠物体重：<input type="text" name="weight" value="0">kg</label>
 	</h4>
 	<h4>
-		<label>*联系人姓名:<input type="text" name="realName" required="required" ></label>
+		<label>*联系人姓名:<input type="text" name="realname" required="required" ></label>
 	</h4>
 	<!-- <h4>
-		<label>联系人性别：<input type="text" name="userSex" required="required" ></label>
+		<label>*联系方式：<input type="text" name="number" required="required" ></label>
 	</h4> -->
-	<h4>
-		<label>*联系方式：<input type="text" name="telNumber" required="required" ></label>
-	</h4>
 	<h4>
 		<label>*详细地址：<input type="text" name="address" required="required"></label>
 	</h4>
 	<h4>
 		<label for="inputfile">*上传照片:</label>
-		<input type="file" id="file" name="petPhotourl" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" enctype="multipart/form-data"/><span id="con"></span>
+		<input type="file" id="file" name="petphotourl" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" enctype="multipart/form-data"/><span id="con"></span>
 		<br>
 		<span id="loadPic"></span>
 	</h4>
@@ -140,7 +137,7 @@
 		<div class="panel panel-default" id="d-p">
 			<h5>请描述您的宠物的性格和喜好。</h5>
 			<div class="panel-body">
-				<textarea name="petDescri" id="txt1" rows="5" required="required"></textarea>
+				<textarea name="petdescri" id="txt1" rows="5" required="required"></textarea>
 			</div>
 		</div>
 	</label>
