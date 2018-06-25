@@ -48,7 +48,9 @@ var even= document.getElementById('file');
   var petdescri=$("#txt1").val();
   var petphotourl=path;
   var placeouttitle=$("input[name='placeouttitle").val();
-  var datatime=new Date();
+  var d=new Date();
+
+var datatime = d.getFullYear() + "-" +((d.getMonth()+1)<10?"0":"")+(d.getMonth()+1)+"-"+(d.getDate()<10?"0":"")+d.getDate();
   var realname=$("input[name='realname']").val();
   var number=$("input[name='number']").val();
   var address=$("input[name='address']").val();
