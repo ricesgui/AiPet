@@ -55,7 +55,7 @@ var even= document.getElementById('file');
 
   $.ajax({
   type:'POST',  
-  url:"/views/sendpet",
+  url:"/views/sendplaceout",
   contentType: "application/json; charset=utf-8",
   data:JSON.stringify({"pet":{"petspecies":petspecies,"name":name,"sex":sex,"age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,"petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"number":number,"address":address}}),
   dataType:"json",
