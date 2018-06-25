@@ -7,3 +7,29 @@
 .forum-img{
 	text-align: center;
 }
+#all{
+	width: 900px;
+	padding-left: 50px;
+	margin: 0px auto;
+}
+.sF_rAleft{
+	float:left;
+	width:110px;
+}
+.sF_rightA{
+	width:800px;
+	background-color:#E8E8E8;
+}
+.content table{
+	width:800px;
+	background-color:#FFF;
+}
+.content table tr td{
+	padding-left:10px;
+}
+.content table{
+	border:solid 0.2px #CCCCCC;
+}
+.content table tr{
+	border:dashed 0.2px #E8E8E8;
+}
