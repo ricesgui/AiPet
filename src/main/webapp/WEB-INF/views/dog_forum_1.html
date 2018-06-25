@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="CSS/index.css">
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>发帖</title>
+<style>
+.s_SIit1{
+    width: 880px;
+    height: 35px;
+    overflow: hidden;
+    color: #000;
+    font-size: 14px;
+    margin-left: 35px;
+}
+.s_STit span {
+    width: 180px;
+    border-right: solid 1px #eeecf1;
+    height: 58px;
+    text-align: center;
+    position: relative;
+}
+.s_STbox {
+    width: 835px;
+    /* height: 385px; */
+    overflow: hidden;
+    margin-left: 76px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 0;
+}
+.s_SBbox {
+    margin-top: 15px;
+    margin-left: 76px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.s_SBbox .sub_ico {
+    background: url(http://a.boqiicdn.com/Images/bbs/bbs_ico.png) no-repeat;
+    border: 0;
+    width: 108px;
+    height: 39px;
+    cursor: pointer;
+	margin-left:-76px;
+}
+.sub_Send .s_STit {
+    height: 58px;
+    border-bottom: solid 1px #eeecf1;
+    background: #f6f6f6;
+    position: relative;
+    width: 100%;
+}
+.s_STit span.sp_cur {
+    background: #FFF;
+    top: 1px;
+}
+.sub_Send {
+    /* height: 595px; */
+    border: solid 1px #eeecf1;
+    overflow: hidden;
+}
+textarea {
+    font-family: monospace;
+    border-color: rgb(169, 169, 169);
+}
+
+/*body {
+    font-size: 12px;
+    color: #666;
+    font-family: "宋体",Arial;
+}*/
+</style>
+</head>
+
+<body>
+<div> 
+  <!--公共头部开始-->
+  <header>
+    <div class="nav navbar-fixed-top" >
+    <!--导航栏开始-->
+    <nav class="navbar navbar-default navbar-inverse" role="navigation" style="color:black;">
+      <div class="container-fluid">
+        <div class="navbar-header"> <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"> 首页</span></a> </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">发布消息<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="out-adopt.html">我要送养</a></li>
+                <li><a href="adopt.html">我要领养</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">狗狗<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dog-outadopt.html">送养信息</a></li>
+                <li><a href="dog-adopt.html">领养信息</a></li>
+                <li><a href="dog-baike.html">狗狗百科</a></li>
+                <li><a href="dog-forum.html">狗狗论坛</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">猫咪<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="cat-outadopt.html">送养信息</a></li>
+                <li><a href="cat-adopt.html">领养信息</a></li>
+                <li><a href="cat-baike.html">猫咪百科</a></li>
+                <li><a href="cat-forum.html">猫咪论坛</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他（如兔子、仓鼠）<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="other-outadopt.html">送养信息</a></li>
+                <li><a href="other-adopt.html">领养信息</a></li>
+                <li><a href="other-baike.html">其他百科</a></li>
+                <li><a href="other-forum.html">其他论坛</a></li>
+              </ul>
+            </li>
+            <li><a href="details.html">领养须知</a></li>
+            <li><a href="help.html">使用助手</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="disabled" id="txtHint" style="color:#5CACEE;font-size: 20px;"></a></li>
+            <li><a class="disabled" id="s1" style="color:#5CACEE;font-size: 20px;"></a></li>
+            <li><a href="#" id="third" style="color:#5CACEE;font-size: 20px;"></a></li>
+            <li id="yincang"><a href="login.html"><span class="glyphicon glyphicon-log-in">[登录]</span></a></li>
+            <li id="yincang"><a href="register.html"><span id="yincang" class="glyphicon glyphicon-user">[注册]</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="bj-img"> <img src="images/keji.jpg" width="100%" height="" alt="导航栏上背景图"> </div>
+</div>
+<!--公共头部结束-->
+<form id="threadForm" name="threadForm" method="post" >
+  <div class="sub_Send">
+  <div class="s_STit"><span class="sp_cur"><a href="#" class="a_icon1" style="font-size:16px;">发表帖子</a></span></div>
+  <div class="iclear M25"></div>
+  <div class="s_SIit1"><span>标题：</span>
+    <input type="text" id="subject" name="subject" class="text_2" value="" onblur="javascript:check_words_count();" maxlength="35"/>
+    <i>还可输入
+    <label id="remain">35</label>
+    个字</i></div>
+  <div class="s_STbox" style="float:left;width:710px;">
+  <textarea id="myEditor" name="myEditor" style="width:708px; height:360px;">
+  </textarea>
+  <div class="s_SBbox" style="clear:both;padding-top:20px;">
+  <input type="button" id="btn_post" value="" class="sub_ico">
+  </div>
+  <div class="iclear M25">
+  </div>
+  </div>
+</form>
+<!--页脚-->
+<footer class="rig"> <br/>
+  <a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved. </footer>
+</body>
+<script type="text/javascript" src="JS/index.js"></script>
+</html>
