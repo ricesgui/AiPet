@@ -1,84 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>论坛发帖</title>
 <link rel="stylesheet" type="text/css" href="CSS/index.css">
+<link rel="stylesheet" type="text/css" href="CSS/adopt.js">
 <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>发帖</title>
-<style>
-.s_SIit1{
-    width: 880px;
-    height: 35px;
-    overflow: hidden;
-    color: #000;
-    font-size: 14px;
-    margin-left: 35px;
-}
-.s_STit span {
-    width: 180px;
-    border-right: solid 1px #eeecf1;
-    height: 58px;
-    text-align: center;
-    position: relative;
-}
-.s_STbox {
-    width: 835px;
-    /* height: 385px; */
-    overflow: hidden;
-    margin-left: 76px;
-    margin-top: 15px;
-    position: relative;
-    z-index: 0;
-}
-.s_SBbox {
-    margin-top: 15px;
-    margin-left: 76px;
-    margin-bottom: 15px;
-    position: relative;
-}
-.s_SBbox .sub_ico {
-    background: url(http://a.boqiicdn.com/Images/bbs/bbs_ico.png) no-repeat;
-    border: 0;
-    width: 108px;
-    height: 39px;
-    cursor: pointer;
-	margin-left:-76px;
-}
-.sub_Send .s_STit {
-    height: 58px;
-    border-bottom: solid 1px #eeecf1;
-    background: #f6f6f6;
-    position: relative;
-    width: 100%;
-}
-.s_STit span.sp_cur {
-    background: #FFF;
-    top: 1px;
-}
-.sub_Send {
-    /* height: 595px; */
-    border: solid 1px #eeecf1;
-    overflow: hidden;
-}
-textarea {
-    font-family: monospace;
-    border-color: rgb(169, 169, 169);
-}
-
-/*body {
-    font-size: 12px;
-    color: #666;
-    font-family: "宋体",Arial;
-}*/
-</style>
+<script type="text/javascript" src="js/index.js"></script>
 </head>
 
 <body>
-<div> 
+
   <!--公共头部开始-->
   <header>
     <div class="nav navbar-fixed-top" >
@@ -134,29 +70,44 @@ textarea {
   </header>
   <div class="bj-img"> <img src="images/keji.jpg" width="100%" height="" alt="导航栏上背景图"> </div>
 </div>
+
 <!--公共头部结束-->
-<form id="threadForm" name="threadForm" method="post" >
-  <div class="sub_Send">
-  <div class="s_STit"><span class="sp_cur"><a href="#" class="a_icon1" style="font-size:16px;">发表帖子</a></span></div>
-  <div class="iclear M25"></div>
-  <div class="s_SIit1"><span>标题：</span>
-    <input type="text" id="subject" name="subject" class="text_2" value="" onblur="javascript:check_words_count();" maxlength="35"/>
-    <i>还可输入
-    <label id="remain">35</label>
-    个字</i></div>
-  <div class="s_STbox" style="float:left;width:710px;">
-  <textarea id="myEditor" name="myEditor" style="width:708px; height:360px;">
-  </textarea>
-  <div class="s_SBbox" style="clear:both;padding-top:20px;">
-  <input type="button" id="btn_post" value="" class="sub_ico">
+<main>  
+  <!--面包屑导航-->
+  <div class="container">
+  <div class="row clearfix" id="outAdopt">
+    <div class="col-md-2 column">
+      <ul class="nav nav-pills" id="rootnav">
+        <li>
+           <a href="index.html">首页</a>
+        </li>
+        <li class="disabled">
+          <a href="#">-->发布帖子</a>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="iclear M25">
+  
+  <div class="oa-text"> 
+<form method="post">
+  <h3 style="color: blue">发表帖子</h3>
+  <br>
+  <label>标题:<input type="text" name="forumTitle"></label>
+  <br>
+  <br>
+  <textarea id="forum-text" style="width:700px; height:360px;"></textarea>
+  <br>
+  <br>
+  <button style="color: blue;width: 80px">发布</button>
+
+  </form>
+  
   </div>
   </div>
-</form>
+</main>
+
 <!--页脚-->
 <footer class="rig"> <br/>
   <a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved. </footer>
 </body>
-<script type="text/javascript" src="JS/index.js"></script>
 </html>

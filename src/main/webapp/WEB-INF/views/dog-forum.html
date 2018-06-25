@@ -25,14 +25,6 @@
 	width:800px;
 	background-color:#E8E8E8;
 }
-.sF_rpleft a{color:#FFF;}
-.sF_rpleft{
-	width:60px;
-	padding-left:10px;
-	border:solid 0.2px #00FF00;
-	background-color:#0F0;
-	cursor:pointer;
-}
 .content table{
 	width:800px;
 	background-color:#FFF;
@@ -110,14 +102,15 @@
   <div class="sF_rightA">
     <div class="sF_rAleft"><img src="images/luntan_dog_1.jpg" class="avatar" style="width:94px;"  alt="狗狗论坛"/></div>
     <div class="sF_Ardiv">
-      <h3>狗狗论坛</h3>
+    <h3>狗狗论坛</h3>
       <b> 今日新帖：<i>0</i> 全部主题：<i>45857</i></b>
-    <p>欢迎进入狗狗论坛，在这里你可以欣赏更多的狗狗图片，交流狗狗们生活的精彩片段，AiPet狗狗论坛期待您的加入。</p></div>
+      <a href="dog-forum-1.html">  <p>欢迎进入狗狗论坛，在这里你可以欣赏更多的狗狗图片，交流狗狗们生活的精彩片段，AiPet狗狗论坛期待您的加入。</p></a> </div>
   </div>
   </br>
   </br>
-  <div class="sF_rpleft">
-  <h4><a herf="javascript:" target="_blank" title="发帖">发帖</a></h4></div>
+  <div>
+  <button class="btn-info" style="width: 50px;height: 40px;"><a href="dog-release.html" style="color: black">发帖</a></button>
+  </div>
 <!--content-->
 <div class="content">
 <table>
@@ -277,15 +270,7 @@
 </table>
 </div>
 <!--/content-->
-<div class="iclear M15"></div>
-<div class="sF_rightP">
-  <div class="sF_rpright">
-    <div class="showpage"> <span class='page-this'>1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a> <span class="page-break">...</span> <a href="#">10</a> <a class='page-next' href=#>下一页</a></div>
-  </div>
-</div>
-<!--/sF_rightP-->
-<div class="iclear H25"></div>
-<!--sF_rightS-->
+
 <form id="postForm" name="postForm" method="post" action="javascript:postSubmit();" >
   <div class="sub_Send sF_rightS">
     <div class="s_STit"><span><i href="javascript:;" class="a_icon1 a_default">快速发帖</i></span></div>
@@ -302,5 +287,4 @@
 <footer class="rig"> <br/>
   <a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved. </footer>
 </body>
-<script type="text/javascript" src="JS/index.js"></script>
 </html>
