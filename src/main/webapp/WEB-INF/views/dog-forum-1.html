@@ -10,6 +10,7 @@
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/forum.js"></script>
 </head>
 <body>
 <div> 
@@ -116,11 +117,25 @@
   <p>试问能对贫穷的主人做到不离不弃，又如此贴心照顾的狗狗能有多少？恐怕也只
     有我们的土狗了。所以当我们更多关注国外那些品种狗的时候，多去爱护我们身
     边的土狗吧。它们能够给我们带来更多的温暖和惊喜！<br/>
-  </p>
-  <button class="btn-success">评论</button>
-  <button class="btn-info">回复</button>
+  </p> 
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+     <textarea id="content1" cols="50" rows="5"></textarea> 
+  </div>
+  <div class="panel-footer">
+    <button class="btn-success" id="comment" onclick="c1()">评论</button>
+    <button class="btn-info" id="reply" onclick="r1()">回复</button>
+  </div>
 </div>
- 
+  <div >
+    <div class="panel panel-default" id="comment">
+      <div class="panel-footer" id="p1">
+   评论区
+  </div>
+</div>
+</div>
+  </div>
   <footer class="rig"> <br/>
   <a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved. </footer>
 </body>

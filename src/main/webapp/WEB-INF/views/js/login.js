@@ -43,8 +43,7 @@ $("#email").blur(function(){
         url: "/views/registerEvent",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
         data: JSON.stringify({"name":name,"email":email,"password":password,"realname":realname,"sex":sex,"number":number,"address":address}), 
-        dataType: "json",   //返回格式为json  
-        //async: true,//请求是否异步，默认为异步，这也是ajax重要特性  
+        dataType: "json",   //返回格式为json   
          success: function (data) {//回调函数
                 if(data.status=='success'){
                   

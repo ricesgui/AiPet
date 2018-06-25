@@ -33,3 +33,12 @@
 .content table tr{
 	border:dashed 0.2px #E8E8E8;
 }
+
+#panel{
+	font-size: 20px;
+	color: red;
+}
+#comment{
+	font-size: 20px;
+	color: #008B00;
+}
