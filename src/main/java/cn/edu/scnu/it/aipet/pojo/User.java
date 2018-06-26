@@ -16,7 +16,8 @@ public class User implements Serializable {
     private String number=null;
     private String email=null;
     private String address=null;
-    private List<MePlaceout> mePlaceouts=null;
+    private List<Placeout> placeouts=null;
+    private List<Adopt> adopts=null;
 
     public Long getIdusers() {
         return idusers;
@@ -82,11 +83,19 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public List<MePlaceout> getMePlaceouts() {
-        return mePlaceouts;
+    public List<Placeout> getPlaceouts() {
+        return placeouts;
     }
 
-    public void setMePlaceouts(List<MePlaceout> mePlaceouts) {
-        this.mePlaceouts = mePlaceouts;
+    public void setPlaceouts(List<Placeout> placeouts) {
+        this.placeouts = placeouts;
+    }
+
+    public List<Adopt> getAdopts() {
+        return adopts;
+    }
+
+    public void setAdopts(List<Adopt> adopts) {
+        this.adopts = adopts;
     }
 }

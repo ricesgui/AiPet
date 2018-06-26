@@ -1,7 +1,9 @@
 package cn.edu.scnu.it.aipet.controller;
 
+import cn.edu.scnu.it.aipet.pojo.Adopt;
 import cn.edu.scnu.it.aipet.pojo.Pet;
 import cn.edu.scnu.it.aipet.pojo.Placeout;
+import cn.edu.scnu.it.aipet.service.AdoptService;
 import cn.edu.scnu.it.aipet.service.PetService;
 import cn.edu.scnu.it.aipet.service.PlaceoutService;
 import cn.edu.scnu.it.aipet.util.PlaceoutJson;
@@ -18,19 +20,21 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/views")
 public class InteractionCon {
-    private  PetService petService=null;
-    private  PlaceoutService placeoutService=null;
+    private  final PetService petService;
+    private  final PlaceoutService placeoutService;
+    private  final AdoptService adoptService;
 
     @Autowired
-    public InteractionCon(PetService petService, PlaceoutService placeoutService) {
+    public InteractionCon(PetService petService, PlaceoutService placeoutService,AdoptService adoptService) {
         this.petService = petService;
         this.placeoutService = placeoutService;
+        this.adoptService=adoptService;
     }
 
 
-    @RequestMapping(value = "/sendplaceout",method = RequestMethod.POST)
-    public ModelAndView insertPetToDb(@RequestBody PlaceoutJson placeoutJson, HttpSession session){
-        System.out.println("进入insetPetToDb!");
+    @RequestMapping(value = "/send_placeout",method = RequestMethod.POST)
+    public ModelAndView insertPlaceoutToDb(@RequestBody PlaceoutJson placeoutJson, HttpSession session){
+        System.out.println("进入insetPlaceoutToDb!");
         ModelAndView mv=new ModelAndView();
         mv.setView(new MappingJackson2JsonView());
         Long iduser=(Long)session.getAttribute("id");
@@ -46,6 +50,22 @@ public class InteractionCon {
             mv.addObject("status","success");
         return mv;
 }
+
+    @RequestMapping(value = "/send_adopt",method = RequestMethod.POST)
+    public ModelAndView insertAdoptToDb(@RequestBody Adopt adopt, HttpSession session){
+        System.out.println("进入insetAdoptToDb!");
+        ModelAndView mv=new ModelAndView();
+        mv.setView(new MappingJackson2JsonView());
+        Long iduser=(Long)session.getAttribute("id");
+        adopt.setIduser(iduser);
+        Long idpet=adoptService.insertAdopt(adopt);  //返回值主键回填
+        if(idpet==0)
+            mv.addObject("status","fail");
+        else
+            mv.addObject("status","success");
+        return mv;
+    }
+
     @RequestMapping(value = "/test/getPetInfo",method = RequestMethod.POST)
     public ModelAndView getPetInfo(){
         Pet pet=new Pet();

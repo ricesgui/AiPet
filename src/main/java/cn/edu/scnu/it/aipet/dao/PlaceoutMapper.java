@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface PlaceoutMapper {
-    public List<Placeout> getPlaceoutByUserid(Long id);
+    public List<Placeout> getPlaceoutByUserId(Long userId);
     public Long insertPlaceout(Placeout placeout);
 }

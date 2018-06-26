@@ -8,8 +8,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PlaceoutServiceImpl implements PlaceoutService {
+    private final PlaceoutMapper placeoutMapper;
+
     @Autowired
-    private PlaceoutMapper placeoutMapper=null;
+    public PlaceoutServiceImpl(PlaceoutMapper placeoutMapper) {
+        this.placeoutMapper = placeoutMapper;
+    }
 
     @Override
     public Long insertPlaceout(Placeout placeout) {

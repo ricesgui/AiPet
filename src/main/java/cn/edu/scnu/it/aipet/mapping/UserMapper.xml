@@ -4,7 +4,8 @@
 <mapper namespace="cn.edu.scnu.it.aipet.dao.UserMapper">
     <resultMap id="user" type="cn.edu.scnu.it.aipet.pojo.User">
         <id column="idusers" property="idusers"/>
-        <collection property="placeouts" column="iduser" select="cn.edu.scnu.it.aipet.dao.PlaceoutMapper.getPlaceoutByUserid"/>
+        <collection property="placeouts" column="iduser" select="cn.edu.scnu.it.aipet.dao.PlaceoutMapper.getPlaceoutByUserId"/>
+        <collection property="adopts" column="iduser" select="cn.edu.scnu.it.aipet.dao.AdoptMapper.getAdoptByUserId"/>
     </resultMap>
    <insert id="insertUser" useGeneratedKeys="true" keyProperty="idusers">
        insert into users(idusers,name,realname,sex,password,number,email,address) values(0,#{name},

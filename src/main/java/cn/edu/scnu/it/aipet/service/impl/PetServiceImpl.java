@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PetServiceImpl implements PetService {
-    @Autowired
-    private PetMapper petMapper=null;
+    private final PetMapper petMapper;
 
-    public PetServiceImpl(PetMapper petMapper) {
+    @Autowired
+    public PetServiceImpl( PetMapper petMapper) {
         this.petMapper = petMapper;
     }
 

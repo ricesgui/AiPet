@@ -10,7 +10,7 @@ public class Placeout {
     Long idpet=null;
     String placeouttitle=null;
     @DateTimeFormat(pattern="yyyy-MM-dd")
-    private Date datatime=null;
+    private Date datetime=null;
     String adoptres=null;
     String realname=null;
     String sex=null;
@@ -50,12 +50,12 @@ public class Placeout {
         this.placeouttitle = placeouttitle;
     }
 
-    public Date getDatatime() {
-        return datatime;
+    public Date getDatetime() {
+        return datetime;
     }
 
-    public void setDatatime(Date datetime) {
-        this.datatime = datetime;
+    public void setDatetime(Date datetime) {
+        this.datetime = datetime;
     }
 
     public String getAdoptres() {

@@ -7,10 +7,10 @@
         <association property="pet" column="idpet" select="cn.edu.scnu.it.aipet.dao.PetMapper.getPet"/>
     </resultMap>
 <select id="getMePlaceoutByUserId" parameterType="Long" resultMap="getPet">
-    select placeouttitle,datatime,adoptres,realname,sex,address from placeout where iduser=#{iduser}
+    select idplaceout,iduser,idpet,placeouttitle,datetime,adoptres,realname,sex,number,address from placeout where iduser=#{iduser}
 </select>
 <insert id="insertPlaceout" useGeneratedKeys="true" keyProperty="idplaceout" parameterType="cn.edu.scnu.it.aipet.pojo.Placeout">
-   insert into placeout(idplaceout,iduser,idpet,placeouttitle,datatime,adoptres,realname,sex,number,address)
-   values(0,#{iduser},#{idpet},#{placeouttitle},#{datatime},#{adoptres},#{realname},#{sex},#{number},#{address})
+   insert into placeout(idplaceout,iduser,idpet,placeouttitle,datetime,adoptres,realname,sex,number,address)
+   values(0,#{iduser},#{idpet},#{placeouttitle},#{datetime},#{adoptres},#{realname},#{sex},#{number},#{address})
 </insert>
 </mapper>
