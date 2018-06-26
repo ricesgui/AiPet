@@ -37,6 +37,7 @@ public class StatusCon {
             return mv;
         }
         session.setAttribute("user_name", user.getName());
+        System.out.println(user.getIdusers());
         session.setAttribute("id",user.getIdusers());
         mv.addObject("status", "ok");
         mv.addObject("errorType", "0");
@@ -55,20 +56,20 @@ public class StatusCon {
         mv.setView(new MappingJackson2JsonView());
         return  mv;
     }
-    @Autowired
-    private User user=null;
     @RequestMapping("/registerEvent")
     public ModelAndView register(@RequestBody User user,HttpSession session){
+        System.out.println("进入注册接口");
         ModelAndView mv=new ModelAndView();
         mv.setView(new MappingJackson2JsonView());
         String status="fail";
         String email=user.getEmail();
         User userJudge=userService.selectUser(email);
-        if(userJudge==null){
+        if(userJudge!=null){
+            System.out.println("邮箱重复");
             mv.addObject("status",status);
             return mv;
         }
-        userService.insertUser(user);
+        Long id=userService.insertUser(user);
         session.setAttribute("name",user.getName());
         session.setAttribute("id",user.getIdusers());
         status="success";

@@ -28,10 +28,12 @@ public class InteractionCon {
     }
 
 
-    @RequestMapping(value = "/sendplacout",method = RequestMethod.POST)
+    @RequestMapping(value = "/sendplaceout",method = RequestMethod.POST)
     public ModelAndView insertPetToDb(@RequestBody PlaceoutJson placeoutJson, HttpSession session){
+        System.out.println("进入insetPetToDb!");
         ModelAndView mv=new ModelAndView();
-        Long iduser=Long.parseLong((String)session.getAttribute("id"));
+        mv.setView(new MappingJackson2JsonView());
+        Long iduser=(Long)session.getAttribute("id");
         Pet pet=placeoutJson.getPet();
         Placeout placeout=placeoutJson.getPlaceout();
         Long idpet=petService.insertPet(pet);  //返回值主键回填
@@ -39,10 +41,9 @@ public class InteractionCon {
         placeout.setIduser(iduser);
         placeoutService.insertPlaceout(placeout);
         if(idpet==0)
-            mv.addObject("status","success");
-        else
             mv.addObject("status","fail");
-        mv.setView(new MappingJackson2JsonView());
+        else
+            mv.addObject("status","success");
         return mv;
 }
     @RequestMapping(value = "/test/getPetInfo",method = RequestMethod.POST)

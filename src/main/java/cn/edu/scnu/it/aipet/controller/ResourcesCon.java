@@ -15,7 +15,6 @@ public class ResourcesCon {
    @RequestMapping(value="/get_name",method = RequestMethod.POST)
    // @RequestMapping(value="/get_name")
     public ModelAndView rtUserInfo(HttpSession session){
-        System.out.println("获取name接口收到请求");
         ModelAndView mv=new ModelAndView();
         mv.addObject("user_name",session.getAttribute("user_name"));
         mv.setView(new MappingJackson2JsonView());

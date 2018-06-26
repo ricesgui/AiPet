@@ -19,5 +19,7 @@
     </typeAliases>
     <mappers>
         <mapper resource="cn/edu/scnu/it/aipet/mapping/UserMapper.xml"/>
+        <mapper resource="cn/edu/scnu/it/aipet/mapping/PetMapper.xml"/>
+        <mapper resource="cn/edu/scnu/it/aipet/mapping/PlaceoutMapper.xml"/>
     </mappers>
 </configuration>

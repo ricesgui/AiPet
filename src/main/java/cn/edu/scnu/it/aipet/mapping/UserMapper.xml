@@ -6,15 +6,15 @@
         <id column="idusers" property="idusers"/>
         <collection property="placeouts" column="iduser" select="cn.edu.scnu.it.aipet.dao.PlaceoutMapper.getPlaceoutByUserid"/>
     </resultMap>
-   <insert id="insertUser" keyProperty="iduser">
-       insert into users(idusers,name,password,email) values(0,#{name},
-      #{password},#{email})
+   <insert id="insertUser" useGeneratedKeys="true" keyProperty="idusers">
+       insert into users(idusers,name,realname,sex,password,number,email,address) values(0,#{name},
+      #{realname},#{sex},#{password},#{number},#{email},#{address})
    </insert>
 
     <delete id="deleteUser" parameterType="long">
         delete from users where id=#{id}
     </delete>
     <select id="selectUserByEmail" parameterType="string" resultMap="user">
-        select name,email,password from users where email=#{email}
+        select idusers,name,email,password from users where email=#{email}
     </select>
 </mapper>
