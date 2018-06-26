@@ -14,7 +14,7 @@ $(function(){
   type:'POST',  
   url:"/views/send_adopt",
   contentType: "application/json; charset=utf-8",
-  data:JSON.stringify({"adopt":{"adoptSpecies":adoptSpecies,"petSex":petSex,"adoptDes":adoptDes,"placeInTitle":placeInTitle,"datetime":datetime,"touchName":touchName,"telNumber":telNumber}}),
+  data:JSON.stringify({"adoptSpecies":adoptSpecies,"petSex":petSex,"adoptDes":adoptDes,"placeInTitle":placeInTitle,"datetime":datetime,"touchName":touchName,"telNumber":telNumber}),
   dataType:"json",
   success:function(data){
   console.log(2);
@@ -24,7 +24,7 @@ $(function(){
    }
    else alert("请重新输入");
   },
-  error: function (xhr,error) {
+  error: function (xhr,error){
                 console.log("out-adopt.fail");
             }  
   });
