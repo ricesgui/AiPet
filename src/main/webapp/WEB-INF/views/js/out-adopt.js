@@ -1,4 +1,4 @@
-
+$(function(){
  $("#btn1").click(function(){
    //发送ajax请求
   var adoptSpecies=$("input[name='adoptSpecies']:checked").val();  
@@ -9,6 +9,7 @@
   var datetime = p.getFullYear() + "-" +((p.getMonth()+1)<10?"0":"")+(p.getMonth()+1)+"-"+(p.getDate()<10?"0":"")+p.getDate();
   var touchName=$("input[name='touchName']").val();
   var telNumber=$("input[name='telNumber']").val();
+  var adoptRes=$("#adoptRes").val();
   $.ajax({
   type:'POST',  
   url:"/views/send_adopt",
@@ -28,4 +29,5 @@
             }  
   });
  });
+})
 
