@@ -13,7 +13,7 @@
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/adopt.js"></script>
+	
 </head>
 <body>	
 	<div>
@@ -78,8 +78,7 @@
 </header>
 <div class="bj-img">
 			<img src="images/keji.jpg" width="100%" height="" alt="导航栏上背景图">
-		</div>
-	
+		</div>	
 </div>		
 	<!--公共头部结束-->
 <main>	
@@ -101,13 +100,13 @@
 	<div class="oa-text">	
 
 	<form method="post" id="form" enctype="multipart/form-data" onsubmit="return false;">
-	<h4><label>*送养种类：<input type="radio" name="petspecies" class="btn-group"> 狗狗</input><input type="radio" name="petspecies" class="btn-group"> 猫咪</input><input type="radio" name="petspecies" class="btn-group"> 其他</input></label>
+	<h4><label>*送养种类：<input type="radio" name="petspecies" value="dog"class="btn-group"> 狗狗</input><input type="radio" name="petspecies" value="cat"class="btn-group"> 猫咪</input><input type="radio" name="petspecies" value="other"class="btn-group"> 其他</input></label>
 	</h4>
 	<h4>
 		<label>*宠物昵称：<input type="text" name="name" required="required"></label>
 	</h4>
 	<h4>
-		<label>性别选择：<input type="radio" name="sex" class="btn-group" >男</input><input type="radio" name="sex" class="btn-group">女</input></label>
+		<label>性别选择：<input type="radio" id="male" value="男" name="sex" class="btn-group" >男</input><input type="radio" name="sex" value="女" id="female" class="btn-group">女</input></label>
 	</h4>
 	<h4>
 		<label>*标题:<input type="text" name="placeouttitle" required="required"></label>
@@ -157,5 +156,5 @@
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 </body>
-
+<script type="text/javascript" src="js/out-adopt.js"></script>
 </html>

@@ -12,7 +12,7 @@
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/out-adopt.js"></script>
+	<script type="text/javascript" src="js/adopt.js"></script>
 </head>
 <body>	
 	<div>
@@ -98,10 +98,10 @@
 	<div class="oa-text">	
 		<form method="post" id="form1" onsubmit="return false;">
 		<h4>
-			<label>*领养种类：<input type="radio" name="adoptSpecies" class="btn-group">狗狗<input type="radio" name="adoptSpecies" class="btn-group">猫咪<input type="radio" name="adoptSpecies" class="btn-group">其他</label>
+			<label>*领养种类：<input type="radio" name="adoptSpecies" value="dog"class="btn-group">狗狗<input type="radio" name="adoptSpecies" value="cat" class="btn-group">猫咪<input type="radio" name="adoptSpecies" value="other" class="btn-group">其他</label>
 		</h4>
 		<h4>
-			<label>性别选择：<input type="radio" name="petSex" class="btn-group">男<input type="radio" name="petSex" class="btn-group">女</label>
+			<label>性别选择：<input type="radio" name="petSex" id="male" value="男"class="btn-group">男<input type="radio" name="petSex" id="female" value="女" class="btn-group">女</label>
 		</h4>
 		<h4>
 			<label>*标题:<input type="text" name="placeInTitle" required="required"></label>
