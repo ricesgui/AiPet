@@ -56,7 +56,7 @@ var datetime = d.getFullYear() + "-" +((d.getMonth()+1)<10?"0":"")+(d.getMonth()
   var address=$("input[name='address']").val();
   $.ajax({
   type:'POST',  
-  url:"/views/send_placeout",
+  url:"/views/send_adopt",
   contentType: "application/json; charset=utf-8",
   data:JSON.stringify({"pet":{"petspecies":petspecies,"name":name,"sex":sex,"age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,"petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datetime":datetime,"realname":realname,"number":number,"address":address}}),
   dataType:"json",

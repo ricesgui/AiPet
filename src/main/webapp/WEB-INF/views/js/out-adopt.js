@@ -12,7 +12,7 @@ $(function(){
   var adoptRes=$("#adoptRes").val();
   $.ajax({
   type:'POST',  
-  url:"/views/send_adopt",
+  url:"/views/send_placeout",
   contentType: "application/json; charset=utf-8",
   data:JSON.stringify({"adoptSpecies":adoptSpecies,"petSex":petSex,"adoptDes":adoptDes,"placeInTitle":placeInTitle,"datetime":datetime,"touchName":touchName,"telNumber":telNumber}),
   dataType:"json",
