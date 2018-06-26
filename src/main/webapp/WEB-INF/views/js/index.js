@@ -60,8 +60,7 @@ window.onload=function(){
                  else console.log("error");
                 },
                 error: function (xhr,error) {
-                    console.debug(xhr);
-                    console.debug(error);
+                    console.log("index.fail");
                 }
             });
         });

@@ -50,19 +50,18 @@ var even= document.getElementById('file');
   var placeouttitle=$("input[name='placeouttitle").val();
   var d=new Date();
 
-var datatime = d.getFullYear() + "-" +((d.getMonth()+1)<10?"0":"")+(d.getMonth()+1)+"-"+(d.getDate()<10?"0":"")+d.getDate();
+var datetime = d.getFullYear() + "-" +((d.getMonth()+1)<10?"0":"")+(d.getMonth()+1)+"-"+(d.getDate()<10?"0":"")+d.getDate();
   var realname=$("input[name='realname']").val();
   var number=$("input[name='number']").val();
   var address=$("input[name='address']").val();
-
   $.ajax({
   type:'POST',  
   url:"/views/sendplaceout",
   contentType: "application/json; charset=utf-8",
-  data:JSON.stringify({"pet":{"petspecies":petspecies,"name":name,"sex":sex,"age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,"petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datatime":datatime,"realname":realname,"number":number,"address":address}}),
+  data:JSON.stringify({"pet":{"petspecies":petspecies,"name":name,"sex":sex,"age_year":age_year,"age_month":age_month,"weight":weight,"petdescri":petdescri,"petphotourl":petphotourl},"placeout":{"placeouttitle":placeouttitle,"datetime":datetime,"realname":realname,"number":number,"address":address}}),
   dataType:"json",
   success:function(data){
-  console.log(2);
+  console.log("adopt.success");
    if(data.status=='success'){
     alert("发布成功！");
     window.location.href="index.html";
@@ -70,8 +69,7 @@ var datatime = d.getFullYear() + "-" +((d.getMonth()+1)<10?"0":"")+(d.getMonth()
    else alert("请重新输入");
   },
   error: function (xhr,error) {
-                console.debug(xhr);
-                console.debug(error);
+                console.log("adopt.fail");
             }  
   });
  });

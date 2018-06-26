@@ -12,6 +12,7 @@
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/out-adopt.js"></script>
 </head>
 <body>	
 	<div>
@@ -95,36 +96,34 @@
 		</div>
 	</div>
 	<div class="oa-text">	
-		<form action="" method="post">
-		<h4><label>*领养种类：<input type="radio" name="kind" class="btn-group"> 狗狗<input type="radio" name="kind" class="btn-group"> 猫咪<input type="radio" name="kind" class="btn-group"> 其他</label>
+		<form method="post" id="form1" onsubmit="return false;">
+		<h4>
+			<label>*领养种类：<input type="radio" name="adoptSpecies" class="btn-group">狗狗<input type="radio" name="adoptSpecies" class="btn-group">猫咪<input type="radio" name="kind" class="btn-group">其他</label>
 		</h4>
 		<h4>
-			<label>性别选择：<input type="radio" name="sex" class="btn-group">男<input type="radio" name="sex" class="btn-group">女</label>
+			<label>性别选择：<input type="radio" name="petSex" class="btn-group">男<input type="radio" name="petSex" class="btn-group">女</label>
 		</h4>
 		<h4>
-			<label>*标题:<input type="text" name="placeouttitle" required="required"></label>
+			<label>*标题:<input type="text" name="placeInTitle" required="required"></label>
 		</h4>
 		<h4>
-			<label>宠物年龄：<input type="number" name="age" min="0" max="100" step="1">年<input type="number" name="age" min="0" max="100" step="1">月 &nbsp;左右</label>
+			<label>*联系人姓名:<input type="text" name="touchName" required="required"></label>
 		</h4>
 		<h4>
-			<label>*联系人姓名:<input type="text" name="name" required="required"></label>
+			<label>*联系方式：<input type="text" name="telNumber" required="required"></label>
 		</h4>
 		<h4>
-			<label>*联系方式：<input type="text" name="number" required="required"></label>
-		</h4>
-		<h4>
-		<label>领养描述：
+		<label>*领养描述：
 		<div class="panel panel-default" id="d-p">
 			<h5>描述你领养宠物之后会如何照顾它。</h5>		
 			<div class="panel-body">
-				<textarea rows="5" required="required"></textarea>
+				<textarea id="adoptDes" rows="5" required="required"></textarea>
 			</div>
 		</div>
 		</label>
 	</h4>
-	<h4><button type="button" class="btn btn-success">发布</button></h4>
-	</form>
+	<h4><button type="button" id="btn1" class="btn btn-success">发布</button></h4>
+</form>
 	</div>
 	</div>
 </main>
@@ -133,8 +132,7 @@
 <div id="d-img">
 	<img src="images/soso2.jpg" width="100%" height="100%" alt="sos图片">
 </div>
-<footer class="rig">
-	
+<footer class="rig">	
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 </body>
