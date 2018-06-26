@@ -14,6 +14,7 @@ public class Placeout {
     String adoptres=null;
     String realname=null;
     String sex=null;
+    String number=null;
     String address=null;
     private Pet pet=null;
 
@@ -95,5 +96,13 @@ public class Placeout {
 
     public void setPet(Pet pet) {
         this.pet = pet;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }
