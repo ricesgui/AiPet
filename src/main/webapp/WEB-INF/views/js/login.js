@@ -58,8 +58,7 @@ $("#email").blur(function(){
                 
             },
         error: function (xhr,error) {
-                console.debug(xhr);
-                console.debug(error);
+                console.log("login.fail");
             }  
      }); 
        }
