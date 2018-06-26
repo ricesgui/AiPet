@@ -11,7 +11,7 @@
   var telNumber=$("input[name='telNumber']").val();
   $.ajax({
   type:'POST',  
-  url:"/views/sendplacein",
+  url:"/views/send_adopt",
   contentType: "application/json; charset=utf-8",
   data:JSON.stringify({"adopt":{"adoptSpecies":adoptSpecies,"petSex":petSex,"adoptDes":adoptDes,"placeInTitle":placeInTitle,"datetime":datetime,"touchName":touchName,"telNumber":telNumber}}),
   dataType:"json",
