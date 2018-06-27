@@ -8,11 +8,6 @@ $(".send_discuss").click(function(){
 	  var comment=$(".send_discuss").val();
 	  var newdate=new Date();
 	  	// $(".send_discuss").after("<div class=discuss_info>"+comment+"</div>");
-	 var username=$("#txtHint").html();
-	 if(username!=""){
-		
-	 var comment=$("#myEditor").val();
-	// $(".send_discuss").after("<div class=discuss_info>"+comment+"</div>");
 	$.ajax({
 	  type:'POST',  
 	  url:"/views/send_comment",
