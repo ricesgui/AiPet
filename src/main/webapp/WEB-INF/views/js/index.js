@@ -104,15 +104,16 @@ function onload2()
 }
    var start=0,size=2;
 function onload5(){
-    setInterval("refresh(start,size)",1000); 
+    setInterval("refresh(start,size)",100000); 
 function refresh(start,size){
 //定时刷新页面数据
+console.log(1);
         $.ajax({ 
         type: "POST",   //请求方式  
         url: "/views/get_user_info",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",   //返回格式为json  
-        data:stringfy({"start":start,"size":size}), 
+        data:stringfy({"start":0,"size":1}), 
         success: function (users){//回调函数
         //向服务器请求用户个人信息，并显示   
         console.log(user);   
