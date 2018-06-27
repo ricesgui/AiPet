@@ -11,8 +11,8 @@
 	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/adopt-info.js"></script>
+	<script type="text/javascript" src="js/index01.js"></script>
+	
 </head>
 <body>	
 	<div>
@@ -82,8 +82,7 @@
   
 </div>    
   <!--公共头部结束-->
-<!--面包屑导航-->
-	
+<!--面包屑导航-->	
 	<div class="row clearfix">
 		<div class="col-md-2 column">
 			<ul class="nav nav-pills" id="rootnav">
@@ -96,19 +95,20 @@
 			</ul>
 		</div>
 	</div>
-	<div class="row" >		
+	<div class="row" id="para">	
+
 		<div class="col-xs-6 col-xs-3">
 			<div class="thumbnail" id="detail">
 			<a href="dog/d-adopt-detail-1.html" data-toggle="tooltip" title="点击我查看更多详情">			
 				<img src="images/d-adopt-1.jpg" width="" height="" alt="领养狗图片">
-				<div class="caption">
-					<h4>地址：广州-天河</h4>
+				<div class="caption" >
+					<h4 >地址：<span id="address1">广州-天河</span></h4>
 					<p>
-						年龄：一年0个月
+						年龄：<span id="age_year1">一</span>年<span id="age_month1">0</span>个月
 						<br/>
-						发布时间：2018-05-30
+						发布时间：<span id="datetime1">2018-05-30</span>
 						<br/>
-						发布人描述信息：从小喜欢狗狗，希望能领养一只泰迪有合适的可以联系我
+						发布人描述信息：<span id="petdescri1">从小喜欢狗狗，希望能领养一只泰迪有合适的可以联系我
 					</p>
 				</div>
 				</a>
@@ -146,7 +146,7 @@
 				</div>
 			</a>
 		</div>	
-		</div>
+		
 		<div class="col-xs-6 col-xs-3">
 			<div class="thumbnail" id="detail">
 				<a href="dog/d-adopt-detail-4.html"  data-toggle="tooltip" title="点击我查看更多详情"><img src="images/d-adopt-4.jpg" width="" height="" alt="领养狗图片">
@@ -164,7 +164,7 @@
 		</div>	
 		</div>
 	</div>
-	<div class="row">
+
 		<div class="col-xs-6 col-xs-3">
 			<div class="thumbnail" id="detail">
 				<a href="dog/d-apopt-detail-5.html"  data-toggle="tooltip" title="点击我查看更多详情">
@@ -233,9 +233,23 @@
 			</a>
 			</div>	
 			</div>
-			<div id="para">
-				
-			</div>
+			<div class="col-xs-6 col-xs-3">
+			<div class="thumbnail" id="detail">
+				<a href="#" data-toggle="tooltip" title="点击我查看更多详情">
+                   <img src="" width="" height="" alt="领养猫图片">
+				<div class="caption">
+					<h4>地址:<span id="address9">北京</span></h4>
+					<p>
+						年龄：<span id="age_year9">2</span>年<span id="age_month9">0</span>个月
+						<br/>
+						发布时间：<span id="datetime9">2018-06-02</span>
+						<br/>
+						发布人描述信息：<span id="petdescri9">银色渐层，女孩二岁，已绝育免疫和驱虫。</span>
+					</p>
+				</div>
+                </a>
+			</div>	
+		</div>
 	</div>
 <!--页脚-->
 <footer class="rig">
@@ -243,5 +257,5 @@
 	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 </body>
-
+<script type="text/javascript" src="js/test.js"></script>
 </html>

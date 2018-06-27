@@ -8,8 +8,7 @@ $(function(){
         success: function (info) {//回调函数
         //向服务器请求新的领养数据，并显示
         console.log("获取成功！");
-            var info =JSON.parse(info);
-            
+            var info =JSON.parse(info);         
         },
         error: function(){
         	console.log("获取领养信息.fail");
@@ -19,3 +18,4 @@ $(function(){
           
         }
 });
+    });

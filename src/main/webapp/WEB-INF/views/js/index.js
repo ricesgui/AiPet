@@ -4,70 +4,70 @@ window.onload=function(){
     onload2();
     onload3();
     onload4();
+    onload5();
 }
-  function onload2()
+function onload2()
+    {
+        var xmlhttp;          
+        if (window.XMLHttpRequest)
         {
-            var xmlhttp;          
-            if (window.XMLHttpRequest)
-            {
-                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-                xmlhttp=new XMLHttpRequest();
-            }
-            else
-            {
-                // IE6, IE5 浏览器执行代码
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange=function()
-            {
-                if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                {
-                    var obj =JSON.parse(xmlhttp.responseText);
-                    if(obj.user_name==null)
-                    {
-                         document.getElementById("txtHint").innerHTML="";
-                                            
-                    }                  
-                    else  
-                    {
-                    document.getElementById("txtHint").innerHTML=obj.user_name;
-                      //实现第二个提示                   
-                    document.getElementById("s1").innerHTML="您已登录";                                     
-                    document.getElementById("third").innerHTML="退出"; 
-                    $("#user_info").show();       
-                    $("#yincang").hide();
-                    $("#div-m").hide();
-                    var im = document.getElementById("denglu");
-                    var bigImg = document.createElement("img");     //创建一个img元素  
-                    bigImg.src="images/maomi.jpg";   //给img元素的src属性赋值  
-                    bigImg.height="400";  //320个像素 不用加px                   
-                    im.appendChild(bigImg);     //为dom添加子元素img  
-                    }
-                }
-            }
-            xmlhttp.open("POST","/resources/get_name",true);
-            xmlhttp.send();
+            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xmlhttp=new XMLHttpRequest();
         }
-        function onload3(){
-           $("#third").click(function(){
-            $.ajax({
-                type: "POST",
-                url: "/views/log_out",
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify({"eventType":"1"}),
-                dataType: "json",
-                success: function (data) {//回调函数
-                 if(data.status=='success'){
-                    window.location.href="index.html";
+        else
+        {
+            // IE6, IE5 浏览器执行代码
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                var obj =JSON.parse(xmlhttp.responseText);
+                if(obj.user_name==null)
+                {
+                     document.getElementById("txtHint").innerHTML="";                                        
+                }                  
+                else  
+                {
+                document.getElementById("txtHint").innerHTML=obj.user_name;
+                  //实现第二个提示                   
+                document.getElementById("s1").innerHTML="您已登录";                                     
+                document.getElementById("third").innerHTML="退出"; 
+                $("#user_info").show();       
+                $("#yincang").hide();
+                $("#div-m").hide();
+                var im = document.getElementById("denglu");
+                var bigImg = document.createElement("img");     //创建一个img元素  
+                bigImg.src="images/maomi.jpg";   //给img元素的src属性赋值  
+                bigImg.height="400";  //320个像素 不用加px                   
+                im.appendChild(bigImg);     //为dom添加子元素img  
                 }
-                 else console.log("error");
-                },
-                error: function (xhr,error) {
-                    console.log("index.fail");
-                }
-            });
+            }
+        }
+        xmlhttp.open("POST","/resources/get_name",true);
+        xmlhttp.send();
+    }
+    function onload3(){
+       $("#third").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "/views/log_out",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({"eventType":"1"}),
+            dataType: "json",
+            success: function (data) {//回调函数
+             if(data.status=='success'){
+                window.location.href="index.html";
+            }
+             else console.log("error");
+            },
+            error: function (xhr,error) {
+                console.log("index.fail");
+            }
         });
-       }
+    });
+   }
        
    function onload4(){
     $("#log").click(function(){  
@@ -101,7 +101,35 @@ window.onload=function(){
     }
 
 });
-
+}
+   var start=0,size=1;
+function onload5(){
+    refresh(start,size);
+    setInterval("refresh(start,size)",100000); 
+function refresh(start,size){
+//定时刷新页面数据
+console.log(1);
+        $.ajax({ 
+        type: "POST",   //请求方式  
+        url: "/views/get_placeout",    //请求的url地址  
+        contentType: "application/json; charset=utf-8",  
+        dataType: "json",   //返回格式为json  
+        data:stringfy({"start":0,"size":1}), 
+        success: function (users){//回调函数
+        //向服务器请求用户个人信息，并显示   
+        console.log(user);   
+       var html01="<div class=\"col-xs-6 col-xs-3\" id=\"para\"><div class=\"thumbnail\" id=\"detail\"><div class=\"caption\"><h4>地址："+users[0].address+"</h4><p>年龄："+users[0].age_year+"年"+users[0].age_month+"月"+"<br>"+"发布时间："+users[0].datetime+"<br>"+"发布人描述信息："+users[0].petdescri+"</p></div></div></div>";
+        $("#para").append(html01);
+        console.log(html01);
+        var html02="<div class=\"col-xs-6 col-xs-3\" id=\"para\"><div class=\"thumbnail\" id=\"detail\"><div class=\"caption\"><h4>地址："+users[1].address+"</h4><p>年龄："+users[1].age_year+"年"+users[1].age_month+"月"+"<br>"+"发布时间："+users[1].datetime+"<br>"+"发布人描述信息："+users[1].petdescri+"</p></div></div></div>";
+        $("#para").append(html02);
+        },
+        error: function(){
+            console.log("获取.fail");
+        }
+    });  
+        start=start+size;
+    }
     
 }
    

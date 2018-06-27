@@ -1,4 +1,4 @@
-package cn.edu.scnu.it.aipet.util;
+package cn.edu.scnu.it.aipet.util.jsonUtil;
 
 public class LoginUser {
     private String email=null;

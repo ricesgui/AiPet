@@ -11,7 +11,6 @@
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引入百度jquery包-->
-	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/user.js"></script>
 </head>
 <body>
@@ -110,10 +109,10 @@
 		<label>密码：<input type="text" name="" id="password" required="required"></label>
 		<br>
 		<br>
-		<label>联系方式:<input type="text" name="" id="number" required="required"></label>
+		<label>联系方式:<input type="text" name="" id="number" required="required" maxlength="11"></label>
 		<br>
 		<br>
-		<label>邮箱/帐号：<input type="text" name="" id="email" required="required"></label>
+		<label>邮箱/帐号：<input type="text" name="" id="email" readonly="readonly" value="" required="required"></label>
 		<br>
 		<br>
 		<label>住址:<input type="text" name="" id="address" required="required"></label>
@@ -121,6 +120,18 @@
 		<br>
 		<button type="submit" id="btn-save">保存</button>
 		</form>
+		<h4>您发布过的送养信息：</h4>
+		<div id="useradopt-info">
+	
+		</div>
+		<h4>您发布过的领养信息：</h4>
+		<div id="outadopt-info">
+			
+		</div>
+		<h4>您领养过的宠物：</h4>
+		<div id="pet">
+			
+		</div>
 </div>
 </div>
 

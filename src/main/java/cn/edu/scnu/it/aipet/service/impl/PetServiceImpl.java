@@ -11,7 +11,7 @@ public class PetServiceImpl implements PetService {
     private final PetMapper petMapper;
 
     @Autowired
-    public PetServiceImpl( PetMapper petMapper) {
+    public PetServiceImpl(PetMapper petMapper) {
         this.petMapper = petMapper;
     }
 

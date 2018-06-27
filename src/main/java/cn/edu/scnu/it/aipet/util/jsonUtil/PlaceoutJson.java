@@ -1,4 +1,4 @@
-package cn.edu.scnu.it.aipet.util;
+package cn.edu.scnu.it.aipet.util.jsonUtil;
 
 import cn.edu.scnu.it.aipet.pojo.Pet;
 import cn.edu.scnu.it.aipet.pojo.Placeout;
