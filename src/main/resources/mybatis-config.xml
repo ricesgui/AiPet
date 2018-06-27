@@ -22,5 +22,6 @@
         <mapper resource="cn/edu/scnu/it/aipet/mapping/PetMapper.xml"/>
         <mapper resource="cn/edu/scnu/it/aipet/mapping/PlaceoutMapper.xml"/>
         <mapper resource="cn/edu/scnu/it/aipet/mapping/AdoptMapper.xml"/>
+        <mapper resource="cn/edu/scnu/it/aipet/mapping/CommentMapper.xml"/>
     </mappers>
 </configuration>

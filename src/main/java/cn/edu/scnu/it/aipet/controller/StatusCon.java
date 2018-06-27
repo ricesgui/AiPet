@@ -1,9 +1,9 @@
 package cn.edu.scnu.it.aipet.controller;
 
-import cn.edu.scnu.it.aipet.util.Event;
-import cn.edu.scnu.it.aipet.util.LoginUser;
-import cn.edu.scnu.it.aipet.pojo.User;
 import cn.edu.scnu.it.aipet.service.UserService;
+import cn.edu.scnu.it.aipet.util.jsonUtil.Event;
+import cn.edu.scnu.it.aipet.util.jsonUtil.LoginUser;
+import cn.edu.scnu.it.aipet.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,26 +18,25 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/views")
 public class StatusCon {
     @Autowired
-    private UserService userService = null;
+    private UserService UserService = null;
     @RequestMapping(value = "/log_in",method =RequestMethod.POST)
-    public ModelAndView logIn(@RequestBody LoginUser loginUser, HttpSession session) {
+    public ModelAndView logIn(@RequestBody LoginUser LoginUser, HttpSession session) {
         ModelAndView mv = new ModelAndView();
         mv.setView(new MappingJackson2JsonView());
-        User user = userService.selectUser(loginUser.getEmail());
+        User user = UserService.selectUser(LoginUser.getEmail());
         if (user == null) {
             //用户名不存在
             mv.addObject("status", "fail");
             mv.addObject("errorType", "1");
             return mv;
         }
-        if (!user.getPassword().equals(loginUser.getPassword())) {
+        if (!user.getPassword().equals(LoginUser.getPassword())) {
             //用户名或密码错误
             mv.addObject("status", "fail");
             mv.addObject("errorType", "2");
             return mv;
         }
         session.setAttribute("user_name", user.getName());
-        System.out.println(user.getIdusers());
         session.setAttribute("id",user.getIdusers());
         mv.addObject("status", "ok");
         mv.addObject("errorType", "0");
@@ -63,13 +62,13 @@ public class StatusCon {
         mv.setView(new MappingJackson2JsonView());
         String status="fail";
         String email=user.getEmail();
-        User userJudge=userService.selectUser(email);
+        User userJudge= UserService.selectUser(email);
         if(userJudge!=null){
             System.out.println("邮箱重复");
             mv.addObject("status",status);
             return mv;
         }
-        Long id=userService.insertUser(user);
+        Long id= UserService.insertUser(user);
         session.setAttribute("name",user.getName());
         session.setAttribute("id",user.getIdusers());
         status="success";
