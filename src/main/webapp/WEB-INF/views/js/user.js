@@ -3,6 +3,7 @@ window.onload=function(){
     onload2();
     onload3();
     onload4();
+    onload5();
    }
 function onload2(){
         var xmlhttp;          
@@ -91,7 +92,8 @@ function onload3(){
         	console.log("获取.fail");
         }
     });  
-    }    
+    }   
+    function onload5(){
 //点击修改按钮触发函数，上传服务器修改
 $("#btn-save").click(function(){
     var name =$("#name").val();
@@ -136,5 +138,5 @@ $("#btn-save").click(function(){
       
  });
     
-
+}
 
