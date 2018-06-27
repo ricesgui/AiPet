@@ -8,16 +8,17 @@ $(function(){
         //data:stringify({"start":0,"size":1}), 
         success: function (data) {//回调函数
         //向服务器请求用户个人信息，并显示
-        var data=JSON.parse(data);
+        
         console.log(data);
-            $("#name").val(data.name);
-            $("#realname").val(data.realname);
-            $("#sex").val(data.sex);
-            $("#password").val(data.password);
-            $("#number").val(data.number);
-            $("#email").val(data.email);
-            $("#address").val(data.address);
-            var html="<div class=\"caption\"><h4>地址："+data.address+"</h4><p>年龄："+data.age_year+"年"+data.age_month+"月"+"<br>"+"发布时间："+data.datetime+"<br>"+"发布人描述信息："+data.petdescri+"</p></div>";
+        console.log(data.user.name);
+            $("#name").val(data.user.name);
+            $("#realname").val(data.user.realname);
+            $("#sex").val(data.user.sex);
+            $("#password").val(data.user.password);
+            $("#number").val(data.user.number);
+            $("#email").val(data.user.email);
+            $("#address").val(data.user.address);
+            var html="<div class=\"caption\"><h4>地址："+data.user.address+"</h4><p>年龄："+data.user.age_year+"年"+data.user.age_month+"月"+"<br>"+"发布时间："+data.user.datetime+"<br>"+"发布人描述信息："+data.user.petdescri+"</p></div>";
             $("#useradopt-info").append(html);
         },
         error: function(){
