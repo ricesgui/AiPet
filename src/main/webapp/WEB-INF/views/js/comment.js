@@ -1,6 +1,8 @@
 $(".send_discuss").click(function(){
-	  var username=$("#txtHint").html();
-	  if(username=" "){
+	 var username=document.getElementById("txtHint").innerHTML;
+	 console.log(username);
+	 // var username=$("#txtHint").html();
+	  if(username==" "){
 	  	alert("请先登录");
 	  	location.href="../login.html";
 	  	return ;
