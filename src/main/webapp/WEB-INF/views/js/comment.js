@@ -1,10 +1,7 @@
 $(".send_discuss").click(function(){
-	 var username=$("#txtHint").val();
-	 if(username==""){
-		 alert("请先登录");
-		 location.href="../login.html";
-		 return ;
-	 }
+	 var username=$("#txtHint").html();
+	 if(username!=""){
+		
 	 var comment=$("#myEditor").val();
 	// $(".send_discuss").after("<div class=discuss_info>"+comment+"</div>");
 	$.ajax({
@@ -26,6 +23,7 @@ $(".send_discuss").click(function(){
 	                console.log("comment.fail");
 	            }  
 	  });
+}
 	 });
 
 

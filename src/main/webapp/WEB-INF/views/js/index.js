@@ -102,8 +102,9 @@ function onload2()
 
 });
 }
-   var start=0,size=2;
+   var start=0,size=1;
 function onload5(){
+    refresh(start,size);
     setInterval("refresh(start,size)",100000); 
 function refresh(start,size){
 //定时刷新页面数据
