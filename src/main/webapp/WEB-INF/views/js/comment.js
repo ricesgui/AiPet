@@ -24,17 +24,17 @@ $(".send_discuss").click(function(){
 	   if(data.status=='success'){
 	    alert("评论成功！");
 	    var txt=document.createElement('div');
-	    txt.className("discuss_info");
-	    txt.innerHTML=comment;
+	    txt.className="discuss_info";
+	    txt.innerHTML=content;
 	    var txt1=document.createElement('div');
-	    txt1.className("post_time");
-	    txt1.innerHTML=newdate;
+	    txt1.className="post_time";
+	    txt1.innerHTML=dateTime;
 	    var txt2=document.createElement('div');
-	    txt2.className("post_name");
+	    txt2.className="post_name";
 	    txt2.innerHTML=data.name;
 	    var txt3="<hr>";
 	    $(".send_discuss").after(txt,txt2,txt1,txt3);
-	    window.location.href="dog-adopt.html";
+	    //window.location.href="dog-adopt.html";
 	   }
 	   else alert("请重新输入");
 	  },
