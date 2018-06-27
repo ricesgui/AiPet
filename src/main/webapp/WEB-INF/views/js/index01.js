@@ -1,4 +1,9 @@
-$(function(){
+window.onload=function(){
+    $("#user_info").hide();
+    onload2();
+    onload3();
+   }
+function onload2(){
         var xmlhttp;          
         if (window.XMLHttpRequest)
         {
@@ -17,8 +22,8 @@ $(function(){
                 var obj =JSON.parse(xmlhttp.responseText);
                 if(obj.user_name==null)
                 {
-                     document.getElementById("txtHint").innerHTML="";
-                     window.location.href="index.html";                  
+                     alert("您还没有登录，请先登录");
+                     window.location.href="login.html";                  
                 }                  
                 else  
                 {
@@ -27,16 +32,31 @@ $(function(){
                 document.getElementById("s1").innerHTML="您已登录";                                     
                 document.getElementById("third").innerHTML="退出"; 
                 $("#user_info").show();       
-                $("#yincang").hide();
-                $("#div-m").hide();
-                var im = document.getElementById("denglu");
-                var bigImg = document.createElement("img");     //创建一个img元素  
-                bigImg.src="images/maomi.jpg";   //给img元素的src属性赋值  
-                bigImg.height="400";  //320个像素 不用加px                   
-                im.appendChild(bigImg);     //为dom添加子元素img  
+                $("#yincang").hide();                
                 }
             }
         }
         xmlhttp.open("POST","/resources/get_name",true);
         xmlhttp.send();
-    });
+    }
+function onload3(){
+           $("#third").click(function(){
+            $.ajax({
+                type: "POST",
+                url: "/views/log_out",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({"eventType":"1"}),
+                dataType: "json",
+                success: function (data) {//回调函数
+                 if(data.status=='success'){
+                    window.location.href="index.html";
+                }
+                 else console.log("error");
+                },
+                error: function (xhr,error) {
+                    console.log("index.fail");
+                }
+            });
+        });
+       }
+       
