@@ -8,6 +8,8 @@ $(function(){
         //data:stringify({"start":0,"size":1}), 
         success: function (data) {//回调函数
         //向服务器请求用户个人信息，并显示
+        var data=JSON.parse(data);
+        console.log(data);
             $("#name").val(data.name);
             $("#realname").val(data.realname);
             $("#sex").val(data.sex);
