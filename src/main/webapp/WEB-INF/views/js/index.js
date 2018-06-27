@@ -48,26 +48,26 @@ function onload2()
         xmlhttp.open("POST","/resources/get_name",true);
         xmlhttp.send();
     }
-        function onload3(){
-           $("#third").click(function(){
-            $.ajax({
-                type: "POST",
-                url: "/views/log_out",
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify({"eventType":"1"}),
-                dataType: "json",
-                success: function (data) {//回调函数
-                 if(data.status=='success'){
-                    window.location.href="index.html";
-                }
-                 else console.log("error");
-                },
-                error: function (xhr,error) {
-                    console.log("index.fail");
-                }
-            });
+    function onload3(){
+       $("#third").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "/views/log_out",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({"eventType":"1"}),
+            dataType: "json",
+            success: function (data) {//回调函数
+             if(data.status=='success'){
+                window.location.href="index.html";
+            }
+             else console.log("error");
+            },
+            error: function (xhr,error) {
+                console.log("index.fail");
+            }
         });
-       }
+    });
+   }
        
    function onload4(){
     $("#log").click(function(){  
@@ -105,7 +105,7 @@ function onload2()
    var start=0,size=2;
 function onload5(){
     setInterval("refresh(start,size)",1000); 
-function refresh(var start,var size){
+function refresh(start,size){
 //定时刷新页面数据
         $.ajax({ 
         type: "POST",   //请求方式  
