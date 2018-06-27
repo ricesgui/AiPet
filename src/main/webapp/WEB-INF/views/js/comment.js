@@ -6,13 +6,15 @@ $(".send_discuss").click(function(){
 	  	return ;
 	  }
 	  var comment=$(".send_discuss").val();
-	  var newdate=new Date();
+	  var p=new Date();
+  	  var datetime = p.getFullYear() + "-" +((p.getMonth()+1)<10?"0":"")+(p.getMonth()+1)+"-"+(p.getDate()<10?"0":"")+p.getDate();
+  
 	  	// $(".send_discuss").after("<div class=discuss_info>"+comment+"</div>");
 	$.ajax({
 	  type:'POST',  
 	  url:"/views/send_comment",
 	  contentType: "application/json; charset=utf-8",
-	  data:JSON.stringify({"comment":{"comment":comment,"datetime":newdate},"users":{"username":username}}),
+	  data:JSON.stringify({"comment":{"comment":comment,"datetime":datetime},"users":{"username":username}}),
 	  dataType:"json",
 	  success:function(data){
 	  console.log(2);
@@ -40,12 +42,4 @@ $(".send_discuss").click(function(){
 
 	 });
 
-
-	 // $.post("#",{type:type,content:content},function(data){
-		//  if(data.status==100)
-		//  {alert("发送成功");
-		//    $(".send_discuss").after("<div class=discuss_info>"+txtC+"</div>");
-		//  }
-	 // });
-	
 

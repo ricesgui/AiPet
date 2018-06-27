@@ -100,8 +100,8 @@ function onload2()
      });  
     }
 
-});
-}
+    });
+    }
    var start=0,size=1;
 function onload5(){
     refresh(start,size);
