@@ -2,12 +2,13 @@ $(".send_discuss").click(function(){
 	 var username=document.getElementById("txtHint").innerHTML;
 	 console.log(username);
 	 // var username=$("#txtHint").html();
-	  if(username==" "){
+	  if(username==""){
 	  	alert("请先登录");
 	  	location.href="../login.html";
 	  	return ;
 	  }
 	  var comment=$(".send_discuss").val();
+	  console.log(comment);
 	  var p=new Date();
   	  var datetime = p.getFullYear() + "-" +((p.getMonth()+1)<10?"0":"")+(p.getMonth()+1)+"-"+(p.getDate()<10?"0":"")+p.getDate();
   
@@ -16,7 +17,7 @@ $(".send_discuss").click(function(){
 	  type:'POST',  
 	  url:"/views/send_comment",
 	  contentType: "application/json; charset=utf-8",
-	  data:JSON.stringify({"comment":{"comment":comment,"datetime":datetime},"users":{"username":username}}),
+	  data:JSON.stringify({"comment":{"comment":comment,"datetime":datetime}}),
 	  dataType:"json",
 	  success:function(data){
 	  console.log(2);
