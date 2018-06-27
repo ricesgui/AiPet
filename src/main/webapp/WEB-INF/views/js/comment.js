@@ -1,13 +1,12 @@
 $(".send_discuss").click(function(){
-	 var uid=1;
-	 var type=1;
-	 if(uid=='0'){
+	 var username=$("#txtHint").val();
+	 if(username==""){
 		 alert("请先登录");
-		 location.href="login.html";
+		 location.href="../login.html";
 		 return ;
 	 }
 	 var comment=$("#myEditor").val();
-	 $(".send_discuss").after("<div class=discuss_info>"+comment+"</div>");
+	// $(".send_discuss").after("<div class=discuss_info>"+comment+"</div>");
 	$.ajax({
 	  type:'POST',  
 	  url:"/views/",
@@ -37,4 +36,4 @@ $(".send_discuss").click(function(){
 		//  }
 	 // });
 	
- });
+
