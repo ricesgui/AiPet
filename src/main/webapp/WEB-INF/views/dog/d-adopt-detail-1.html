@@ -26,7 +26,6 @@
     margin-top: 15px;
 	}
 	.send_discuss {
-    float: left;
     height: 40px;
     line-height: 40px;
     text-align: center;
@@ -34,6 +33,12 @@
     background-color: red;
     color: #FFFFFF;
     cursor: pointer;
+}
+.discuss_info {
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
 }
 	</style>
 </head>
@@ -147,20 +152,23 @@
   </textarea>
   <div class="send_discuss">发布</div>
   <script type="text/javascript">
-     $(".send_discuss").click(function(){
-		 var uid=1;
-		 var type=1;
-		 if(uid=='0'){
+      $(".send_discuss").click(function(){
+      	 var username=$("#txtHint").val();
+		 if(username==""){
 			 alert("请先登录");
 			 location.href="../login.html";
 			 return ;
 		 }
-		 var content=$("#myEditor").val();
-		 $(".send_discuss").after("<div class=discuss_info>content</div>");
 		 $.post("#",{type:type,content:content},function(data){
 			 if(data.status==100)
 			 {alert("发送成功");
-			   $(".send_discuss").after("<div class=discuss_info>content</div>");
+			  var content=$("#myEditor").val();
+		       console.log(content);
+	          var txt=document.createElement("div");
+		      txt.className="discuss_info";
+		      txt.innerHTML=content;
+		      var txt1=document.createElement("hr");
+		      $(".send_discuss").after(txt,txt1);
 			 }
 		 });
 		

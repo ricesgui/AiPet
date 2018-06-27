@@ -1,0 +1,2 @@
+//alert('$("#info")');
+alert("dewd");
