@@ -7,7 +7,7 @@ $(".send_discuss").click(function(){
 	  	location.href="../login.html";
 	  	return ;
 	  }
-	  var comment=$(".send_discuss").val();
+	  var comment=$("#myEditor").val();
 	  console.log(comment);
 	  var p=new Date();
   	  var datetime = p.getFullYear() + "-" +((p.getMonth()+1)<10?"0":"")+(p.getMonth()+1)+"-"+(p.getDate()<10?"0":"")+p.getDate();
