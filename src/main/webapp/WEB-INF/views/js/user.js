@@ -78,11 +78,11 @@ function onload3(){
             $("#number").val(data.user.number);
             $("#email").val(data.user.email);
             $("#address").val(data.user.address);
-            for (var i = adopts.length - 1; i >= 0; i--) {
+            for (var i = data.user.adopts.length - 1; i >= 0; i--) {
                 var html="<div class=\"caption\"><h4>种类："+data.user.adopts[i].adoptSpecies+"</h4><p>性别："+data.user.adopts[i].petsex+"<br>联系方式："+data.user.adopts[i].telNumber+"<br>标题："+data.user.adopt[i].placeInTitle+"<br>发布时间："+data.user.adopts[i].datetime+"<br>"+"发布人描述信息："+data.user.adopts[i].pet.adopts[i].adoptDes+"</p></div>";
             $("#pet").append(html);
             }
-            for (var i = placeouts.length - 1; i >= 0; i--) {
+            for (var i = data.user.placeouts.length - 1; i >= 0; i--) {
               var html="<div class=\"caption\"><h4>昵称："+data.user.placeouts[i].pet.name+"</h4><p>年龄："+data.user.placeouts[i].pet.age_year+"年"+data.user.placeouts[i].pet.age_month+"月"+"<br>"+"发布时间："+data.user.placeouts[i].datetime+"<br>"+"发布人描述信息："+data.user.placeouts[i].pet.petdescri+"</p></div>";
             $("#useradopt-info").append(html);
             }
