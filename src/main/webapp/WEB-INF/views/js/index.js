@@ -119,7 +119,7 @@ console.log(1);
         //向服务器请求用户个人信息，并显示   
         console.log(data);  
         for (var i = data.length - 1; i >= 0; i--) {
-            var html="<div class=\"col-xs-6 col-xs-3\" id=\"para\"><div class=\"thumbnail\" id=\"detail\"><div class=\"caption\"><h4>地址："+data.user.placeout[i].address+"</h4><p>年龄："+data.users.placeout[i].pet.age_year+"年"+data.users.placeout[i].pet.age_month+"月"+"<br>"+"发布时间："+data.user.placeout[i].datetime+"<br>"+"发布人描述信息："+data.user.placeout[i].pet.petdescri+"</p></div></div></div>";
+            var html="<div class=\"col-xs-6 col-xs-3\" id=\"para\"><div class=\"thumbnail\" id=\"detail\"><div class=\"caption\"><h4>地址："+data.user.placeouts[i].address+"</h4><p>年龄："+data.users.placeouts[i].pet.age_year+"年"+data.users.placeouts[i].pet.age_month+"月"+"<br>"+"发布时间："+data.user.placeouts[i].datetime+"<br>"+"发布人描述信息："+data.user.placeouts[i].pet.petdescri+"</p></div></div></div>";
         $("#para").append(html);
          } 
         
