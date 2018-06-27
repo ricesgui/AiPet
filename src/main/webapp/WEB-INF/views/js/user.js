@@ -6,16 +6,16 @@ $(function(){
         contentType: "application/json; charset=utf-8",  
         dataType: "json",   //返回格式为json  
         //data:stringify({"start":0,"size":1}), 
-        success: function (users) {//回调函数
+        success: function (data) {//回调函数
         //向服务器请求用户个人信息，并显示
-            $("#name").val(users.name);
-            $("#realname").val(users.realname);
-            $("#sex").val(users.sex);
-            $("#password").val(users.password);
-            $("#number").val(users.number);
-            $("#email").val(users.email);
-            $("#address").val(users.address);
-            var html="<div class=\"caption\"><h4>地址："+users.address+"</h4><p>年龄："+users.age_year+"年"+users.age_month+"月"+"<br>"+"发布时间："+users.datetime+"<br>"+"发布人描述信息："+users.petdescri+"</p></div>";
+            $("#name").val(data.name);
+            $("#realname").val(data.realname);
+            $("#sex").val(data.sex);
+            $("#password").val(data.password);
+            $("#number").val(data.number);
+            $("#email").val(data.email);
+            $("#address").val(data.address);
+            var html="<div class=\"caption\"><h4>地址："+data.address+"</h4><p>年龄："+data.age_year+"年"+data.age_month+"月"+"<br>"+"发布时间："+data.datetime+"<br>"+"发布人描述信息："+data.petdescri+"</p></div>";
             $("#useradopt-info").append(html);
         },
         error: function(){
@@ -39,17 +39,17 @@ $("#btn-save").click(function(){
         contentType: "application/json; charset=utf-8",  
         data: JSON.stringify({"name":name,"email":email,"password":password,"realname":realname,"sex":sex,"number":number,"address":address}), 
         dataType: "json",   //返回格式为json   
-        success: function (users) {//回调函数
-                if(users.status=='success'){                  
+        success: function (data) {//回调函数
+                if(data.status=='success'){                  
                     alert("修改成功");
                     //服务器返回用户数据json包，获取并修改原来的值                                 
-		            $("#name").val(users.name);
-		            $("#realname").val(users.realname);
-		            $("#sex").val(users.sex);
-		            $("#password").val(users.password);
-		            $("#number").val(users.number);
-		            $("#email").val(users.email);
-		            $("#address").val(users.address);
+		            $("#name").val(data.name);
+		            $("#realname").val(data.realname);
+		            $("#sex").val(data.sex);
+		            $("#password").val(data.password);
+		            $("#number").val(data.number);
+		            $("#email").val(data.email);
+		            $("#address").val(data.address);
                 }
                 else if(user.status=='fail')
                     {                       
@@ -58,7 +58,7 @@ $("#btn-save").click(function(){
                 
             },
         error: function (xhr,error) {
-                console.log("users.fail");
+                console.log("data.fail");
             }  
      }); 
        }
