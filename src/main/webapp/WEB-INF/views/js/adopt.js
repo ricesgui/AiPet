@@ -14,7 +14,7 @@ $(function(){
   type:'POST',  
   url:"/views/send_adopt",
   contentType: "application/json; charset=utf-8",
-  data:JSON.stringify({"adoptSpecies":adoptSpecies,"petSex":petSex,"adoptDes":adoptDes,"placeInTitle":placeInTitle,"datetime":datetime,"touchName":touchName,"telNumber":telNumber,"adoptDes":adoptDes}),
+  data:JSON.stringify({"adoptSpecies":adoptSpecies,"petSex":petSex,"adoptDes":adoptDes,"adoptRes":adopt,"placeInTitle":placeInTitle,"datetime":datetime,"touchName":touchName,"telNumber":telNumber,"adoptDes":adoptDes}),
   dataType:"json",
   success:function(data){
   console.log(2);
