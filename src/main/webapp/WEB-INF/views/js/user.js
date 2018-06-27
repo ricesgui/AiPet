@@ -5,7 +5,7 @@ $(function(){
         url: "/resources/get_user_info",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",   //返回格式为json  
-        data:stringify({"start":0,"size":1}), 
+        //data:stringify({"start":0,"size":1}), 
         success: function (users) {//回调函数
         //向服务器请求用户个人信息，并显示
             $("#name").val(users.name);

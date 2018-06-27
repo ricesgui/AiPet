@@ -111,7 +111,7 @@ function refresh(start,size){
 console.log(1);
         $.ajax({ 
         type: "POST",   //请求方式  
-        url: "/views/get_user_info",    //请求的url地址  
+        url: "/views/get_placeout",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",   //返回格式为json  
         data:stringfy({"start":0,"size":1}), 
