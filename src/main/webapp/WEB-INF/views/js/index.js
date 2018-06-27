@@ -1,5 +1,6 @@
 
 window.onload=function(){
+    $("#user_info").hide();
     onload2();
     onload3();
     onload4();
@@ -24,14 +25,16 @@ window.onload=function(){
                     var obj =JSON.parse(xmlhttp.responseText);
                     if(obj.user_name==null)
                     {
-                         document.getElementById("txtHint").innerHTML="";                   
+                         document.getElementById("txtHint").innerHTML="";
+                                            
                     }                  
                     else  
                     {
                     document.getElementById("txtHint").innerHTML=obj.user_name;
                       //实现第二个提示                   
                     document.getElementById("s1").innerHTML="您已登录";                                     
-                    document.getElementById("third").innerHTML="退出";        
+                    document.getElementById("third").innerHTML="退出"; 
+                    $("#user_info").show();       
                     $("#yincang").hide();
                     $("#div-m").hide();
                     var im = document.getElementById("denglu");
@@ -98,6 +101,8 @@ window.onload=function(){
     }
 
 });
+
+    
 }
    
 

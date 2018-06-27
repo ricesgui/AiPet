@@ -31,3 +31,25 @@ body{
 	content: "->"
 	padding: 0 5px;
 }
+.discuss_title{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+    #myEditor{
+	width: 95%;
+    height: 100px;
+    border: 1px solid #e3e3e3;
+    margin-top: 15px;
+	}
+	.send_discuss {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 100px;
+    background-color: red;
+    color: #FFFFFF;
+    cursor: pointer;
+}

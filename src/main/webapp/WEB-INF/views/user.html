@@ -1,20 +1,22 @@
-<!--xiaogui-->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>关于我们</title>
+	<title>个人中心</title>
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">-->
 	<link rel="stylesheet" type="text/css" href="CSS/index.css">
-	<link rel="stylesheet" type="text/css" href="CSS/aboutus.css">
 	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引入百度jquery包-->
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/user.js"></script>
 </head>
-<body>	
-		<!--公共头部开始-->
+<body>
+	<div>
+	<!--公共头部开始-->
 	<header>	
 		<div class="nav navbar-fixed-top" >
 	<!--导航栏开始-->
@@ -79,26 +81,56 @@
 <div class="bj-img">
 			<img src="images/keji.jpg" width="100%" height="" alt="导航栏上背景图">
 		</div>
-	
-
-<!--导航栏结束-->
-<div id="text">
-	<h1>关于我们</h1>
-	<p class="p-text">
-		这个只是我们用于帮助流浪动物的网站，在网站发布或领养动物是没有手续费的。
-		<br/>
-		如果有外来要您付款的链接请勿相信，并联系我们。邮箱：<a href="mailto:wangjun@163.com">wangjun@163.com</a>
-	</p>
-		<h3>
-			感谢您的使用。
-		</h3>
+<main>
+	<div class="container">
+	<div class="row clearfix" id="user">
+		<div class="col-md-2 column">
+			<ul class="nav nav-pills" id="rootnav">
+				<li>
+					 <a href="index.html">首页</a>
+				</li>
+				<li class="disabled">
+					<a href="">-->个人中心</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="user-body">
+		<h3>您的基本信息</h3>
+		<form method="post" onsubmit="return false;">
+		<label>用户名:<input type="text" name="" id="name" required="required"></label>
+		<br>
+		<br>
+		<label>真实名字：<input type="text" name="" id="realname" required="required"></label>
+		<br>
+		<br>
+		<label>性别：<input type="text" name="" id="sex" required="required"></label>
+		<br>
+		<br>
+		<label>密码：<input type="text" name="" id="password" required="required"></label>
+		<br>
+		<br>
+		<label>联系方式:<input type="text" name="" id="number" required="required"></label>
+		<br>
+		<br>
+		<label>邮箱/帐号：<input type="text" name="" id="email" required="required"></label>
+		<br>
+		<br>
+		<label>住址:<input type="text" name="" id="address" required="required"></label>
+		<br>
+		<br>
+		<button type="submit" id="btn-save">保存</button>
+		</form>
+</div>
 </div>
 
+</main>
+<div id="d-img">
+	<img src="images/soso2.jpg" width="100%" height="100%" alt="sos图片">
+</div>
 <!--页脚-->
 <footer class="rig">
-	<br/>
-	<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
+		<a href="about_us.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;Copyright &copy; 2018 AiPet All Rights Reserved.
 </footer>
 </body>
-<script type="text/javascript" src="JS/index.js"></script>
 </html>

@@ -12,30 +12,7 @@
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/index.js"></script>
-    <style>
-	.discuss_title{
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
-}
-    #myEditor{
-	width: 95%;
-    height: 100px;
-    border: 1px solid #e3e3e3;
-    margin-top: 15px;
-	}
-	.send_discuss {
-    float: left;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    width: 100px;
-    background-color: red;
-    color: #FFFFFF;
-    cursor: pointer;
-}
-	</style>
+ 	<script type="text/javascript" src="../js/comment.js"></script>
 </head>
 <body>	
 	<div>
@@ -146,26 +123,6 @@
        <textarea id="myEditor" name="myEditor">
   </textarea>
   <div class="send_discuss">发布</div>
-  <script type="text/javascript">
-     $(".send_discuss").click(function(){
-		 var uid=1;
-		 var type=1;
-		 if(uid=='0'){
-			 alert("请先登录");
-			 location.href="../login.html";
-			 return ;
-		 }
-		 var content=$("#myEditor").val();
-		 $(".send_discuss").after("<div class=discuss_info>content</div>");
-		 $.post("#",{type:type,content:content},function(data){
-			 if(data.status==100)
-			 {alert("发送成功");
-			   $(".send_discuss").after("<div class=discuss_info>content</div>");
-			 }
-		 });
-		
-	 });
-   </script> 
 </div>
 </main>
 <!--页脚-->
