@@ -6,7 +6,7 @@ import cn.edu.scnu.it.aipet.pojo.Placeout;
 import cn.edu.scnu.it.aipet.service.AdoptService;
 import cn.edu.scnu.it.aipet.service.PetService;
 import cn.edu.scnu.it.aipet.service.PlaceoutService;
-import cn.edu.scnu.it.aipet.util.PlaceoutJson;
+import cn.edu.scnu.it.aipet.util.jsonUtil.PlaceoutJson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,30 +20,30 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/views")
 public class InteractionCon {
-    private  final PetService petService;
-    private  final PlaceoutService placeoutService;
-    private  final AdoptService adoptService;
+    private  final PetService PetService;
+    private  final PlaceoutService PlaceoutService;
+    private  final AdoptService AdoptService;
 
     @Autowired
-    public InteractionCon(PetService petService, PlaceoutService placeoutService,AdoptService adoptService) {
-        this.petService = petService;
-        this.placeoutService = placeoutService;
-        this.adoptService=adoptService;
+    public InteractionCon(PetService PetService, PlaceoutService PlaceoutService, AdoptService AdoptService) {
+        this.PetService = PetService;
+        this.PlaceoutService = PlaceoutService;
+        this.AdoptService = AdoptService;
     }
 
 
     @RequestMapping(value = "/send_placeout",method = RequestMethod.POST)
-    public ModelAndView insertPlaceoutToDb(@RequestBody PlaceoutJson placeoutJson, HttpSession session){
+    public ModelAndView insertPlaceoutToDb(@RequestBody PlaceoutJson PlaceoutJson, HttpSession session){
         System.out.println("进入insetPlaceoutToDb!");
         ModelAndView mv=new ModelAndView();
         mv.setView(new MappingJackson2JsonView());
         Long iduser=(Long)session.getAttribute("id");
-        Pet pet=placeoutJson.getPet();
-        Placeout placeout=placeoutJson.getPlaceout();
-        Long idpet=petService.insertPet(pet);  //返回值主键回填
+        Pet pet= PlaceoutJson.getPet();
+        Placeout placeout= PlaceoutJson.getPlaceout();
+        Long idpet= PetService.insertPet(pet);  //返回值主键回填
         placeout.setIdpet(idpet);
         placeout.setIduser(iduser);
-        placeoutService.insertPlaceout(placeout);
+        PlaceoutService.insertPlaceout(placeout);
         if(idpet==0)
             mv.addObject("status","fail");
         else
@@ -58,7 +58,7 @@ public class InteractionCon {
         mv.setView(new MappingJackson2JsonView());
         Long iduser=(Long)session.getAttribute("id");
         adopt.setIduser(iduser);
-        Long idpet=adoptService.insertAdopt(adopt);  //返回值主键回填
+        Long idpet= AdoptService.insertAdopt(adopt);  //返回值主键回填
         if(idpet==0)
             mv.addObject("status","fail");
         else
