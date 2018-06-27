@@ -7,17 +7,17 @@ $(".send_discuss").click(function(){
 	  	location.href="../login.html";
 	  	return ;
 	  }
-	  var comment=$("#myEditor").val();
-	  console.log(comment);
+	  var content=$("#myEditor").val();
+	  console.log(content);
 	  var p=new Date();
-  	  var datetime = p.getFullYear() + "-" +((p.getMonth()+1)<10?"0":"")+(p.getMonth()+1)+"-"+(p.getDate()<10?"0":"")+p.getDate();
+  	  var dateTime = p.getFullYear() + "-" +((p.getMonth()+1)<10?"0":"")+(p.getMonth()+1)+"-"+(p.getDate()<10?"0":"")+p.getDate();
   
 	  	// $(".send_discuss").after("<div class=discuss_info>"+comment+"</div>");
 	$.ajax({
 	  type:'POST',  
 	  url:"/views/send_comment",
 	  contentType: "application/json; charset=utf-8",
-	  data:JSON.stringify({"comment":{"comment":comment,"datetime":datetime}}),
+	  data:JSON.stringify({"content":content,"dateTime":dateTime}),
 	  dataType:"json",
 	  success:function(data){
 	  console.log(2);
