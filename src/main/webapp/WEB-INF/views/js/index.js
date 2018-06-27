@@ -101,7 +101,7 @@ function onload2()
     }
 
 });
-
+}
    var start=0,size=2;
 function onload5(){
     setInterval("refresh(start,size)",1000); 

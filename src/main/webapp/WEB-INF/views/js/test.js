@@ -1,6 +1,6 @@
 var start=0,size=2;
 
-function refresh(var start,var size){
+function refresh(start,size){
 //定时刷新页面数据
    		$.ajax({ 
         type: "POST",   //请求方式  

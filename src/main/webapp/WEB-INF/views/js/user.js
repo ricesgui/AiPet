@@ -42,8 +42,7 @@ $("#btn-save").click(function(){
         success: function (users) {//回调函数
                 if(users.status=='success'){                  
                     alert("修改成功");
-                    //服务器返回用户数据json包，获取并修改原来的值                   
-               
+                    //服务器返回用户数据json包，获取并修改原来的值                                 
 		            $("#name").val(users.name);
 		            $("#realname").val(users.realname);
 		            $("#sex").val(users.sex);
