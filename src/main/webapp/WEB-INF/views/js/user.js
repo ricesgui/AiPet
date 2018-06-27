@@ -2,7 +2,7 @@ $(function(){
 	//点击个人中心，进到页面，向服务器请求数据回填
    		$.ajax({  
         type: "POST",   //请求方式  
-        url: "/views/",    //请求的url地址  
+        url: "/views/get_user_info",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
         dataType: "json",   //返回格式为json   
         success: function (users) {//回调函数
@@ -18,6 +18,25 @@ $(function(){
         },
         error: function(){
         	console.log("获取.fail");
+        }
+    });
+        //异步请求发布消息
+        $.ajax({  
+        type: "POST",   //请求方式  
+        url: "/views/",    //请求的url地址  
+        contentType: "application/json; charset=utf-8",  
+        dataType: "json",   //返回格式为json   
+        success: function (users) {//回调函数
+        //向服务器请求用户个人信息，并显示
+            var useradoptinfo =JSON.parse(useradoptinfo);
+            var html="<div class=\"caption\"><h4>地址："+useradoptinfo.address+
+            "</h4><p>年龄："+useradoptinfo.age_year+"年"+useradoptinfo.age_month+"月"
+            +"<br>"+"发布时间："+useradoptinfo.datetime+"<br>"+"发布人描述信息："+
+            useradoptinfo.petdescri+"</p></div>";
+            $("#useradopt-info").after(html);
+        },
+        error: function(){
+            console.log("获取用户发布的送养信息fail");
         }
     });
 //点击修改按钮触发函数，上传服务器修改
@@ -66,6 +85,6 @@ $("#btn-save").click(function(){
      else {alert("请完整填写个人信息！"); }
       
  });
-
+    
  });
 
