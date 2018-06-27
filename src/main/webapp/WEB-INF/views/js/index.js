@@ -109,7 +109,7 @@ function onload5(){
 function refresh(start,size){
 //定时刷新页面数据
 console.log(1);
-        $.ajax({ 
+        $.ajax({
         type: "POST",   //请求方式  
         url: "/views/get_placeout",    //请求的url地址  
         contentType: "application/json; charset=utf-8",  
