@@ -37,7 +37,7 @@ $(".send_discuss").click(function(){
 	                console.log("comment.fail");
 	            }  
 	  });
-}
+
 	 });
 
 
