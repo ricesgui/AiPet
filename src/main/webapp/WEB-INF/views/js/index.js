@@ -104,7 +104,7 @@ function onload2()
     }
    var start=0,size=1;
 function onload5(){
-    refresh(start,size);
+    refresh(0,1);
     setInterval("refresh(start,size)",100000); 
 function refresh(start,size){
 //定时刷新页面数据
@@ -115,14 +115,14 @@ console.log(1);
         contentType: "application/json; charset=utf-8",  
         dataType: "json",   //返回格式为json  
         data:stringfy({"start":0,"size":1}), 
-        success: function (users){//回调函数
+        success: function (data){//回调函数
         //向服务器请求用户个人信息，并显示   
-        console.log(user);   
-       var html01="<div class=\"col-xs-6 col-xs-3\" id=\"para\"><div class=\"thumbnail\" id=\"detail\"><div class=\"caption\"><h4>地址："+users[0].address+"</h4><p>年龄："+users[0].age_year+"年"+users[0].age_month+"月"+"<br>"+"发布时间："+users[0].datetime+"<br>"+"发布人描述信息："+users[0].petdescri+"</p></div></div></div>";
-        $("#para").append(html01);
-        console.log(html01);
-        var html02="<div class=\"col-xs-6 col-xs-3\" id=\"para\"><div class=\"thumbnail\" id=\"detail\"><div class=\"caption\"><h4>地址："+users[1].address+"</h4><p>年龄："+users[1].age_year+"年"+users[1].age_month+"月"+"<br>"+"发布时间："+users[1].datetime+"<br>"+"发布人描述信息："+users[1].petdescri+"</p></div></div></div>";
-        $("#para").append(html02);
+        console.log(data);  
+        for (var i = data.length - 1; i >= 0; i--) {
+            var html="<div class=\"col-xs-6 col-xs-3\" id=\"para\"><div class=\"thumbnail\" id=\"detail\"><div class=\"caption\"><h4>地址："+data.user.placeout[i].address+"</h4><p>年龄："+data.users.placeout[i].pet.age_year+"年"+data.users.placeout[i].pet.age_month+"月"+"<br>"+"发布时间："+data.user.placeout[i].datetime+"<br>"+"发布人描述信息："+data.user.placeout[i].pet.petdescri+"</p></div></div></div>";
+        $("#para").append(html);
+         } 
+        
         },
         error: function(){
             console.log("获取.fail");
