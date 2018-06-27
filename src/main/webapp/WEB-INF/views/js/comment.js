@@ -34,7 +34,7 @@ $(".send_discuss").click(function(){
 	    txt2.innerHTML=data.name;
 	    var txt3="<hr>";
 	    $(".send_discuss").after(txt,txt2,txt1,txt3);
-	    window.location.href="dog-adopt.html";
+	    //window.location.href="dog-adopt.html";
 	   }
 	   else alert("请重新输入");
 	  },
