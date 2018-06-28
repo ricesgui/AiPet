@@ -23,6 +23,8 @@ $(".send_discuss").click(function(){
 	  console.log(2);
 	   if(data.status=='success'){
 	    alert("评论成功！");
+	    for (var i=data.length-1;i>=0;i--)
+	    {
 	    var txt=document.createElement('div');
 	    txt.className="discuss_info";
 	    txt.innerHTML=content;
@@ -34,6 +36,7 @@ $(".send_discuss").click(function(){
 	    txt2.innerHTML=data.name;
 	    var txt3="<hr>";
 	    $(".send_discuss").after(txt,txt2,txt1,txt3);
+	}
 	    //window.location.href="dog-adopt.html";
 	   }
 	   else alert("请重新输入");
