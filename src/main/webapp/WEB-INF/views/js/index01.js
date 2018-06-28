@@ -22,8 +22,7 @@ function onload2(){
                 var obj =JSON.parse(xmlhttp.responseText);
                 if(obj.user_name==null)
                 {
-                     alert("您还没有登录，请先登录");
-                     window.location.href="login.html";                  
+                    $("#txtHint").html("您还没有登录哦，去<a href=\"login.html\">登录</a>获得更好体验");              
                 }                  
                 else  
                 {
