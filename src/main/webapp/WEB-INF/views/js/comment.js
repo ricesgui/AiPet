@@ -27,7 +27,7 @@ $(".send_discuss").click(function(){
 	    {
 	    var txt=document.createElement('div');
 	    txt.className="discuss_info";
-	    txt.innerHTML=content;
+	    txt.innerHTML=data.content;
 	    var txt1=document.createElement('div');
 	    txt1.className="post_time";
 	    txt1.innerHTML=dateTime;
