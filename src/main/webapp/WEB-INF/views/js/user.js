@@ -75,7 +75,7 @@ function onload3(){
             $("#name").val(data.user.name);
             $("#realname").val(data.user.realname);
             $("#sex").val(data.user.sex);
-            $("#password").val(data.user.password);
+            // $("#password").val(data.user.password);
             $("#number").val(data.user.number);
             $("#email").val(data.user.email);
             $("#address").val(data.user.address);          
@@ -85,7 +85,7 @@ function onload3(){
             }
              for (var i = data.user.adopts.length - 1; i >= 0; i--) {
                 var html="<div class=\"caption\" style=\"color:#5CACEE\"><h5>种类："+data.user.adopts[i].adoptSpecies+"</h5><p>性别："+data.user.adopts[i].petSex+"<br>联系方式："+data.user.adopts[i].telNumber+"<br>标题："+data.user.adopts[i].placeInTitle+"<br>发布时间："+data.user.adopts[i].datetime+"<br>"+"发布人描述信息："+data.user.adopts[i].adoptDes+"</p></div>";
-            $("#pet").append(html);
+            $("#outadopt-info").append(html);
             }
         },
         error: function(){
