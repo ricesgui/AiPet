@@ -4,8 +4,8 @@
 <mapper namespace="cn.edu.scnu.it.aipet.dao.UserMapper">
     <resultMap id="user" type="cn.edu.scnu.it.aipet.pojo.User">
         <id column="idusers" property="idusers"/>
-        <collection property="placeouts" column="iduser" select="cn.edu.scnu.it.aipet.dao.PlaceoutMapper.getPlaceoutByUserId"/>
-        <collection property="adopts" column="iduser" select="cn.edu.scnu.it.aipet.dao.AdoptMapper.getAdoptByUserId"/>
+        <collection property="placeouts" column="idusers" javaType="list" select="cn.edu.scnu.it.aipet.dao.PlaceoutMapper.getPlaceoutByUserId"/>
+        <collection property="adopts" column="idusers" javaType="list" select="cn.edu.scnu.it.aipet.dao.AdoptMapper.getAdoptByUserId"/>
     </resultMap>
    <insert id="insertUser" useGeneratedKeys="true" keyProperty="idusers">
        insert into users(idusers,name,realname,sex,password,number,email,address) values(0,#{name},
@@ -15,7 +15,11 @@
     <delete id="deleteUser" parameterType="long">
         delete from users where id=#{id}
     </delete>
-    <select id="selectUserByEmail" parameterType="string" resultMap="user">
-        select idusers,name,email,password from users where email=#{email}
+    <select id="getUserByEmail" parameterType="string" resultMap="user">
+        select idusers,name,password,realname,sex,number,email,address from users where email=#{email}
     </select>
+    <select id="getUserByUserId" parameterType="long" resultMap="user">
+        select idusers,name,realname,sex,number,email,address from users where idusers=#{iduser}
+    </select>
+
 </mapper>

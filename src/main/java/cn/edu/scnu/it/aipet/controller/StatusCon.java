@@ -23,7 +23,7 @@ public class StatusCon {
     public ModelAndView logIn(@RequestBody LoginUser LoginUser, HttpSession session) {
         ModelAndView mv = new ModelAndView();
         mv.setView(new MappingJackson2JsonView());
-        User user = UserService.selectUser(LoginUser.getEmail());
+        User user = UserService.getUserByEmail(LoginUser.getEmail());
         if (user == null) {
             //用户名不存在
             mv.addObject("status", "fail");
@@ -62,7 +62,7 @@ public class StatusCon {
         mv.setView(new MappingJackson2JsonView());
         String status="fail";
         String email=user.getEmail();
-        User userJudge= UserService.selectUser(email);
+        User userJudge= UserService.getUserByEmail(email);
         if(userJudge!=null){
             System.out.println("邮箱重复");
             mv.addObject("status",status);

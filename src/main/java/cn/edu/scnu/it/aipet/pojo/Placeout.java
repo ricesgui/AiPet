@@ -2,21 +2,22 @@ package cn.edu.scnu.it.aipet.pojo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
+import java.sql.Date;
+
 
 public class Placeout {
-    Long idplaceout=null;
-    Long iduser=null;
-    Long idpet=null;
-    String placeouttitle=null;
-    @DateTimeFormat(pattern="yyyy-MM-dd")
-    private Date datetime=null;
-    String adoptres=null;
-    String realname=null;
-    String sex=null;
-    String number=null;
-    String address=null;
-    private Pet pet=null;
+    private Long idplaceout = null;
+    private Long iduser = null;
+    private Long idpet;
+    private String placeouttitle = null;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date datetime = null;
+    private String adoptres = null;
+    private String realname = null;
+    private String sex = null;
+    private String number = null;
+    private String address = null;
+    private Pet pet = null;
 
     public Long getIdplaceout() {
         return idplaceout;

@@ -7,7 +7,7 @@
         <result column="datetime" property="dateTime"/>
         <result column="iduser" property="idUser"/>
     </resultMap>
-<insert id="insertComment" parameterType="cn.edu.scnu.it.aipet.pojo.Comment">
+<insert id="insertComment" useGeneratedKeys="true" keyProperty="id_comment" parameterType="cn.edu.scnu.it.aipet.pojo.Comment">
     insert into comment(id_comment,content,iduser,datetime) values(0,#{content},#{idUser},#{dateTime})
 </insert>
 </mapper>

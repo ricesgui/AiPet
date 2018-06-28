@@ -6,14 +6,15 @@
         <id column="idplaceout" property="idplaceout"/>
         <association property="pet" column="idpet" select="cn.edu.scnu.it.aipet.dao.PetMapper.getPet"/>
     </resultMap>
-<select id="getMePlaceoutByUserId" parameterType="Long" resultMap="getPet">
-    select * from placeout where iduser=#{iduser};
+    <select id="getPlaceoutByUserId" parameterType="Long" resultMap="getPet">
+    select idplaceout,iduser,idpet,placeouttitle,datetime,adoptres,realname,sex,number,address from placeout where iduser=#{userId};
 </select>
-<insert id="insertPlaceout" useGeneratedKeys="true" keyProperty="idplaceout" parameterType="cn.edu.scnu.it.aipet.pojo.Placeout">
+    <insert id="insertPlaceout" useGeneratedKeys="true" keyProperty="idplaceout"
+            parameterType="cn.edu.scnu.it.aipet.pojo.Placeout">
    insert into placeout(idplaceout,iduser,idpet,placeouttitle,datetime,adoptres,realname,sex,number,address)
    values(0,#{iduser},#{idpet},#{placeouttitle},#{datetime},#{adoptres},#{realname},#{sex},#{number},#{address})
 </insert>
-    <select id="getMePlaceout" resultMap="getPet">
-    select * from placeout limit #{start},#{size};
+    <select id="getPlaceout" resultMap="getPet">
+    select idplaceout,iduser,idpet,placeouttitle,datetime,adoptres,realname,sex,number,address from placeout limit #{start},#{size};
 </select>
 </mapper>

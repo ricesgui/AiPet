@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper {
     public Long insertUser(User user);
-    public User getUser(@Param("iduser") Long iduser);
+    public User getUserByUserId(@Param("iduser") Long iduser);
     public int updateUser(User role);
     public int deleteUser(@Param("iduser") Long iduser);
-    public User selectUserByEmail(@Param("email") String email);
+    public User getUserByEmail(@Param("email") String email);
 }

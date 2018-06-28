@@ -4,7 +4,9 @@ import cn.edu.scnu.it.aipet.dao.PlaceoutMapper;
 import cn.edu.scnu.it.aipet.dao.UserMapper;
 import cn.edu.scnu.it.aipet.pojo.Placeout;
 import cn.edu.scnu.it.aipet.pojo.User;
+import cn.edu.scnu.it.aipet.util.IndexJsonUtil;
 import cn.edu.scnu.it.aipet.util.jsonUtil.Event;
+import cn.edu.scnu.it.aipet.util.jsonUtil.IndexJson;
 import cn.edu.scnu.it.aipet.util.jsonUtil.SelectLimit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -51,11 +53,13 @@ public class ResourcesCon {
         return mv;
     }
 
-    @RequestMapping(value = "/get_placeout", method = RequestMethod.POST)
-    public ModelAndView getPlaceout(@RequestBody SelectLimit selectLimit) {
+    @RequestMapping(value = "/get_placeouts ", method = RequestMethod.POST)
+    public ModelAndView getPlaceouts(@RequestBody SelectLimit selectLimit) {
+        System.out.println("进入getPlaceouts!");
         ModelAndView mv = new ModelAndView();
         List<Placeout> placeouts = placeoutMapper.getPlaceout(selectLimit.getStart(), selectLimit.getSize());
-        mv.addObject(placeouts);
+        List<IndexJson> indexJsons=IndexJsonUtil.parseIndexJson(placeouts);
+        mv.addObject(indexJsons);
         mv.setView(new MappingJackson2JsonView());
         return mv;
     }
@@ -65,7 +69,7 @@ public class ResourcesCon {
         ModelAndView mv=new ModelAndView();
         mv.setView(new MappingJackson2JsonView());
         Long userId=(Long)session.getAttribute("id");
-        User user=userMapper.getUser(userId);
+        User user=userMapper.getUserByUserId(userId);
         mv.addObject(user);
         return mv;
     }

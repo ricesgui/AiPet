@@ -4,11 +4,12 @@
 <mapper namespace="cn.edu.scnu.it.aipet.dao.AdoptMapper">
 
 <insert id="insertAdopt" useGeneratedKeys="true" keyProperty="idadopt">
-insert into adopt(idadopt,iduser,adoptDes,adoptSpecies,placeInTitle,touchName,telNumber,petSex,datetime)
- values (0,#{iduser},#{adoptDes},#{adoptSpecies},#{placeInTitle},#{touchName},#{telNumber},#{petSex},#{datetime})
+insert into adopt(idadopt,iduser,adoptDes,adoptSpecies,placeInTitle,touchName,adoptRes,telNumber,petSex,datetime)
+ values (0,#{iduser},#{adoptDes},#{adoptSpecies},#{placeInTitle},#{touchName},#{adoptRes},#{telNumber},#{petSex},#{datetime})
 </insert>
- <select id="getAdoptByUserId" parameterType="Long" >
-    select idadopt,iduser,adoptDes,adoptSpecies,placeinTitle,touchName,telNumber,petSex,datetime from placeout where iduser=#{iduser}
+ <select id="getAdoptByUserId" parameterType="Long" resultType="cn.edu.scnu.it.aipet.pojo.Adopt" >
+    select idadopt,iduser,adoptDes,adoptSpecies,placeInTitle,touchName,adoptRes,telNumber,petSex,datetime from
+    adopt where iduser=#{userId}
 </select>
 
 </mapper>

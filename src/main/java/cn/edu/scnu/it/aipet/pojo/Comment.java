@@ -2,7 +2,7 @@ package cn.edu.scnu.it.aipet.pojo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Comment {
     private Long idCommet;

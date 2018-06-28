@@ -23,7 +23,7 @@ public class CheckCon {
     @RequestMapping(value = "/username",method = RequestMethod.POST)
     public ModelAndView checkUserName(@RequestBody String email){
         ModelAndView mv = new ModelAndView();
-        User user = UserService.selectUser(email);
+        User user = UserService.getUserByEmail(email);
         if (user == null)
             //用户名不存在
             mv.addObject("validity","true");

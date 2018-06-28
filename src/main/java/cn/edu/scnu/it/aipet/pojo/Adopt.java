@@ -3,7 +3,7 @@ package cn.edu.scnu.it.aipet.pojo;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.sql.Date;
 
 
 public class Adopt {
@@ -14,6 +14,7 @@ public class Adopt {
     private String placeInTitle=null;
     private String telNumber=null;
     private String touchName=null;
+    private String adoptRes=null;
     private String petSex=null;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date datetime=null;
@@ -90,4 +91,11 @@ public class Adopt {
         this.touchName = touchName;
     }
 
+    public String getAdoptRes() {
+        return adoptRes;
+    }
+
+    public void setAdoptRes(String adoptRes) {
+        this.adoptRes = adoptRes;
+    }
 }
